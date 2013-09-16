@@ -3,4 +3,10 @@ It is based on Sunbird code, and requires Lightning to work. Since it's just UI,
 
 It does NOT disable normal Lightning UI, which can still be used. However, component bar and Window menu will have an additional icon/entry for calendar.
 
-It also does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't.
+It also does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't. Since Thunderbird support requires additional effort here, I don't support it.
+
+TODO:
+* Bug fixes
+* Ability to open calendar when SeaMonkey starts
+* Better integration with SeaMonkey: New event/task in Navigator File->Create menu etc.
+* Modern theme support
