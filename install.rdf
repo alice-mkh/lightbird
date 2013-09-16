@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>{df846912-2659-4705-acb0-8bc0c0520e1a}</em:id>
+        <em:version>0.1</em:version>
+        <em:type>2</em:type>
+        <em:bootstrap>false</em:bootstrap>
+        <em:unpack>false</em:unpack>
+        <em:strictCompatibility>false</em:strictCompatibility>
+        <em:iconURL>chrome://calendar/skin/cal-icon32.png</em:iconURL>
+        <em:name>Lightbird</em:name>
+        <em:description>Standalone calendar UI for Lightning</em:description>
+        <em:creator>Exalm</em:creator>
+        <em:targetApplication>
+            <Description>
+                <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+                <em:minVersion>2.17</em:minVersion>
+                <em:maxVersion>2.23</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    </Description>
+</RDF>

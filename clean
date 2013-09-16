@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm *.xpi
+rm -rf temp

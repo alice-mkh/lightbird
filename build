@@ -1,0 +1,39 @@
+#!/bin/bash
+
+rm -rf temp
+mkdir temp
+cp chrome.manifest temp
+cp install.rdf temp
+cp content temp -r
+cp locale temp -r
+cp skin temp -r
+
+#Substitute variables
+while read LINE; do
+    if [[ $LINE != [A-Z]* ]]; then
+        continue
+    fi
+    LINE1=`echo $LINE | grep -oE "^[^=]+"`
+    LINE2=`echo $LINE | grep -oE "[^=]+$"`
+    sed "s|\$$LINE1|$LINE2|g" -i `find . -name "*.rdf"` `find . -name "*.js"` `find . -name "*.css"` `find . -name "*.manifest"`
+    eval "$LINE1=\"$LINE2\""
+done < "config.txt"
+
+cd temp/content/sunbird
+
+#sed -E "/ifn?def MOZ_UPDATER/,/endif/d" -i *
+sed -E "/ifn?def XP_MACOSX/,/endif/d" -i *
+sed -E "/ifn?def XP_UNIX/,/endif/d" -i *
+sed -E "/ifn?def XP_WIN/,/endif/d" -i *
+for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sunbird-scripts calendar-menubar sunbird-toolbar; do
+    tail -n +5 "$F.inc" > "$F.inc.temp"
+    sed "/#include $F.inc/r $F.inc.temp" -i calendar.xul hiddenWindow.xul
+    sed "s/#include $F.inc//g" -i calendar.xul hiddenWindow.xul
+    rm "$F.inc"
+    rm "$F.inc.temp"
+done
+sed -E "s/#.*//g" -i *
+cd ../..
+#sed "s/\"\&/\"/g" -i */*
+
+zip ../lightbird-$VERSION-sm.xpi * -r

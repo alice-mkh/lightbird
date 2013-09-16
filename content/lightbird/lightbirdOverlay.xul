@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+
+<!DOCTYPE overlay SYSTEM "chrome://sunbird/locale/lightbirdOverlay.dtd" >
+
+<!-- This is the overlay that adds Calendar to the (global) task menu. -->
+
+<?xml-stylesheet href="chrome://lightbird/skin/lightbirdOverlay.css" type="text/css"?> 
+
+<overlay id="LightbirdTaskMenuID"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://lightbird/content/lightbirdOverlay.js"/>
+
+<keyset id="tasksKeys">
+  <key id="key_calendar"  key="&calendarCmd.commandkey;" command="Tasks:Calendar" modifiers="accel"/>
+</keyset>
+
+<commandset id="tasksCommands">
+  <command id="Tasks:Calendar" oncommand="toCalendar();"/>
+</commandset>
+
+<menupopup id="windowPopup">
+  <menuitem
+        label="&calendarCmd.label;"
+        accesskey="&calendarCmd.accesskey;"
+        key="key_calendar"
+        command="Tasks:Calendar"
+        id="tasksMenuCalendar"
+        class="menuitem-iconic"
+        insertafter="tasksMenuAddressBook,tasksMenuEditor,IMMenuItem,tasksMenuNavigator"/>
+</menupopup>
+
+<statusbarpanel id="component-bar">
+  <toolbarbutton class="taskbutton" id="mini-calendar" oncommand="toCalendar()"
+    insertafter="mini-addr,mini-comp,mini-aim,mini-nav" tooltiptext="&calendarCmd.label;"/>
+</statusbarpanel>
+
+</overlay>
