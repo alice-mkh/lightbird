@@ -9,6 +9,7 @@
 
 <commandset id="calendar_commands">
   <!-- These commands already exist in thunderbird -->
+  <command id="cmd_close" oncommand="closeCalendar()"/>
   <command id="cmd_undo" oncommand="goDoCommand('cmd_undo')"/>
   <command id="cmd_redo" oncommand="goDoCommand('cmd_redo')"/>
   <command id="cmd_cut" oncommand="goDoCommand('cmd_cut')"/>

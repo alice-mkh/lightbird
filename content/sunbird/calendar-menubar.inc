@@ -33,6 +33,7 @@
                      label="&calendar.subscribe.label;"
                      accesskey="&calendar.subscribe.accesskey;"
                      observes="calendar_new_calendar_command"/>
+           <menuitem id="menu_close"/>
            <menuseparator id="calendar-new-sep"/>
 
            <!-- import: pulling data into existing files -->
