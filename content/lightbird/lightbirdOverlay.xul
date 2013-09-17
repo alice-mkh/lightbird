@@ -35,7 +35,7 @@
 </menupopup>
 
 <statusbarpanel id="component-bar">
-  <toolbarbutton class="taskbutton" id="mini-calendar" oncommand="toCalendar()"
+  <toolbarbutton class="taskbutton" id="mini-cal" oncommand="toCalendar()"
     insertafter="mini-addr,mini-comp,mini-aim,mini-nav" tooltiptext="&calendarCmd.label;"/>
 </statusbarpanel>
 

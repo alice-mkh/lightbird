@@ -2,10 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#mini-calendar {
+#mini-cal {
   list-style-image: url("chrome://lightbird/skin/cal-icon16.png");
 }
 
 #tasksMenuCalendar {
   list-style-image: url("chrome://lightbird/skin/cal-icon16.png");
+}
+
+#mini-cal[BiffState="Alarm"] {
+  list-style-image: url("chrome://calendar/skin/taskbar-calalarm.gif");
 }
