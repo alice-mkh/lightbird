@@ -4,10 +4,12 @@ style chrome://global/content/customizeToolbar.xul chrome://sunbird/skin/calenda
 style chrome://global/content/customizeToolbar.xul chrome://sunbird/skin/toolbar.css
 skin sunbird classic/1.0 skin/winstripe/
 skin sunbird classic/1.0 skin/pinstripe/ os=Darwin
+skin sunbird modern/1.0 skin/modern/
 
 #Lightbird
 content lightbird content/lightbird/
 skin lightbird classic/1.0 skin/common/
+skin lightbird modern/1.0 skin/modern-common/
 overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/lightbirdOverlay.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 
 #Locales

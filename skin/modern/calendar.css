@@ -1,0 +1,104 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+*/
+
+/*--------------------------------------------------------------------
+ *   toolbar
+ *-------------------------------------------------------------------*/
+
+#calendar-bar > .toolbar-holder > .toolbar-primary-icon {
+  background-image: url("chrome://sunbird/skin/calendar_topbar.gif");
+}
+
+#calendar-controls-box
+{
+   background-image        : url("chrome://sunbird/skin/calendar_topbar.gif");
+   background-repeat       : no-repeat;
+   min-height              : 33px;
+   max-height              : 33px;
+}
+
+/*--------------------------------------------------------------------
+ *   MAIN view deck - contains nav buttons and views
+ *-------------------------------------------------------------------*/
+#view-deck {
+  background: #FFFFFF;
+  padding: 0px;
+}
+
+.unifinder-closebutton {
+  background-color: transparent !important;
+  margin: 0px 4px !important;
+  padding: 3px 2px !important;
+  border: none !important;
+  list-style-image: url("chrome://global/skin/icons/close.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton:hover {
+  list-style-image: url("chrome://global/skin/icons/close-hov.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton:hover:active {
+  list-style-image: url("chrome://global/skin/icons/close-act.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton[disabled="true"] {
+  padding: 3px 2px !important;
+  list-style-image: url("chrome://global/skin/icons/close-dis.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+#view-tabbox {
+    display: none;
+}
+
+/*--------------------------------------------------------------------
+ *   menubar
+ *-------------------------------------------------------------------*/
+#menubar-items {
+  -moz-box-orient: vertical; /* for flex hack */
+}
+
+#menubar-items > menubar {
+  -moz-box-flex: 1; /* make menu items expand to fill toolbar height */
+}
+
+/*--------------------------------------------------------------------
+ * print preview
+ *-------------------------------------------------------------------*/
+toolbar[printpreview="true"] {
+  -moz-binding: url("chrome://global/content/printPreviewBindings.xml#printpreviewtoolbar");
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, completed),
+.calendar-task-tree-col-completed {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-check.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, completed, current) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-act-check.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress, current) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-act.gif);
+    -moz-image-region: auto !important;
+}
