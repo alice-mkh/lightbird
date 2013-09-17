@@ -598,7 +598,7 @@ toolbar[iconsize="small"] #calendar-publish-button:hover {
 #calendar-multiweek-view-tbutton:active {
     -moz-image-region: rect(24px 144px 48px 120px);
 }
-#calendar-multiweek-view-tbutton:hover:active {
+#calendar-multiweek-view-tbutton:hover:active,
 #calendar-multiweek-view-tbutton[checked="true"] {
     -moz-image-region: rect(72px 144px 96px 120px);
 }
