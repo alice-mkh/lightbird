@@ -5,3 +5,5 @@
 <!ENTITY calendarCmd.label                 "Календарь" >
 <!ENTITY calendarCmd.accesskey             "к" >
 <!ENTITY calendarCmd.commandkey            "8" >
+<!ENTITY startup.calendar.label            "Календарь" >
+<!ENTITY startup.calendar.accesskey        "к" >
