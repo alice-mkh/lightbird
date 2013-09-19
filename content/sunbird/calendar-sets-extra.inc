@@ -5,3 +5,9 @@
 <commandset id="commands"/>
 
 <commandset id="tasksCommands"/>
+
+<stringbundleset id="stringbundleset">
+  <stringbundle id="bundle_brand"
+                src="chrome://branding/locale/brand.properties"/>
+  <stringbundle id="bundle_viewApplyTheme"/>
+</stringbundleset>

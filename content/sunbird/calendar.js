@@ -8,6 +8,8 @@
 
 Components.utils.import("resource://gre/modules/Services.jsm");
 
+var gBrandBundle;
+
 function calendarInit() {
     // Take care of common initialization
     commonInitCalendar();
@@ -30,6 +32,8 @@ function calendarInit() {
     }*/
 
     Services.prefs.setBoolPref("extensions.lightbird.tempNotification", false);
+
+    gBrandBundle = document.getElementById("bundle_brand");
 }
 
 function handleCommandLine(aComLine) {
