@@ -1,9 +1,9 @@
 Lightbird is a SeaMonkey extension that aims to provide conventional interface for Lightning calendar.
 It is based on Sunbird code, and requires Lightning to work. Since it's just UI, it doesn't contain any binary components.
 
-It does NOT disable normal Lightning UI, which can still be used. However, component bar and Window menu will have an additional icon/entry for calendar.
+It disables default Lightning UI, but there is an option on Calendar preferences pane to re-enable it 
 
-It also does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't. Since Thunderbird support requires additional effort here, I don't support it.
+It does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't. Since Thunderbird support requires additional effort here, I don't support it.
 
 TODO before publishing on AMO:
 * Bug fixes
