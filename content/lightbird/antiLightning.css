@@ -1,0 +1,35 @@
+#calendar-show-todaypane-panel,
+#calendar-invitations-panel,
+#today-splitter,
+#calendar-tab-button,
+#task-tab-button,
+#lightning-button-calendar,
+#lightning-button-tasks,
+#menu_Open,
+#ltnNewEvent,
+#ltnNewTask,
+#afterltnNewTask,
+#ltnNewCalendar,
+#ltnCalendarProperties,overlay
+#ltnViewMenuSeparator,
+#ltnTodayPaneMenu,
+#ltnCalendarMenu,
+#ltnTasksMenu,
+#ltnGoToToday,
+#ltnGoNextSeparator,
+#calendar-go-menu-next,
+#ltnGoPreviousSeparator,
+#calendar-go-menu-previous,
+#menu_Event_Task,
+#mailContext-calendar-convert-menu {
+    display: none !important;
+}
+
+#openMessageFileMenuitem {
+    display: block !important;
+}
+
+#today-pane-panel,
+#calendarTabPanel {
+    visibility: collapse !important;
+}

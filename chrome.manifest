@@ -10,15 +10,14 @@ skin sunbird modern/1.0 skin/modern/
 content lightbird content/lightbird/
 skin lightbird classic/1.0 skin/common/
 skin lightbird modern/1.0 skin/modern-common/
-overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/lightbirdOverlay.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
-overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/lightbirdOverlay.xul application=$SM_ID
+overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
+overlay chrome://calendar/content/preferences/general.xul chrome://lightbird/content/calPrefsOverlay.xul application=$SM_ID
+overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/messengerOverlay.xul application=$SM_ID
+overlay chrome://messenger/content/msgAccountCentral.xul chrome://lightbird/content/accountCentralOverlay.xul application=$SM_ID
 component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 
 #Locales
 locale sunbird en-US locale/en-US/
 locale sunbird ru locale/ru/
-
-#Purge Lightning UI. TODO: Make this optional
-style chrome://messenger/content/messenger.xul chrome://lightbird/content/antiLightning.css
-style chrome://messenger/content/msgAccountCentral.xul chrome://lightbird/content/antiLightning-accountCentral.css

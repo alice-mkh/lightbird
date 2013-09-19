@@ -2,6 +2,4 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-pref("general.startup.calendar", false);
-pref("extensions.lightbird.tempNotification", false);
-pref("extensions.lightbird.disableLightningUI", true);
+cssName = "antiLightning-accountCentral";

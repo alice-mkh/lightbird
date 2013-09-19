@@ -7,3 +7,6 @@
 <!ENTITY calendarCmd.commandkey            "8" >
 <!ENTITY startup.calendar.label            "Календарь" >
 <!ENTITY startup.calendar.accesskey        "к" >
+<!ENTITY pref.lightbird.label              "Настройки Lightbird" >
+<!ENTITY pref.disableLightning.label       "Отключить стандартный интерфейс Lightning" >
+<!ENTITY pref.disableLightning.accesskey   "ч" >
