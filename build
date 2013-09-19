@@ -10,6 +10,8 @@ cp defaults temp -r
 cp locale temp -r
 cp skin temp -r
 
+cd temp
+
 #Substitute variables
 while read LINE; do
     if [[ $LINE != [A-Z]* ]]; then
@@ -21,7 +23,7 @@ while read LINE; do
     eval "$LINE1=\"$LINE2\""
 done < "config.txt"
 
-cd temp/content/sunbird
+cd content/sunbird
 
 #sed -E "/ifn?def MOZ_UPDATER/,/endif/d" -i *
 sed -E "/ifn?def XP_MACOSX/,/endif/d" -i *
