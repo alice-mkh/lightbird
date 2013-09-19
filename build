@@ -21,7 +21,7 @@ while read LINE; do
     LINE2=`echo $LINE | grep -oE "[^=]+$"`
     sed "s|\$$LINE1|$LINE2|g" -i `find . -name "*.rdf"` `find . -name "*.js"` `find . -name "*.css"` `find . -name "*.manifest"`
     eval "$LINE1=\"$LINE2\""
-done < "config.txt"
+done < "../config.txt"
 
 cd content/sunbird
 
@@ -31,8 +31,8 @@ sed -E "/ifn?def XP_UNIX/,/endif/d" -i *
 sed -E "/ifn?def XP_WIN/,/endif/d" -i *
 for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sunbird-scripts calendar-menubar sunbird-toolbar; do
     tail -n +5 "$F.inc" > "$F.inc.temp"
-    sed "/#include $F.inc/r $F.inc.temp" -i calendar.xul hiddenWindow.xul
-    sed "s/#include $F.inc//g" -i calendar.xul hiddenWindow.xul
+    sed "/#include $F.inc/r $F.inc.temp" -i calendar.xul
+    sed "s/#include $F.inc//g" -i calendar.xul
     rm "$F.inc"
     rm "$F.inc.temp"
 done
