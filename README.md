@@ -5,8 +5,6 @@ It does NOT disable normal Lightning UI, which can still be used. However, compo
 
 It also does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't. Since Thunderbird support requires additional effort here, I don't support it.
 
-TODO:
+TODO before publishing on AMO:
 * Bug fixes
-* Ability to open calendar when SeaMonkey starts
 * Better integration with SeaMonkey: New event/task in Navigator File->Create menu etc.
-* Modern theme support
