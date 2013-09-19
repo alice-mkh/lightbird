@@ -4,7 +4,9 @@ rm -rf temp
 mkdir temp
 cp chrome.manifest temp
 cp install.rdf temp
+cp components temp -r
 cp content temp -r
+cp defaults temp -r
 cp locale temp -r
 cp skin temp -r
 

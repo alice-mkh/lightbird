@@ -28,6 +28,8 @@ function calendarInit() {
         }
         handleCommandLine(cl);
     }*/
+
+    Services.prefs.setBoolPref("extensions.lightbird.tempNotification", false);
 }
 
 function handleCommandLine(aComLine) {
