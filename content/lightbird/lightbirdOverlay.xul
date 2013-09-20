@@ -4,7 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 
-<!DOCTYPE overlay SYSTEM "chrome://sunbird/locale/lightbirdOverlay.dtd" >
+<!DOCTYPE overlay SYSTEM "chrome://sunbird/locale/lightbird.dtd" >
 
 <!-- This is the overlay that adds Calendar to the (global) task menu. -->
 
