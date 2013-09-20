@@ -26,6 +26,10 @@
 <!ENTITY calendar.reloadserver.key                         "R">
 <!ENTITY calendar.reloadserver.accesskey                   "ь">
 
+<!ENTITY calendar.synccalendars.label                      "Синхронизировать календари">
+<!ENTITY calendar.synccalendars.key                        "R">
+<!ENTITY calendar.synccalendars.accesskey                  "ь">
+
 <!ENTITY calendar.publish.calendar.label                   "Публикация…">
 <!ENTITY calendar.publish.calendar.accesskey               "у">
 <!ENTITY calendar.publish.selection.label                  "Публикация выделенного…">

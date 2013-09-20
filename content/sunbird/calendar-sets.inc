@@ -30,14 +30,12 @@
   <command id="open_local_calendar_command" oncommand="openLocalCalendar()"/>
 
   <command id="go_date_command" oncommand="pickAndGoToDate()"/>
-<!--  <command id="cmd_quitApplication"     oncommand="goQuitApplication()"/>-->
-	
+
   <command id="close_calendar_command" oncommand="closeCalendar()"/>
   <command id="calendar_go_to_today_command" oncommand="goToDate(now())"/>
 
 #ifdef XP_MACOSX
   <command id="minimizeWindowCmd" oncommand="window.minimize();"/>
-  <command id="zoomWindowCmd" oncommand="zoomWindow();"/>
 #endif
 </commandset>
 
@@ -65,7 +63,7 @@
   <key id="go_to_date_key"       keycode="VK_UP"                         observes="go_date_command"             modifiers="accel"/>
 
   <key id="import_key"           key="&calendar.import.key;"             observes="calendar_import_command"              modifiers="accel"/>
-  <key id="reload_server_key"    key="&calendar.context.synccalendars.accesskey;" observes="calendar_reload_remote_calendars"  modifiers="accel"/>
+  <key id="reload_server_key"    key="&calendar.synccalendars.key;"      observes="calendar_reload_remote_calendars"  modifiers="accel"/>
 
 # TODO L10N These keys need localization
   <key id="key_fullZoomReduce"   key="-"                                 observes="cmd_fullZoomReduce"          modifiers="accel"/>

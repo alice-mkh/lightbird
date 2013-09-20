@@ -64,8 +64,8 @@
 
            <menuitem id="calendar-synccalendars-menu"
                      key="reload_server_key"
-                     label="&calendar.context.synccalendars.label;"
-                     accesskey="&calendar.context.synccalendars.accesskey;"
+                     label="&calendar.synccalendars.label;"
+                     accesskey="&calendar.synccalendars.accesskey;"
                      observes="calendar_reload_remote_calendars"/>
            <menuseparator id="calendar-reload-sep"/>
 
@@ -262,11 +262,6 @@
            </menu>
            <menuseparator/>
            <menu id="menu_viewApplyTheme"/>
-           <!-- XXX lilmatt: Finish this! -->
-<!--           <menuitem id="calendar-fullscreen-menu"
-                     label="&calendar.fullscreen.label;"
-                     accesskey="&calendar.fullscreen.accesskey;"
-                     disabled="true"/>-->
          </menupopup>
        </menu>
 

@@ -170,10 +170,6 @@
                   flex="1"/>
   <statusbarpanel class="statusbarpanel-progress" collapsed="true" id="statusbar-progresspanel">
       <progressmeter class="progressmeter-statusbar" id="statusbar-icon" mode="normal" value="0"/>
-<!--  <statusbarpanel id="offline-status"
-                  class="statusbarpanel-iconic"
-                  offline="true"
-                  oncommand="calendarOfflineManager.toggleOfflineStatus()"/>-->
   </statusbarpanel>
   <statusbarpanel id="offline-status"
                   class="statusbarpanel-iconic"
