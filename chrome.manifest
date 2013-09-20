@@ -18,5 +18,34 @@ component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 
 #Locales
+locale sunbird ca locale/ca/
+locale sunbird cs locale/cs/
+locale sunbird da locale/da/
+locale sunbird de locale/de/
+locale sunbird en-GB locale/en-GB/
 locale sunbird en-US locale/en-US/
+locale sunbird es-AR locale/es-AR/
+locale sunbird es-ES locale/es-ES/
+locale sunbird et locale/et/
+locale sunbird eu locale/eu/
+locale sunbird fi locale/fi/
+locale sunbird fr locale/fr/
+locale sunbird fy-NL locale/fy-NL/
+locale sunbird ga-IE locale/ga-IE/
+locale sunbird gd locale/gd/
+locale sunbird hr locale/hr/
+locale sunbird hu locale/hu/
+locale sunbird is locale/is/
+locale sunbird it locale/it/
+locale sunbird ja locale/ja/
+locale sunbird ko locale/ko/
+locale sunbird lt locale/lt/
+locale sunbird nb-NO locale/nb-NO/
+locale sunbird nl locale/nl/
+locale sunbird nn-NO locale/nn-NO/
+locale sunbird pl locale/pl/
+locale sunbird pt-PT locale/pt-PT/
 locale sunbird ru locale/ru/
+locale sunbird sk locale/sk/
+locale sunbird zh-CN locale/zh-CN/
+locale sunbird zh-TW locale/zh-TW/
