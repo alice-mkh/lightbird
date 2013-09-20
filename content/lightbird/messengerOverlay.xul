@@ -5,8 +5,5 @@
 
 <overlay id="messsengerOverlayLightbird"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script type="application/javascript">
-        var cssName = "antiLightning";
-    </script>
     <script type="application/javascript" src="chrome://lightbird/content/messengerOverlay.js"/>
 </overlay>

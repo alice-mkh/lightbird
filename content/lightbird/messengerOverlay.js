@@ -13,7 +13,7 @@ const prefObserver = {
         }
         let b = Services.prefs.getBoolPref("extensions.lightbird."+data);
 
-        let uri = Services.io.newURI("chrome://lightbird/content/" + cssName + ".css", null, null);
+        let uri = Services.io.newURI("chrome://lightbird/content/antiLightning.css", null, null);
         let b2 = cssService.sheetRegistered(uri, cssService.USER_SHEET);
         if (b == b2){
             return;

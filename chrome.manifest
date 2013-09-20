@@ -14,7 +14,6 @@ overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/conten
 overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
 overlay chrome://calendar/content/preferences/general.xul chrome://lightbird/content/calPrefsOverlay.xul application=$SM_ID
 overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/messengerOverlay.xul application=$SM_ID
-overlay chrome://messenger/content/msgAccountCentral.xul chrome://lightbird/content/accountCentralOverlay.xul application=$SM_ID
 component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 
