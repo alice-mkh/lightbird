@@ -67,11 +67,10 @@
   <key id="key_fullZoomEnlarge2" key="="                                 observes="cmd_fullZoomEnlarge"         modifiers="accel"/>
   <key id="key_fullZoomReset"    key="0"                                 observes="cmd_fullZoomReset"           modifiers="accel"/>
 
-  <key id="key_find"/>
-<!--  <key id="find_key"
+  <key id="find_key"
        key="&sunbird.find.key;"
        modifiers="accel"
-       oncommand="focusSearch();"/>-->
+       oncommand="focusSearch();"/>
 
 #ifdef XP_MACOSX
   <key id="key_minimizeWindow"   key="&minimizeWindow.key;"              command="minimizeWindow"               modifiers="accel"/>
