@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for LANG in $@; do
-LANG=en_US.utf8 hg clone http://hg.mozilla.org/releases/l10n/mozilla-release/$LANG/ $LANG
+LANGUAGE=en_US.UTF-8 hg clone http://hg.mozilla.org/releases/l10n/mozilla-release/$LANG/ $LANG
 cp -r $LANG/calendar/chrome/sunbird locale/$LANG
 rm -rf $LANG
 cp locale/en-US/lightbird.dtd locale/$LANG/
