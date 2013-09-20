@@ -15,6 +15,7 @@ function calendarInit() {
     commonInitCalendar();
 
     var toolbox = document.getElementById("calendar-toolbox");
+    toolbox.customizeInit = CalendarToolboxCustomizeInit;
     toolbox.customizeDone = CalendarToolboxCustomizeDone;
 
     // Setup the offline manager
@@ -137,47 +138,14 @@ function closeCalendar() {
     self.close();
 }
 
-function openPreferences() {
-    // Check to see if the prefwindow is already open
-    var win = Services.wm.getMostRecentWindow("Calendar:Preferences");
 
-    if (win) {
-        win.focus();
-    } else {
-        // The prefwindow should only be modal on non-instant-apply platforms
-        var instApply = getPrefSafe("browser.preferences.instantApply", false);
-
-        var features = "chrome,titlebar,toolbar,centerscreen," +
-                       (instApply ? "dialog=no" : "modal");
-
-        var url = "chrome://calendar/content/preferences/preferences.xul";
-
-        openDialog(url, "Preferences", features);
-    }
-}
-
-function CalendarCustomizeToolbar() {
-  // Disable the toolbar context menu items
-  var menubar = document.getElementById("main-menubar");
-  for (var i = 0; i < menubar.childNodes.length; ++i) {
-    menubar.childNodes[i].setAttribute("disabled", true);
-  }
-
-  var cmd = document.getElementById("cmd_CustomizeToolbars");
-  cmd.setAttribute("disabled", "true");
-
-  window.openDialog("chrome://global/content/customizeToolbar.xul", "CustomizeToolbar",
-                    "chrome,all,dependent", document.getElementById("calendar-toolbox"));
+function CalendarToolboxCustomizeInit(aToolboxChanged) {
+  toolboxCustomizeInit("main-menubar");
 }
 
 function CalendarToolboxCustomizeDone(aToolboxChanged) {
   // Re-enable parts of the UI we disabled during the dialog
-  var menubar = document.getElementById("main-menubar");
-  for (var i = 0; i < menubar.childNodes.length; ++i) {
-    menubar.childNodes[i].setAttribute("disabled", false);
-  }
-  var cmd = document.getElementById("cmd_CustomizeToolbars");
-  cmd.removeAttribute("disabled");
+  toolboxCustomizeDone("main-menubar", document.getElementById("calendar-toolbox"), aToolboxChanged);
 
   // XXX Shouldn't have to do this, but I do
   window.focus();

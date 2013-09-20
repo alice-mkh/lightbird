@@ -15,6 +15,7 @@
   <command id="cmd_cut" oncommand="goDoCommand('cmd_cut')"/>
   <command id="cmd_copy" oncommand="goDoCommand('cmd_copy')"/>
   <command id="cmd_paste" oncommand="goDoCommand('cmd_paste')"/>
+  <command id="cmd_find" oncommand="focusSearch();"/>
   <command id="cmd_selectAll" oncommand="goDoCommand('cmd_selectAll')"/>
   <command id="cmd_pageSetup" oncommand="goDoCommand('cmd_pageSetup')"/>
   <command id="cmd_print" oncommand="goDoCommand('cmd_print')"/>
@@ -22,7 +23,6 @@
   <command id="cmd_fullZoomEnlarge" oncommand="goDoCommand('cmd_fullZoomEnlarge')"/>
   <command id="cmd_fullZoomReset" oncommand="goDoCommand('cmd_fullZoomReset')"/>
 
-  <command id="cmd_CustomizeToolbars" oncommand="CalendarCustomizeToolbar()"/>
   <command id="cmd_showStatusBar" oncommand="goToggleToolbar('status-bar', 'menu_showStatusBar');"/>
   <command id="cmd_showTaskBox" oncommand="goToggleToolbar('todo-tab-panel', 'menu_showTaskBox'); goToggleToolbar('calendar-todo-splitter');"/>
 
@@ -45,20 +45,16 @@
   <key id="modify_event_key"     key="&event.edit.event.key;"            observes="calendar_modify_event_command"  modifiers="accel"/>
   <key id="new_calendar_key"     key="&calendar.new.server.key;"         observes="calendar_new_calendar_command"  modifiers="accel"/>
   <key id="open_calendar_key"    key="&calendar.open.file.key;"          observes="open_local_calendar_command" modifiers="accel"/>
-  <key id="key_close"            key="&sunbird.close.key;"               observes="close_calendar_command"      modifiers="accel"/>
-  <key id="print_key"            key="&calendar.print.key;"              observes="cmd_print"                   modifiers="accel"/>
+  <key id="key_close"/>
+  <key id="key_print"/>
 
-  <key id="undo_key"             key="&calendar.undo.key;"               observes="cmd_undo"                    modifiers="accel"/>
-#ifdef XP_UNIX
-  <key id="redo_key"             key="&calendar.undo.key;"               observes="cmd_redo"                    modifiers="shift, accel"/>
-#else
-  <key id="redo_key"             key="&calendar.redo.key;"               observes="cmd_redo"                    modifiers="accel"/>
-#endif
+  <key id="key_undo"/>
+  <key id="key_redo"/>
 
-  <key id="key_cut"              key="&calendar.cut.key;"                observes="cmd_cut"                     modifiers="accel"/>
-  <key id="key_copy"             key="&calendar.copy.key;"               observes="cmd_copy"                    modifiers="accel"/>
-  <key id="key_paste"            key="&calendar.paste.key;"              observes="cmd_paste"                   modifiers="accel"/>
-  <key id="key_selectAll"        key="&calendar.selectall.key;"          observes="cmd_selectAll"               modifiers="accel"/>
+  <key id="key_cut"/>
+  <key id="key_copy"/>
+  <key id="key_paste"/>
+  <key id="key_selectAll"/>
 
   <key id="go_to_date_key"       keycode="VK_UP"                         observes="go_date_command"             modifiers="accel"/>
 
@@ -71,10 +67,11 @@
   <key id="key_fullZoomEnlarge2" key="="                                 observes="cmd_fullZoomEnlarge"         modifiers="accel"/>
   <key id="key_fullZoomReset"    key="0"                                 observes="cmd_fullZoomReset"           modifiers="accel"/>
 
-  <key id="find_key"
+  <key id="key_find"/>
+<!--  <key id="find_key"
        key="&sunbird.find.key;"
        modifiers="accel"
-       oncommand="focusSearch();"/>
+       oncommand="focusSearch();"/>-->
 
 #ifdef XP_MACOSX
   <key id="key_minimizeWindow"   key="&minimizeWindow.key;"              command="minimizeWindow"               modifiers="accel"/>

@@ -74,7 +74,7 @@
                      accesskey="&calendar.pagesetup.accesskey;"
                      observes="cmd_pageSetup"/>
            <menuitem id="calendar-print-menu"
-                     key="print_key"
+                     key="key_print"
                      label="&calendar.print.label;"
                      accesskey="&calendar.print.accesskey;"
                      observes="cmd_print"/>
@@ -89,12 +89,12 @@
               accesskey="&editMenu.accesskey;">
          <menupopup id="mppEdit">
            <menuitem id="calendar-undo-menu"
-                     key="undo_key"
+                     key="key_undo"
                      accesskey="&calendar.undo.accesskey;"
                      label="&calendar.undo.label;"
                      observes="cmd_undo"/>
            <menuitem id="calendar-redo-menu"
-                     key="redo_key"
+                     key="key_redo"
                      accesskey="&calendar.redo.accesskey;"
                      label="&calendar.redo.label;"
                      observes="cmd_redo"/>
@@ -148,17 +148,10 @@
              label="&viewMenu.label;"
              accesskey="&viewMenu.accesskey;">
          <menupopup id="menu_viewPopup">
-           <menu id="menu_Toolbars"
-                 label="&toolbarsMenu.label;"
-                 accesskey="&toolbarsMenu.accesskey;"
-                 onpopupshowing="sbOnViewToolbarsPopupShowing(event);">
-             <menupopup>
-               <menuseparator/>
-               <menuitem id="calendar-view-menu-customize"
-                         observes="cmd_CustomizeToolbars"
-                         label="&sunbird.menu.customize.label;"
-                         accesskey="&sunbird.menu.customize.accesskey;"/>
-             </menupopup>
+            <menu id="menu_Toolbars">
+             <menupopup id="view_toolbars_popup"
+                        onpopupshowing="onViewToolbarsPopupShowing(event);"
+                        oncommand="onViewToolbarCommand(event);"/>
            </menu>
            <menuitem id="menu_showStatusBar"
                      type="checkbox"

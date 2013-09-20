@@ -65,12 +65,7 @@
 
 <!-- GENERAL CONTEXT MENU -->
 <popupset id="calendar-popupset">
-  <menupopup id="toolbar-context-menu">
-<!--    <menuitem command="cmd_CustomizeToolbars"
-              id="toolbar-context-menu-customize"
-              label="&sunbird.context.customize.label;"
-              accesskey="&sunbird.context.customize.accesskey;"/>-->
-  </menupopup>
+  <menupopup id="toolbar-context-menu"/>
 </popupset>
 
 #include calendar-sets-extra.inc
