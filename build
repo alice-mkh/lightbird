@@ -40,4 +40,4 @@ sed -E "s/#.*//g" -i *
 cd ../..
 #sed "s/\"\&/\"/g" -i */*
 
-zip ../lightbird-$VERSION-sm.xpi * -r
+zip ../$NAME-$VERSION-sm.xpi * -r
