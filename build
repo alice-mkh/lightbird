@@ -35,4 +35,9 @@ done
 sed -E "s/#.*//g" -i *
 cd ../..
 
+cd skin
+cp winstripe winstripe-aero -r
+sed "s/\.png/-aero\.png/g" -i winstripe-aero/toolbar.css
+cd ..
+
 zip ../$NAME-$VERSION-sm.xpi * -r

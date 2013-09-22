@@ -3,6 +3,7 @@ content sunbird content/sunbird/
 style chrome://global/content/customizeToolbar.xul chrome://sunbird/skin/calendar.css
 style chrome://global/content/customizeToolbar.xul chrome://sunbird/skin/toolbar.css
 skin sunbird classic/1.0 skin/winstripe/
+skin sunbird classic/1.0 skin/winstripe-aero/ os=WINNT osversion>=6
 skin sunbird classic/1.0 skin/pinstripe/ os=Darwin
 skin sunbird modern/1.0 skin/modern/
 
