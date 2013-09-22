@@ -150,7 +150,7 @@
       <vbox id="todo-tab-panel" persist="height,collapsed" flex="1"/>
     </vbox>
 
-    <splitter id="cal_sidebar_splitter" collapse="before"
+    <splitter id="calsidebar_splitter" collapse="before"
               persist="state" orient="horizontal">
       <grippy/>
     </splitter>
