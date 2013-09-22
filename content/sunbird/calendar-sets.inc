@@ -34,9 +34,9 @@
   <command id="close_calendar_command" oncommand="closeCalendar()"/>
   <command id="calendar_go_to_today_command" oncommand="goToDate(now())"/>
 
-#ifdef XP_MACOSX
+<!--
   <command id="minimizeWindowCmd" oncommand="window.minimize();"/>
-#endif
+-->
 </commandset>
 
 <keyset id="calendar-keys">
@@ -72,12 +72,12 @@
        modifiers="accel"
        oncommand="focusSearch();"/>
 
-#ifdef XP_MACOSX
+<!--
   <key id="key_minimizeWindow"   key="&minimizeWindow.key;"              command="minimizeWindow"               modifiers="accel"/>
   <key id="key_preferencesCmdMac" key="&preferencesCmdMac.commandkey;" modifiers="&preferencesCmdMac.modifiers;"/>
   <key id="key_hideThisAppCmdMac" key="&hideThisAppCmdMac.commandkey;" modifiers="&hideThisAppCmdMac.modifiers;"/>
   <key id="key_hideOtherAppsCmdMac" key="&hideOtherAppsCmdMac.commandkey;" modifiers="&hideOtherAppsCmdMac.modifiers;"/>
-#endif
+-->
 </keyset>
 
 <keyset id="tasksKeys"/>

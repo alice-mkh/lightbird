@@ -25,10 +25,6 @@ done < "../config.txt"
 
 cd content/sunbird
 
-#sed -E "/ifn?def MOZ_UPDATER/,/endif/d" -i *
-sed -E "/ifn?def XP_MACOSX/,/endif/d" -i *
-sed -E "/ifn?def XP_UNIX/,/endif/d" -i *
-sed -E "/ifn?def XP_WIN/,/endif/d" -i *
 for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sunbird-scripts calendar-menubar sunbird-toolbar; do
     tail -n +5 "$F.inc" > "$F.inc.temp"
     sed "/#include $F.inc/r $F.inc.temp" -i calendar.xul
@@ -38,6 +34,5 @@ for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sun
 done
 sed -E "s/#.*//g" -i *
 cd ../..
-#sed "s/\"\&/\"/g" -i */*
 
 zip ../$NAME-$VERSION-sm.xpi * -r
