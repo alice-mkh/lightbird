@@ -4,7 +4,7 @@
 
 Components.utils.import("resource://gre/modules/Services.jsm");
 
-const prefObserver = {
+const lightbirdPrefObserver = {
     observe: function(subject, topic, data) {
         if (topic != "nsPref:changed" || data != "disableLightningUI"){
             return;
@@ -28,15 +28,15 @@ const prefObserver = {
 function lightbirdOnLoad() {
     let prefs = Services.prefs.getBranch("extensions.lightbird.");
     prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
-    prefs.addObserver("", prefObserver, false);
-    prefObserver.observe("", "nsPref:changed", "disableLightningUI");
+    prefs.addObserver("", lightbirdPrefObserver, false);
+    lightbirdPrefObserver.observe("", "nsPref:changed", "disableLightningUI");
 
     addEventListener("unload", lightbirdOnUnload, false);
 }
 
 function lightbirdOnUnload() {
     let prefs = Services.prefs.getBranch("extensions.lightbird.");
-    prefs.removeObserver("", prefObserver);
+    prefs.removeObserver("", lightbirdPrefObserver);
 }
 
 addEventListener("load", lightbirdOnLoad, false);
