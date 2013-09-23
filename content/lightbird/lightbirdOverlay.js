@@ -3,7 +3,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 Components.utils.import("resource://gre/modules/Services.jsm");
-var prefs = Services.prefs.getBranch("extensions.lightbird.");
 
 function toCalendar() {
     toOpenWindowByType("calendarMainWindow", "chrome://sunbird/content/calendar.xul");
@@ -42,6 +41,7 @@ const alertObserver = {
 };
 
 function lightbirdOnLoad() {
+    let prefs = Services.prefs.getBranch("extensions.lightbird.");
     let alarmService = Components.classes['@mozilla.org/calendar/alarm-service;1']
                        .getService(Components.interfaces.calIAlarmService);
     alarmService.addObserver(alertObserver);
@@ -54,6 +54,7 @@ function lightbirdOnLoad() {
 }
 
 function lightbirdOnUnload() {
+    let prefs = Services.prefs.getBranch("extensions.lightbird.");
     let alarmService = Components.classes['@mozilla.org/calendar/alarm-service;1']
                        .getService(Components.interfaces.calIAlarmService);
     alarmService.removeObserver(alertObserver);

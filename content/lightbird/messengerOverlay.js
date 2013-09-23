@@ -3,14 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 Components.utils.import("resource://gre/modules/Services.jsm");
-var prefs = Services.prefs.getBranch("extensions.lightbird.");
-var cssService = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
 
 const prefObserver = {
     observe: function(subject, topic, data) {
         if (topic != "nsPref:changed" || data != "disableLightningUI"){
             return;
         }
+        let cssService = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
         let b = Services.prefs.getBoolPref("extensions.lightbird."+data);
 
         let uri = Services.io.newURI("chrome://lightbird/content/antiLightning.css", null, null);
@@ -27,6 +26,7 @@ const prefObserver = {
 };
 
 function lightbirdOnLoad() {
+    let prefs = Services.prefs.getBranch("extensions.lightbird.");
     prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
     prefs.addObserver("", prefObserver, false);
     prefObserver.observe("", "nsPref:changed", "disableLightningUI");
@@ -35,6 +35,7 @@ function lightbirdOnLoad() {
 }
 
 function lightbirdOnUnload() {
+    let prefs = Services.prefs.getBranch("extensions.lightbird.");
     prefs.removeObserver("", prefObserver);
 }
 
