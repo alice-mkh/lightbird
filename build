@@ -36,7 +36,7 @@ sed -E "s/^#.*//g" -i *
 cd ../..
 
 cd skin
-cp winstripe winstripe-aero -r
+cp winstripe/toolbar.css winstripe-aero
 sed "s/\.png/-aero\.png/g" -i winstripe-aero/toolbar.css
 cd ..
 
