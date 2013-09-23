@@ -8,7 +8,7 @@
         <em:bootstrap>false</em:bootstrap>
         <em:unpack>false</em:unpack>
         <em:strictCompatibility>false</em:strictCompatibility>
-        <em:iconURL>chrome://calendar/skin/cal-icon32.png</em:iconURL>
+        <em:iconURL>$EXT_ICON</em:iconURL>
         <em:name>$EXT_NAME</em:name>
         <em:description>$EXT_DESC</em:description>
         <em:creator>Exalm</em:creator>
