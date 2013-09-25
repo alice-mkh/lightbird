@@ -7,6 +7,9 @@ skin sunbird classic/1.0 skin/winstripe-aero/ os=WINNT osversion>=6
 skin sunbird classic/1.0 skin/pinstripe/ os=Darwin
 skin sunbird modern/1.0 skin/modern/
 
+overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/lightningOverlay.xul
+overlay chrome://lightning/content/messenger-overlay-sidebar.xul chrome://lightbird/content/lightningOverlay2.xul
+
 #Lightbird
 content lightbird content/lightbird/
 skin lightbird classic/1.0 skin/common/

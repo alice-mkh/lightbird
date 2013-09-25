@@ -42,6 +42,45 @@
     visibility: collapse !important;
 }
 
+calendar-day-view,
+calendar-week-view,
+calendar-multiweek-view,
+calendar-month-view,
+calendar-task-tree,
+menupopup[type="task-progress"] > arrowscrollbox,
+menupopup[type="task-priority"] > arrowscrollbox,
+task-menupopup,
+calendar-caption,
+.item-date-row,
+lightning-notification-bar,
+#calendar-task-tree-detail > calendar-task-tree,
+treenode-checkbox,
+modebox,
+modevbox,
+modehbox,
+toolbarbutton[doubleimage="true"],
+toolbarbutton[todaypane="true"],
+minimonth,
+datepicker,
+datepicker-forever,
+datetimepicker,
+datetextpicker,
+timepicker,
+timepicker-grids,
+timepicker-minute,
+timepicker-hour,
+calendar-base-view,
+calendar-editable-item,
+calendar-category-box,
+calendar-shadow-box,
+agenda-checkbox-richlist-item,
+agenda-richlist-item,
+agenda-allday-richlist-item,
+daypicker {
+    -moz-binding: none !important;
+    display: none !important;
+}
+
 }
 
 @-moz-document url(chrome://messenger/content/msgAccountCentral.xul) {
