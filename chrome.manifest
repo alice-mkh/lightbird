@@ -7,18 +7,17 @@ skin sunbird classic/1.0 skin/winstripe-aero/ os=WINNT osversion>=6
 skin sunbird classic/1.0 skin/pinstripe/ os=Darwin
 skin sunbird modern/1.0 skin/modern/
 
-overlay chrome://navigator/content/navigator.xul chrome://lightbird/content/navigatorOverlay.xul
-overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/lightningOverlay.xul
-overlay chrome://lightning/content/messenger-overlay-sidebar.xul chrome://lightbird/content/lightningOverlay2.xul
-
 #Lightbird
 content lightbird content/lightbird/
 skin lightbird classic/1.0 skin/common/
 skin lightbird modern/1.0 skin/modern-common/
-overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/lightbirdOverlay.xul application=$SM_ID
+overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/tasksOverlay.xul application=$SM_ID
 overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
 overlay chrome://calendar/content/preferences/general.xul chrome://lightbird/content/calPrefsOverlay.xul application=$SM_ID
+overlay chrome://navigator/content/navigator.xul chrome://lightbird/content/navigatorOverlay.xul application=$SM_ID
 overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/messengerOverlay.xul application=$SM_ID
+overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/lightningOverlay.xul application=$SM_ID
+overlay chrome://lightning/content/messenger-overlay-sidebar.xul chrome://lightbird/content/lightningOverlay2.xul
 component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 
