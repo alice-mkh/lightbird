@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE overlay SYSTEM "chrome://lightning/locale/lightning.dtd" >
+
+<overlay id="navigatorOverlayLightbird"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <broadcasterset id="mainBroadcasterSet">
+        <broadcaster id="viewLightbirdTasksSidebar"
+                     autoCheck="false"
+                     label="&lightning.menu.view.tasks.label;"
+                     type="checkbox"
+                     group="sidebar"
+                     sidebarurl="chrome://lightbird/content/tasksSidebar.xul"
+                     sidebartitle="&lightning.menu.view.tasks.label;"
+                     oncommand="toggleSidebar('viewLightbirdTasksSidebar');"/>
+    </broadcasterset>
+</overlay>
