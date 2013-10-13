@@ -4,10 +4,14 @@
 
 Components.utils.import("resource://calendar/modules/calUtils.jsm");
 
+var gCurrentMode = 'tasks';
+
 var TasksSidebar = {
     onLoad: function onLoad() {
         updateCalendarToDoUnifinder();
-        document.commandDispatcher.updateCommands("calendar_commands");
+        calendarUpdateNewItemsCommand();
+        calendarController.updateCommands();
+        calendarController2.updateCommands();
     },
 
     onUnload: function onUnload() {
@@ -22,5 +26,6 @@ function currentView(){
     view.selectedDay = cal.now();
     return view;
 }
+
 
 function ensureCalendarVisible(aCalendar) {}
