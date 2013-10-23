@@ -15,4 +15,5 @@
   <!ENTITY % dtd4 SYSTEM "chrome://global/locale/global.dtd" > %dtd4;
   <!ENTITY % downloadsDTD SYSTEM "chrome://communicator/locale/downloads/downloadmanager.dtd" > %downloadsDTD;
   <!ENTITY % navigatorDTD SYSTEM "chrome://navigator/locale/navigator.dtd" > %navigatorDTD;
+  <!ENTITY % lightningDTD SYSTEM "chrome://lightning/locale/lightning.dtd" > %lightningDTD;
 ]>

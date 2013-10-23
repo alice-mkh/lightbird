@@ -9,21 +9,31 @@
          <menupopup id="menu_FilePopup">
 
            <!-- create new event or task (top of 1st menu, for new users) -->
-           <menuitem id="calendar-new-event-menu"
-                     key="calendar-new-event-key"
-                     label="&event.new.event;"
-                     accesskey="&event.new.event.accesskey;"
-                     observes="calendar_new_event_command"/>
-           <menuitem id="calendar-new-todo-menu"
-                     key="calendar-new-todo-key"
-                     label="&event.new.task;"
-                     accesskey="&event.new.task.accesskey;"
-                     observes="calendar_new_todo_command"/>
-           <menuitem id="calendar-new-calendar-menu"
-                     key="new_calendar_key"
-                     label="&calendar.new.server.label;"
-                     accesskey="&calendar.new.server.accesskey;"
-                     observes="calendar_new_calendar_command"/>
+           <menu id="menu_New">
+             <menupopup id="menu_NewPopup">
+               <menuitem id="calendar-new-event-menu"
+                         key="calendar-new-event-key"
+                         label="&lightning.menupopup.new.event.label;"
+                         accesskey="&event.new.event.accesskey;"
+                         observes="calendar_new_event_command"/>
+               <menuitem id="calendar-new-todo-menu"
+                         key="calendar-new-todo-key"
+                         label="&lightning.menupopup.new.task.label;"
+                         accesskey="&event.new.task.accesskey;"
+                         observes="calendar_new_todo_command"/>
+               <menuitem id="calendar-new-calendar-menu"
+                         key="new_calendar_key"
+                         label="&lightning.menupopup.new.calendar.label;"
+                         accesskey="&calendar.new.server.accesskey;"
+                         observes="calendar_new_calendar_command"/>
+               <menuseparator id="sep_NewPopup"/>
+               <menuitem id="menu_newNavigator"/>
+               <menuitem id="menu_newPrivateWindow"/>
+               <menuitem id="menu_newMessage"/>
+               <menuitem id="menu_newCard"/>
+               <menuitem id="menu_newEditor"/>
+             </menupopup>
+           </menu>
            <menuitem id="calendar-open-calendar-menu"
                      key="open_calendar_key"
                      label="&calendar.open.file.label;"

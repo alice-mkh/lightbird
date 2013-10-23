@@ -4,7 +4,19 @@
 
 <commandset id="commands"/>
 
-<commandset id="tasksCommands"/>
+<keyset id="newKeys">
+  <key id="key_newBlankPage"/>
+<!-- Conflicts with new event -->
+<!--   <key id="key_newNavigator"/> -->
+  <key id="key_newPrivateWindow"/>
+  <key id="key_newMessage"/>
+</keyset>
+
+<commandset id="tasksCommands">
+  <command id="cmd_newNavigator"/>
+  <command id="cmd_newPrivateWindow"/>
+  <command id="cmd_newEditor"/>
+</commandset>
 
 <stringbundleset id="stringbundleset">
   <stringbundle id="bundle_brand"
