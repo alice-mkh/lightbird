@@ -4,4 +4,3 @@
 
 pref("general.startup.calendar", false);
 pref("extensions.lightbird.tempNotification", false);
-/*pref("extensions.lightbird.disableLightningUI", true);*/
