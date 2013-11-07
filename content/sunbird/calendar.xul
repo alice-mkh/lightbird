@@ -19,7 +19,7 @@
 <!-- Overlays -->
 <?xul-overlay href="chrome://global/content/globalOverlay.xul"?>
 <?xul-overlay href="chrome://calendar/content/calendar-calendars-list.xul"?>
-<?xul-overlay href="chrome://calendar/content/calendar-unifinder.xul"?>
+<?xul-overlay href="chrome://sunbird/content/calendar-unifinder.xul"?>
 <?xul-overlay href="chrome://calendar/content/calendar-unifinder-todo.xul"?>
 <?xul-overlay href="chrome://calendar/content/calendar-common-sets.xul"?>
 <?xul-overlay href="chrome://calendar/content/calendar-views.xul"?>
