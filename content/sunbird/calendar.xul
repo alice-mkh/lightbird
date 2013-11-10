@@ -87,7 +87,7 @@
 
   <toolbarpalette id="calendarToolbarPalette">
 #include sunbird-toolbar.inc
-      <toolbaritem id="throbber-box" align="center">
+      <toolbaritem id="throbber-box" align="center" class="toolbaritem-noline">
         <button id="navigator-throbber"
                 oncommand="goClickThrobber('browser.throbber.url', event)"
                 onclick="checkForMiddleClick(this, event);"
