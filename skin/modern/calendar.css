@@ -90,7 +90,8 @@ toolbar[printpreview="true"] {
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future),
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress) {
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating) {
     list-style-image: url(chrome://global/skin/checkbox/cbox.gif);
     -moz-image-region: auto !important;
 }
@@ -98,9 +99,15 @@ toolbar[printpreview="true"] {
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday, current),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue, current),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future, current),
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress, current) {
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating, current) {
     list-style-image: url(chrome://global/skin/checkbox/cbox-act.gif);
     -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating, current) {
+    opacity: 0.2 !important;
 }
 
 .calendar-task-tree > treechildren::-moz-tree-row(selected, focus),
