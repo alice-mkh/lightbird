@@ -13,7 +13,7 @@ skin lightbird classic/1.0 skin/common/
 skin lightbird modern/1.0 skin/modern-common/
 overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/tasksOverlay.xul application=$SM_ID
 overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
-#The overlay that registers Tasks sidebar is disabled, because it's unfinished.
+overlay chrome://navigator/content/navigator.xul chrome://lightbird/content/navigatorOverlay.xul
 component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 

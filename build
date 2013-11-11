@@ -40,4 +40,14 @@ cp winstripe/toolbar.css winstripe-aero
 sed "s/\.png/-aero\.png/g" -i winstripe-aero/toolbar.css
 cd ..
 
+for ARG in $@; do
+    if [[ $ARG == "-no-sidebar" ]]; then
+        rm content/lightbird/tasksSidebar.js
+        rm content/lightbird/tasksSidebar.xul
+        rm content/lightbird/navigatorOverlay.xul
+        OVERLAY=`grep "navigatorOverlay" chrome.manifest`
+        sed -E "s|$OVERLAY||g" -i chrome.manifest
+    fi
+done
+
 zip ../$NAME-$VERSION-sm.xpi * -rq
