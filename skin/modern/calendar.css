@@ -102,3 +102,60 @@ toolbar[printpreview="true"] {
     list-style-image: url(chrome://global/skin/checkbox/cbox-act.gif);
     -moz-image-region: auto !important;
 }
+
+.calendar-task-tree > treechildren::-moz-tree-row(selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(duetoday, selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(future, selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(completed, selected, focus) {
+    background-color: #424F63 !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-row(inprogress, selected, focus) {
+    background-color: #126312 !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-row(overdue, selected, focus) {
+    background-color: #631212 !important;
+}
+
+#calsidebar_splitter {
+    border-width: 1px 2px !important;
+    border-style: solid !important;
+    -moz-border-top-colors: #DFE5EF !important;
+    -moz-border-right-colors: #3B414F #AAB4BF !important;
+    -moz-border-bottom-colors: #AAB4BF !important;
+    -moz-border-left-colors: #97A4B2 #DFE5EF !important;
+    min-width: 5px !important;
+    width: 9px !important;
+    background-color: #C1CBD5 !important;
+    margin-top: 0 !important;
+    -moz-margin-end: 0 !important;
+    position: static !important;
+    z-index: auto !important;
+    transition: none !important;
+}
+
+#unifinder-searchBox {
+    background: url("chrome://global/skin/toolbar/tb-mid.gif") #C7D0D9 repeat-x top !important;
+}
+
+#unifinder-search-field,
+#view-task-edit-field,
+#task-text-filter-field,
+#unifinder-task-edit-field {
+    border: 2px solid !important;
+    -moz-border-top-colors: #BEC3D3 #5D616E !important;
+    -moz-border-right-colors: #F8FAFE #5D616E !important;
+    -moz-border-bottom-colors: #F8FAFE #5D616E !important;
+    -moz-border-left-colors: #BEC3D3 #5D616E !important;
+}
+
+#unifinder-search-field[focused="true"],
+#view-task-edit-field[focused="true"],
+#task-text-filter-field[focused="true"],
+#unifinder-task-edit-field[focused="true"] {
+    -moz-border-top-colors: #98A5B2 #000000 !important;
+    -moz-border-right-colors: #98A5B2 #000000 !important;
+    -moz-border-bottom-colors: #98A5B2 #000000 !important;
+    -moz-border-left-colors: #98A5B2 #000000 !important;
+}
