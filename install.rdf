@@ -6,9 +6,8 @@
         <em:version>$VERSION</em:version>
         <em:type>2</em:type>
         <em:bootstrap>false</em:bootstrap>
-        <em:unpack>false</em:unpack>
+        <em:unpack>true</em:unpack>
         <em:strictCompatibility>false</em:strictCompatibility>
-        <em:iconURL>$EXT_ICON</em:iconURL>
         <em:name>$EXT_NAME</em:name>
         <em:description>$EXT_DESC</em:description>
         <em:creator>Exalm</em:creator>
