@@ -10,8 +10,8 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <preferences id="appearance_preferences">
-    <preference id="general.startup.calendar"
-                name="general.startup.calendar"
+    <preference id="$PREF_STARTUP"
+                name="$PREF_STARTUP"
                 type="bool"/>
 </preferences>
 
@@ -21,10 +21,10 @@
               accesskey="&startup.calendar.accesskey;"
               pref="true"
               preftype="bool"
-              prefstring="general.startup.calendar"
+              prefstring="$PREF_STARTUP"
               prefattribute="checked"
               wsm_persist="true"
-              preference="general.startup.calendar"/>
+              preference="$PREF_STARTUP"/>
 </groupbox>
 
 </overlay>

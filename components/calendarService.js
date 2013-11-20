@@ -52,7 +52,7 @@ function handler_QI(iid)
 }
 
 CLineService.prototype.commandLineArgument = "-calendar";
-CLineService.prototype.prefNameForStartup = "general.startup.calendar";
+CLineService.prototype.prefNameForStartup = "$PREF_STARTUP";
 CLineService.prototype.chromeUrlForTask = "chrome://sunbird/content/calendar.xul";
 CLineService.prototype.helpText = "Start with calendar";
 CLineService.prototype.handlesArgs = false;

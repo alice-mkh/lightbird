@@ -5,6 +5,8 @@ EXT_DESC=Standalone calendar UI for Lightning
 NAME=lightbird
 VERSION=0.2
 
+PREF_STARTUP=extensions.general.startup.calendar
+
 SM_ID={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 SM_MIN_VERSION=2.17
 SM_MAX_VERSION=2.23
