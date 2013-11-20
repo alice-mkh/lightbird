@@ -5,6 +5,7 @@
 <!-- DTD File with all strings specific to the calendar -->
 <!DOCTYPE window
 [
+  <!ENTITY % tbLightbirdDTD SYSTEM "chrome://sunbird/locale/tbLightbird.dtd" > %tbLightbirdDTD;
   <!ENTITY % dtd1 SYSTEM "chrome://calendar/locale/global.dtd" > %dtd1;
   <!ENTITY % dtd2 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd2;
   <!ENTITY % sunbirdDTD SYSTEM "chrome://sunbird/locale/sunbird.dtd" > %sunbirdDTD;

@@ -18,5 +18,12 @@
                 <em:maxVersion>$SM_MAX_VERSION</em:maxVersion>
             </Description>
         </em:targetApplication>
+        <em:targetApplication>
+            <Description>
+                <em:id>$TB_ID</em:id>
+                <em:minVersion>$TB_MIN_VERSION</em:minVersion>
+                <em:maxVersion>$TB_MAX_VERSION</em:maxVersion>
+            </Description>
+        </em:targetApplication>
     </Description>
 </RDF>

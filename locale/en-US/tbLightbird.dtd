@@ -1,0 +1,9 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY menuBar.tooltip "Menu Bar">
+<!ENTITY throbber.tooltip "">
+<!ENTITY lightning.menupopup.new.event.label "">
+<!ENTITY lightning.menupopup.new.task.label "">
+<!ENTITY lightning.menupopup.new.calendar.label "">

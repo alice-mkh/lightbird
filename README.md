@@ -3,6 +3,6 @@ It is based on Sunbird code, and requires Lightning to work. Since it's just UI,
 
 It disables default Lightning UI, but there is an option on Calendar preferences pane to re-enable it 
 
-It does not work with Thunderbird. For Thunderbird normal Lightning UI is fine, while for SeaMonkey it isn't. Since Thunderbird support requires additional effort here, I don't support it.
+It does not work with Thunderbird as for now. I have changed my mind and will support it later.
 
 AMO listing: https://addons.mozilla.org/en-US/seamonkey/addon/lightbird/
