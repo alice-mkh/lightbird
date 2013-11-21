@@ -5,6 +5,7 @@ LANGUAGE=en_US.UTF-8 hg clone http://hg.mozilla.org/releases/l10n/mozilla-releas
 cp -r $LANG/calendar/chrome/sunbird locale/$LANG
 rm -rf $LANG
 cp locale/en-US/lightbird.dtd locale/$LANG/
+cp locale/en-US/tbLightbird.dtd locale/$LANG/
 echo "locale sunbird $LANG locale/$LANG/" >> chrome.manifest
 sed "s/reloadserver/synccalendars/g" -i locale/$LANG/menuOverlay.dtd
 done
