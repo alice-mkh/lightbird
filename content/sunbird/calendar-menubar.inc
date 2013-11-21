@@ -263,7 +263,7 @@
                        label="&sunbird.menu.numberofweeks.6;"/>
            </menupopup>
            </menu>
-           <menuseparator/>
+           <menuseparator id="menu_viewApplyTheme_separator"/>
            <menu id="menu_viewApplyTheme"/>
          </menupopup>
        </menu>

@@ -23,21 +23,10 @@
        modifiers="accel"/>
 </keyset>
 
-<commandset id="tasksCommands">
+<commandset id="addressBook">
   <command id="Tasks:Calendar"
            oncommand="toCalendar();"/>
 </commandset>
-
-<menupopup id="appmenu_taskPopup">
-  <menuitem
-        label="&calendarCmd.label;"
-        accesskey="&calendarCmd.accesskey;"
-        key="key_calendar"
-        command="Tasks:Calendar"
-        id="tasksMenuCalendar"
-        class="menuitem-iconic"
-        insertafter="appmenu_addressBook"/>
-</menupopup>
 
 <menupopup id="taskPopup">
   <menuitem
@@ -47,6 +36,6 @@
         command="Tasks:Calendar"
         id="tasksMenuCalendar"
         class="menuitem-iconic"
-        insertafter="addressBook"/>
+        insertafter="tasksMenuMail"/>
 </menupopup>
 </overlay>

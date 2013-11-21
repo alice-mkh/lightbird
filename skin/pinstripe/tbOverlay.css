@@ -1,0 +1,33 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#navigator-throbber {
+  width: 17px;
+  min-width: 17px;
+  min-height: 16px;
+  margin: 0 4px;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+}
+
+#throbber-box[busy="true"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+}
+
+#wrapper-throbber-box > #throbber-box {
+  list-style-image: url("chrome://global/skin/icons/notloading_16.png");
+}
+
+#offline-status-tb {
+  padding: 0 2px;
+}
+
+#offline-status-tb[offline="true"] {
+  list-style-image: url("chrome://messenger/skin/icons/offline.png");
+}
+
+#offline-status-tb {
+  list-style-image: url("chrome://messenger/skin/icons/online.png");
+}

@@ -3,6 +3,8 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<?xml-stylesheet href="chrome://sunbird/skin/tbOverlay.css" type="text/css"?>
+
 <!DOCTYPE overlay
 [
   <!ENTITY % sunbirdDTD SYSTEM "chrome://sunbird/locale/sunbird.dtd" > %sunbirdDTD;
@@ -11,10 +13,15 @@
 
 <overlay id="tbLightbirdOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-         
-    <button id="navigator-throbber" removeelement="true"/>
+    <script type="application/javascript" src="chrome://sunbird/content/tbOverlay.js"/>
 
+    <menuseparator id="calendar-print-sep" removeelement="true"/>
+    <menuitem id="offlineGoOfflineCmd" removeelement="true"/>
+
+    <menuseparator id="menu_viewApplyTheme_separator" removeelement="true"/>
     <menu id="menu_viewApplyTheme" removeelement="true"/>
+
+    <menuitem id="menu_preferences" oncommand="openOptionsDialog('paneLightning')"/>
 
     <menupopup id="menu_FilePopup">
         <menu id="menu_New" removeelement="true"/>
@@ -38,5 +45,18 @@
                     insertbefore="calendar-open-calendar-menu"/>
     </menupopup>
 
+    <menu id="tasksMenu" removeelement="true"/>
     <menu id="windowMenu" removeelement="true"/>
+    <menu id="menu_Help" removeelement="true"/>
+
+    <statusbar id="status-bar">
+        <statusbarpanel id="component-bar"  removeelement="true"/>
+        <statusbarpanel id="offline-status" removeelement="true"/>
+        <statusbarpanel id="offline-status-tb"
+                        class="statusbarpanel-iconic"
+                        oncommand="calendarOfflineManager.toggleOfflineStatus()"
+                        offline="true"
+                        observes="Communicator:WorkMode"
+                        insertbefore="statusText"/>
+    </statusbar>
 </overlay>

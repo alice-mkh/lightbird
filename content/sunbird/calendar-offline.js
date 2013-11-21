@@ -18,6 +18,11 @@ calendarOfflineManager.updateOfflineUI = function sunbird_updateOfflineUI(aIsOff
     setElementValue("offline-status", aIsOffline && "true", "offline");
     setElementValue("offline-status", tooltip, "tooltiptext");
 
+    if (document.getElementById("offline-status-tb")) {
+        setElementValue("offline-status-tb", aIsOffline && "true", "offline");
+        setElementValue("offline-status-tb", tooltip, "tooltiptext");
+    }
+
     baseUpdateOfflineUI(aIsOffline);
 };
 

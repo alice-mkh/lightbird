@@ -30,7 +30,7 @@ override chrome://calendar/content/calendar-unifinder.xul chrome://lightbird/con
 #Thunderbird-specific stuff
 overlay chrome://sunbird/content/calendar.xul chrome://sunbird/content/tbOverlay.xul application=$TB_ID
 overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/tbOverlay.xul application=$TB_ID
-overlay chrome://messenger/content/addressbook/addressbook.xul chrome://lightbird/content/tbOverlay.xul application=$TB_ID
+overlay chrome://messenger/content/addressbook/addressbook.xul chrome://lightbird/content/tbOverlayAddressBook.xul application=$TB_ID
 overlay chrome://sunbird/content/calendar.xul chrome://messenger/content/utilityOverlay.xul application=$TB_ID
 
 #Locales
