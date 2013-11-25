@@ -13,6 +13,10 @@
   padding: 0px;
 }
 
+#view-tabbox{
+    display: none;
+}
+
 toolbarbutton.chevron {
   list-style-image: url("chrome://global/skin/icons/chevron.png") !important;
 }
