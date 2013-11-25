@@ -179,4 +179,5 @@
                   observes="Communicator:WorkMode"/>
 </statusbar>
 
+<panel id="customizeToolbarSheetPopup"/>
 </window>
