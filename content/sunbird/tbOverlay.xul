@@ -3,17 +3,17 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<?xml-stylesheet href="chrome://sunbird/skin/tbOverlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://$NAME/skin/sunbird/tbOverlay.css" type="text/css"?>
 
 <!DOCTYPE overlay
 [
-  <!ENTITY % sunbirdDTD SYSTEM "chrome://sunbird/locale/sunbird.dtd" > %sunbirdDTD;
+  <!ENTITY % sunbirdDTD SYSTEM "chrome://$NAME/locale/sunbird.dtd" > %sunbirdDTD;
   <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
 ]>
 
 <overlay id="$NAMEThunderbirdCompatOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script type="application/javascript" src="chrome://sunbird/content/tbOverlay.js"/>
+    <script type="application/javascript" src="chrome://$NAME/content/sunbird/tbOverlay.js"/>
 
     <menuseparator id="calendar-print-sep" removeelement="true"/>
     <menuitem id="offlineGoOfflineCmd" removeelement="true"/>

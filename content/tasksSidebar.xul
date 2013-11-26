@@ -20,7 +20,7 @@
 <?xml-stylesheet href="chrome://calendar/content/calendar-bindings.css" type="text/css"?>
 <?xml-stylesheet href="chrome://calendar/content/widgets/calendar-widget-bindings.css" type="text/css"?>
 <?xml-stylesheet href="chrome://calendar/skin/calendar-views.css" type="text/css"?>
-<?xml-stylesheet href="chrome://sunbird/skin/calendar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://$NAME/skin/sunbird/calendar.css" type="text/css"?>
 
 <page id="todayPanePanel"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

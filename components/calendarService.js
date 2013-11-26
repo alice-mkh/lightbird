@@ -53,7 +53,7 @@ function handler_QI(iid)
 
 CLineService.prototype.commandLineArgument = "-calendar";
 CLineService.prototype.prefNameForStartup = "$PREF_STARTUP";
-CLineService.prototype.chromeUrlForTask = "chrome://sunbird/content/calendar.xul";
+CLineService.prototype.chromeUrlForTask = "chrome://$NAME/content/sunbird/calendar.xul";
 CLineService.prototype.helpText = "Start with calendar";
 CLineService.prototype.handlesArgs = false;
 CLineService.prototype.defaultArgs = "";
@@ -65,7 +65,7 @@ function handler_handle(cmdLine)
 {
     if (cmdLine.handleFlag("calendar", false))
     {
-        openWindow("chrome://sunbird/content/calendar.xul");
+        openWindow("chrome://$NAME/content/sunbird/calendar.xul");
         cmdLine.preventDefault = true;
     }
 }

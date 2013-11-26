@@ -5,7 +5,7 @@
 Components.utils.import("resource://gre/modules/Services.jsm");
 
 function toCalendar() {
-    toOpenWindowByType("calendarMainWindow", "chrome://sunbird/content/calendar.xul");
+    toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
 }
 
 const calendarAlertObserver = {

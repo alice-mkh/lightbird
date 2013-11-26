@@ -22,7 +22,7 @@ while read LINE; do
     fi
     LINE1=`echo $LINE | grep -oE "^[^=]+"`
     LINE2=`echo $LINE | grep -oE "[^=]+$"`
-    sed "s|\$$LINE1|$LINE2|g" -i `find . -name "*.rdf"` `find . -name "*.xul"` `find . -name "*.js"` `find . -name "*.css"` `find . -name "*.manifest"`
+    sed "s|\$$LINE1|$LINE2|g" -i `find . -name "*.rdf"` `find . -name "*.xul"` `find . -name "*.js"` `find . -name "*.css"` `find . -name "*.xml"` `find . -name "*.inc"` `find . -name "*.manifest"`
     eval "$LINE1=\"$LINE2\""
 done < "../config.txt"
 
@@ -39,15 +39,21 @@ sed -E "s/^#.*//g" -i *
 cd ../..
 
 cd skin
-cp winstripe/toolbar.css winstripe-aero
-sed "s/\.png/-aero\.png/g" -i winstripe-aero/toolbar.css
+for F in common/*; do
+    cp $F pinstripe
+    cp $F winstripe
+    cp $F winstripe-aero
+done
+rm -rf common
+cp winstripe/sunbird/toolbar.css winstripe-aero/sunbird
+sed "s/\.png/-aero\.png/g" -i winstripe-aero/sunbird/toolbar.css
 cd ..
 
 for ARG in $@; do
     if [[ $ARG == "-no-sidebar" ]]; then
-        rm content/lightbird/tasksSidebar.js
-        rm content/lightbird/tasksSidebar.xul
-        rm content/lightbird/navigatorOverlay.xul
+        rm content/tasksSidebar.js
+        rm content/tasksSidebar.xul
+        rm content/navigatorOverlay.xul
         OVERLAY=`grep "navigatorOverlay" chrome.manifest`
         sed -E "s|$OVERLAY||g" -i chrome.manifest
     fi

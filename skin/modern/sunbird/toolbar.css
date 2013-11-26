@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://sunbird/skin/button.css");
+@import url("chrome://$NAME/skin/sunbird/button.css");
 
 /*--------------------------------------------------------------------
  *   Primary toolbar buttons
@@ -11,7 +11,7 @@
 .cal-toolbarbutton-1 {
     -moz-box-orient: vertical;
     min-width: 0px;
-    list-style-image: url("chrome://sunbird/skin/btn1.png");
+    list-style-image: url("chrome://$NAME/skin/sunbird/btn1.png");
 }
 
 toolbar[labelalign="end"] .cal-toolbarbutton-1 {
