@@ -5,7 +5,7 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://lightning/locale/lightning.dtd" >
 
-<overlay id="navigatorOverlayLightbird"
+<overlay id="$NAMENavigatorOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <broadcasterset id="mainBroadcasterSet">
@@ -14,7 +14,7 @@
                      label="&lightning.menu.view.tasks.label;"
                      type="checkbox"
                      group="sidebar"
-                     sidebarurl="chrome://lightbird/content/tasksSidebar.xul"
+                     sidebarurl="chrome://$NAME/content/tasksSidebar.xul"
                      sidebartitle="&lightning.menu.view.tasks.label;"
                      oncommand="toggleSidebar('viewLightbirdTasksSidebar');"/>
     </broadcasterset>

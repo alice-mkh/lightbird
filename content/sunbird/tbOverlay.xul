@@ -11,7 +11,7 @@
   <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
 ]>
 
-<overlay id="tbLightbirdOverlay"
+<overlay id="$NAMEThunderbirdCompatOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <script type="application/javascript" src="chrome://sunbird/content/tbOverlay.js"/>
 

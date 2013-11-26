@@ -8,13 +8,13 @@
 
 <!-- This is the overlay that adds Calendar to the (global) task menu. -->
 
-<?xml-stylesheet href="chrome://lightbird/skin/tasksOverlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://$NAME/skin/tasksOverlay.css" type="text/css"?>
 
-<overlay id="LightbirdTaskMenuID"
+<overlay id="$NAMETasksOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/x-javascript"
-        src="chrome://lightbird/content/tasksOverlay.js"/>
+        src="chrome://$NAME/content/tasksOverlay.js"/>
 
 <keyset id="tasksKeys">
   <key id="key_calendar"

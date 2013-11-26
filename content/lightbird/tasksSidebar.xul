@@ -37,7 +37,7 @@
   <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js"/>
   <script type="application/javascript" src="chrome://calendar/content/calendar-task-editing.js"/>
 
-  <script type="application/javascript" src="chrome://lightbird/content/tasksSidebar.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/tasksSidebar.js"/>
 
   <vbox id="todo-tab-panel" />
 

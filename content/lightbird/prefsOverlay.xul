@@ -6,7 +6,7 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://sunbird/locale/lightbird.dtd">
 
-<overlay id="LightbirdPrefs"
+<overlay id="$NAMEPrefsOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <preferences id="appearance_preferences">

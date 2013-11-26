@@ -8,29 +8,29 @@ skin sunbird classic/1.0 skin/pinstripe/ os=Darwin
 skin sunbird modern/1.0 skin/modern/
 
 #Lightbird
-content lightbird content/lightbird/
-skin lightbird classic/1.0 skin/common/
-skin lightbird modern/1.0 skin/modern-common/
-overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/tasksOverlay.xul application=$SM_ID
-overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
-overlay chrome://navigator/content/navigator.xul chrome://lightbird/content/navigatorOverlay.xul application=$SM_ID
+content $NAME content/lightbird/
+skin $NAME classic/1.0 skin/common/
+skin $NAME modern/1.0 skin/modern-common/
+overlay chrome://editor/content/editorTasksOverlay.xul chrome://$NAME/content/tasksOverlay.xul application=$SM_ID
+overlay chrome://communicator/content/pref/pref-appearance.xul chrome://$NAME/content/prefsOverlay.xul application=$SM_ID
+overlay chrome://navigator/content/navigator.xul chrome://$NAME/content/navigatorOverlay.xul application=$SM_ID
 component {4af82fb4-8942-4644-874d-f768a149b4f3} components/calendarService.js application=$SM_ID
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3} application=$SM_ID
 
-override chrome://lightning/content/imip-bar-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-accountCentral.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-messageWindow.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/lightning-migration.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/suite-overlay-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/today-pane.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/calendar-task-view.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/calendar-unifinder.xul chrome://lightbird/content/emptyOverlay.xul
+override chrome://lightning/content/imip-bar-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://lightning/content/messenger-overlay-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://lightning/content/messenger-overlay-accountCentral.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://lightning/content/messenger-overlay-messageWindow.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://lightning/content/lightning-migration.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://lightning/content/suite-overlay-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://calendar/content/today-pane.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://calendar/content/calendar-task-view.xul chrome://$NAME/content/emptyOverlay.xul
+override chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/emptyOverlay.xul
 
 #Thunderbird-specific stuff
 overlay chrome://sunbird/content/calendar.xul chrome://sunbird/content/tbOverlay.xul application=$TB_ID
-overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/tbOverlay.xul application=$TB_ID
-overlay chrome://messenger/content/addressbook/addressbook.xul chrome://lightbird/content/tbOverlayAddressBook.xul application=$TB_ID
+overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/tbOverlay.xul application=$TB_ID
+overlay chrome://messenger/content/addressbook/addressbook.xul chrome://$NAME/content/tbOverlayAddressBook.xul application=$TB_ID
 overlay chrome://sunbird/content/calendar.xul chrome://messenger/content/utilityOverlay.xul application=$TB_ID
 
 #Locales

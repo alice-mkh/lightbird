@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #mini-cal {
-  list-style-image: url("chrome://lightbird/skin/taskbar.png");
+  list-style-image: url("chrome://$NAME/skin/taskbar.png");
   -moz-image-region: rect(0 21px 13px 0);
 }
 
@@ -28,5 +28,5 @@
 }
 
 #tasksMenuCalendar {
-  list-style-image: url("chrome://lightbird/skin/cal-icon16.png");
+  list-style-image: url("chrome://$NAME/skin/cal-icon16.png");
 }
