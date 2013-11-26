@@ -25,7 +25,7 @@
 
 <commandset id="tasksCommands">
   <command id="Tasks:Calendar"
-           oncommand="toCalendar();"/>
+           oncommand="lightbirdObject.toCalendar();"/>
 </commandset>
 
 <menupopup id="windowPopup">
@@ -42,7 +42,7 @@
 <statusbarpanel id="component-bar">
   <toolbarbutton class="taskbutton"
                  id="mini-cal"
-                 oncommand="toCalendar()"
+                 command="Tasks:Calendar"
                  insertafter="mini-irc,mini-addr,mini-comp,mini-aim,mini-nav"
                  tooltiptext="&calendarCmd.label;"/>
 </statusbarpanel>

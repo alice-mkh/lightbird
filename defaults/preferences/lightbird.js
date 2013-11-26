@@ -3,4 +3,4 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 pref("$PREF_STARTUP", false);
-pref("extensions.lightbird.tempNotification", false);
+//pref("extensions.lightbird.tempNotification", false);
