@@ -41,7 +41,7 @@ const calendarAlertObserver = {
 var lightbirdObject = {
     toCalendar: function() {
         toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
-    },
+    }
 /*
     onLoad: function() {
         let prefs = Services.prefs.getBranch("extensions.lightbird.");
