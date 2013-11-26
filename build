@@ -55,6 +55,8 @@ for ARG in $@; do
         rm content/tasksSidebar.xul
         rm content/navigatorOverlay.xul
         OVERLAY=`grep "navigatorOverlay" chrome.manifest`
+        OVERLAY=`echo $OVERLAY | sed -E "s/\{/\\\\\{/g"`
+        OVERLAY=`echo $OVERLAY | sed -E "s/\}/\\\\\}/g"`
         sed -E "s|$OVERLAY||g" -i chrome.manifest
     fi
 done
