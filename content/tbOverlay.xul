@@ -25,7 +25,7 @@
 
 <commandset id="tasksCommands">
   <command id="Tasks:Calendar"
-           oncommand="toCalendar();"/>
+           oncommand="lightbirdObject.toCalendar();"/>
 </commandset>
 
 <menupopup id="appmenu_taskPopup">

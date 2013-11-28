@@ -25,7 +25,7 @@
 
 <commandset id="addressBook">
   <command id="Tasks:Calendar"
-           oncommand="toCalendar();"/>
+           oncommand="lightbirdObject.toCalendar();"/>
 </commandset>
 
 <menupopup id="taskPopup">
