@@ -6,4 +6,5 @@ It disables default Lightning UI, but there is an option on Calendar preferences
 It does not work with Thunderbird as for now. I have changed my mind and will support it later.
 
 AMO listing: https://addons.mozilla.org/en-US/seamonkey/addon/lightbird/
+
 MozillaZine thread: http://forums.mozillazine.org/viewtopic.php?f=48&t=2774051
