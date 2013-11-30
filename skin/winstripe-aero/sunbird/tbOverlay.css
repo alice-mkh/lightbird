@@ -12,13 +12,13 @@
   background: none;
 }
 
-#throbber-box[busy="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
-}
-
 #throbber-box,
 #wrapper-throbber-box > #throbber-box {
   list-style-image: url("chrome://global/skin/icons/notloading_16.png");
+}
+
+#navigator-throbber[busy="true"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }
 
 #offline-status-tb {
@@ -31,4 +31,10 @@
 
 #offline-status-tb {
   list-style-image: url("chrome://messenger/skin/icons/online.png");
+}
+
+toolbox[labelalign="end"] .cal-toolbarbutton-1,
+toolbox[labelalign="end"] .cal-toolbarbutton-1[type="menu-button"]
+  > .toolbarbutton-menubutton-button {
+  -moz-box-orient: horizontal !important;
 }
