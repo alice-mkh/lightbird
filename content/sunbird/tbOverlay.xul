@@ -9,11 +9,31 @@
 [
   <!ENTITY % sunbirdDTD SYSTEM "chrome://$NAME/locale/sunbird.dtd" > %sunbirdDTD;
   <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
+  <!ENTITY % sunbirdDTD SYSTEM "chrome://calendar/locale/sunbird.dtd" > %sunbirdDTD;
 ]>
 
 <overlay id="$NAMEThunderbirdCompatOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <script type="application/javascript" src="chrome://$NAME/content/sunbird/tbOverlay.js"/>
+
+    <broadcasterset id="calendar_broadcasters">
+        <broadcaster id="cmd_CustomizeToolbars" removeelement="true"/>
+    </broadcasterset>
+
+    <commandset id="calendar_commands">
+        <command id="cmd_CustomizeToolbars" oncommand="CalendarCustomizeToolbar()"/>
+    </commandset>
+
+    <popupset id="calendar-popupset">
+        <menupopup id="toolbar-context-menu"
+                   onpopupshowing="sbOnViewToolbarsPopupShowing(event);">
+            <menuseparator/>
+            <menuitem id="calendar-view-menu-customize"
+                      observes="cmd_CustomizeToolbars"
+                      label="&sunbird.menu.customize.label;"
+                      accesskey="&sunbird.menu.customize.accesskey;"/>
+        </menupopup>
+    </popupset>
 
     <menuseparator id="calendar-print-sep" removeelement="true"/>
     <menuitem id="offlineGoOfflineCmd" removeelement="true"/>
@@ -44,6 +64,17 @@
                     observes="calendar_new_calendar_command"
                     insertbefore="calendar-open-calendar-menu"/>
     </menupopup>
+
+    <menu id="menu_Toolbars"
+          onpopupshowing="sbOnViewToolbarsPopupShowing(event);">
+        <menupopup id="view_toolbars_popup">
+            <menuseparator/>
+            <menuitem id="calendar-view-menu-customize"
+                      observes="cmd_CustomizeToolbars"
+                      label="&sunbird.menu.customize.label;"
+                      accesskey="&sunbird.menu.customize.accesskey;"/>
+        </menupopup>
+    </menu>
 
     <menu id="tasksMenu" removeelement="true"/>
     <menu id="windowMenu" removeelement="true"/>

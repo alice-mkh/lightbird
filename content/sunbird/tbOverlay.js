@@ -23,3 +23,34 @@ function openOptionsDialog(aPaneID, aTabID, aOtherArgs)
                "Preferences", features, aPaneID, aTabID, aOtherArgs);
   }
 }
+
+function CalendarToolboxCustomizeInit(aToolboxChanged) {
+    
+}
+
+function CalendarCustomizeToolbar() {
+  // Disable the toolbar context menu items
+  var menubar = document.getElementById("main-menubar");
+  for (var i = 0; i < menubar.childNodes.length; ++i) {
+    menubar.childNodes[i].setAttribute("disabled", true);
+  }
+
+  var cmd = document.getElementById("cmd_CustomizeToolbars");
+  cmd.setAttribute("disabled", "true");
+
+  window.openDialog("chrome://global/content/customizeToolbar.xul", "CustomizeToolbar",
+                    "chrome,all,dependent", document.getElementById("calendar-toolbox"));
+}
+
+function CalendarToolboxCustomizeDone(aToolboxChanged) {
+  // Re-enable parts of the UI we disabled during the dialog
+  var menubar = document.getElementById("main-menubar");
+  for (var i = 0; i < menubar.childNodes.length; ++i) {
+    menubar.childNodes[i].setAttribute("disabled", false);
+  }
+  var cmd = document.getElementById("cmd_CustomizeToolbars");
+  cmd.removeAttribute("disabled");
+
+  // XXX Shouldn't have to do this, but I do
+  window.focus();
+}
