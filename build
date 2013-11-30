@@ -61,4 +61,4 @@ for ARG in $@; do
     fi
 done
 
-zip ../$NAME-$VERSION-sm.xpi * -rq
+zip ../$NAME-$VERSION-sm+tb.xpi * -rq
