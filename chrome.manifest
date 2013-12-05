@@ -24,6 +24,7 @@ override chrome://lightning/content/suite-overlay-sidebar.xul chrome://$NAME/con
 override chrome://calendar/content/today-pane.xul chrome://$NAME/content/emptyOverlay.xul
 override chrome://calendar/content/calendar-task-view.xul chrome://$NAME/content/emptyOverlay.xul
 override chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/emptyOverlay.xul
+overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/messengerOverlay.xul
 
 #Thunderbird-specific stuff
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/tbOverlay.xul application=$TB_ID
