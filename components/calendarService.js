@@ -55,7 +55,7 @@ CLineService.prototype.commandLineArgument = "-calendar";
 CLineService.prototype.prefNameForStartup = "$PREF_STARTUP";
 CLineService.prototype.chromeUrlForTask = "chrome://$NAME/content/sunbird/calendar.xul";
 CLineService.prototype.helpText = "Start with calendar";
-CLineService.prototype.handlesArgs = false;
+CLineService.prototype.handlesArgs = true;
 CLineService.prototype.defaultArgs = "";
 CLineService.prototype.openWindowWithArgs = true;
 
@@ -114,7 +114,7 @@ var CalendarModule = new Object();
 CalendarModule.registerSelf =
 function (compMgr, fileSpec, location, type)
 {
-    dump("*** Registering -calendar handler.\n");
+//    dump("*** Registering -calendar handler.\n");
 
     compMgr = compMgr.QueryInterface(Components.interfaces.nsIComponentRegistrar);
 
@@ -130,6 +130,9 @@ function (compMgr, fileSpec, location, type)
     catman.addCategoryEntry("command-line-argument-handlers",
                             "calendar command line handler",
                             CLINE_SERVICE_CONTRACTID, true, true);
+    catman.addCategoryEntry("command-line-handler",
+                            "m-calendar",
+                            CLINE_SERVICE_CONTRACTID, true, true);
 }
 
 CalendarModule.unregisterSelf =
@@ -139,9 +142,13 @@ function(compMgr, fileSpec, location)
 
     compMgr.unregisterFactoryLocation(CLINE_SERVICE_CID,
                                       fileSpec);
+    var catman = Components.classes["@mozilla.org/categorymanager;1"]
+                       .getService(nsICategoryManager);
     catman = Components.classes["@mozilla.org/categorymanager;1"]
                        .getService(nsICategoryManager);
     catman.deleteCategoryEntry("command-line-argument-handlers",
+                               CLINE_SERVICE_CONTRACTID, true);
+    catman.deleteCategoryEntry("m-calendar",
                                CLINE_SERVICE_CONTRACTID, true);
 }
 
