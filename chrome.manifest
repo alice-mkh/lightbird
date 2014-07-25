@@ -30,6 +30,11 @@ overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/messenge
 overlay chrome://calendar/content/calendar-common-sets.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
 overlay chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
 
+overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder.xul application=$SM_ID appversion>=2.27
+overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder-old.xul application=$SM_ID appversion<2.27
+overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder.xul application=$TB_ID appversion>=30.0
+overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder-old.xul application=$TB_ID appversion<30.0
+
 #Thunderbird-specific stuff
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/tbOverlay.xul application=$TB_ID
 overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/tbOverlay.xul application=$TB_ID
