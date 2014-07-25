@@ -14,6 +14,10 @@
 <!ENTITY calendar.new.server.key                           "L">
 <!ENTITY calendar.new.server.accesskey                     "l">
 
+<!ENTITY calendar.print.label                              "Print…">
+<!ENTITY calendar.print.key                                "P">
+<!ENTITY calendar.print.accesskey                          "P">
+
 <!ENTITY calendar.import.label                             "Import…">
 <!ENTITY calendar.import.key                               "I">
 <!ENTITY calendar.import.accesskey                         "I">
