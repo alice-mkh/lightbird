@@ -27,6 +27,9 @@ override chrome://calendar/content/calendar-task-view.xul chrome://$NAME/content
 override chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/emptyOverlay.xul
 overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/messengerOverlay.xul
 
+overlay chrome://calendar/content/calendar-common-sets.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
+overlay chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
+
 #Thunderbird-specific stuff
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/tbOverlay.xul application=$TB_ID
 overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/tbOverlay.xul application=$TB_ID

@@ -160,7 +160,7 @@
          <menupopup id="menu_viewPopup">
             <menu id="menu_Toolbars">
              <menupopup id="view_toolbars_popup"
-                        onpopupshowing="onViewToolbarsPopupShowing(event);"
+                        onpopupshowing="sbOnViewToolbarsPopupShowing(event);"
                         oncommand="onViewToolbarCommand(event);"/>
            </menu>
            <menuitem id="menu_showStatusBar"

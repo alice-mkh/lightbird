@@ -2,6 +2,23 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY event.new.event "Nýr atburður…">
+<!ENTITY event.new.event.key "N">
+<!ENTITY event.new.event.accesskey "N">
+<!ENTITY event.new.task "Nýtt verk…">
+<!ENTITY event.new.task.key "K">
+<!ENTITY event.new.task.accesskey "k">
+<!ENTITY calendar.new.server.label "Nýtt dagatal…">
+<!ENTITY calendar.new.server.key "D">
+<!ENTITY calendar.new.server.accesskey "d">
+<!ENTITY calendar.print.label "Prenta…">
+<!ENTITY calendar.print.key "P">
+<!ENTITY calendar.print.accesskey "P">
+<!ENTITY calendar.import.label "Flytja inn…">
+<!ENTITY calendar.import.key "I">
+<!ENTITY calendar.import.accesskey "F">
+<!ENTITY calendar.export.selection.label "Flytja út val…">
+<!ENTITY calendar.export.selection.accesskey "y">
 <!ENTITY calendar.open.file.label "Opna dagatal…">
 <!ENTITY calendar.open.file.key "O">
 <!ENTITY calendar.open.file.accesskey "O">

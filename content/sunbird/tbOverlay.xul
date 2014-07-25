@@ -9,7 +9,7 @@
 [
   <!ENTITY % sunbirdDTD SYSTEM "chrome://$NAME/locale/sunbird.dtd" > %sunbirdDTD;
   <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
-  <!ENTITY % sunbirdDTD SYSTEM "chrome://calendar/locale/sunbird.dtd" > %sunbirdDTD;
+  <!ENTITY % menuOverlayDTD SYSTEM "chrome://$NAME/locale/menuOverlay.dtd" > %menuOverlayDTD;
 ]>
 
 <overlay id="$NAMEThunderbirdCompatOverlay"

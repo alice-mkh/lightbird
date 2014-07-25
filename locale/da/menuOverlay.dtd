@@ -2,6 +2,25 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY event.new.event "Ny begivenhed…">
+<!ENTITY event.new.event.key "N">
+<!ENTITY event.new.event.accesskey "N">
+
+<!ENTITY event.new.task "Ny opgave…">
+<!ENTITY event.new.task.key "T">
+<!ENTITY event.new.task.accesskey "y">
+
+<!ENTITY calendar.new.server.label "Ny kalenderfil…">
+<!ENTITY calendar.new.server.key "L">
+<!ENTITY calendar.new.server.accesskey "k">
+
+<!ENTITY calendar.import.label "Importer…">
+<!ENTITY calendar.import.key "I">
+<!ENTITY calendar.import.accesskey "I">
+
+<!ENTITY calendar.export.selection.label "Eksporter det valgte…">
+<!ENTITY calendar.export.selection.accesskey "V">
+
 <!ENTITY calendar.open.file.label "Åbn kalenderfil…">
 <!ENTITY calendar.open.file.key "Å">
 <!ENTITY calendar.open.file.accesskey "Å">
