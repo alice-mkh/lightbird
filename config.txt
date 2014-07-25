@@ -3,7 +3,7 @@ EXT_NAME=Lightbird
 EXT_DESC=Standalone calendar UI for Lightning
 
 NAME=lightbird
-VERSION=0.3.2
+VERSION=0.3.3
 
 PREF_STARTUP=general.startup.calendar
 
