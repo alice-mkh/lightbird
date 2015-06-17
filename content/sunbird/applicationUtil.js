@@ -22,7 +22,6 @@ function goToggleToolbar(id, elementID)
     }
 }
 
-
 /**
  * We recreate the View > Toolbars menu each time it is opened to include any
  * user-created toolbars.
@@ -54,7 +53,7 @@ function sbOnViewToolbarsPopupShowing(aEvent)
             menuItem.setAttribute("type", "checkbox");
             menuItem.setAttribute("label", toolbarName);
             menuItem.setAttribute("accesskey", toolbar.getAttribute("accesskey"));
-            menuItem.setAttribute("checked", toolbar.getAttribute("collapsed") != "true");
+            menuItem.setAttribute("checked", toolbar.getAttribute("hidden") != "true");
             popup.insertBefore(menuItem, firstMenuItem);
 
             menuItem.addEventListener("command", sbOnViewToolbarCommand, false);
@@ -71,6 +70,6 @@ function sbOnViewToolbarCommand(aEvent)
     var index = aEvent.originalTarget.getAttribute("toolbarindex");
     var toolbar = toolbox.childNodes[index];
 
-    toolbar.collapsed = (aEvent.originalTarget.getAttribute("checked") != "true");
-    document.persist(toolbar.id, "collapsed");
+    toolbar.hidden = (aEvent.originalTarget.getAttribute("checked") != "true");
+    document.persist(toolbar.id, "hidden");
 }
