@@ -36,6 +36,8 @@ overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbi
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder-old.xul application=$TB_ID appversion<30.0
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/smOverlay.xul application=$SM_ID
 
+overlay chrome://calendar/content/calendar-event-dialog.xul chrome://$NAME/content/sunbird/calendar-event-dialog-overlay.xul application=$SM_ID
+
 #Thunderbird-specific stuff
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/tbOverlay.xul application=$TB_ID
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://messenger/content/baseMenuOverlay.xul application=$TB_ID

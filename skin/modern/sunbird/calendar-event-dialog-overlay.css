@@ -1,0 +1,107 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+*/
+
+.toolbar-primary-icon {
+  background-image: url("chrome://$NAME/skin/sunbird/calendar_topbar.gif");
+}
+
+#button-save {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif") !important;
+}
+
+#button-attendees,
+#button-url {
+  list-style-image: url("chrome://messenger/skin/icons/btn1.gif") !important;
+}
+
+#button-privacy {
+  list-style-image: url("chrome://messenger/skin/smime/icons/smbtn1.gif") !important;
+}
+
+#button-delete {
+  list-style-image: url("chrome://$NAME/skin/sunbird/btn1.png") !important;
+}
+
+#button-save {
+  -moz-image-region: rect(238px 49px 271px 0);
+}
+
+#button-save:hover {
+  -moz-image-region: rect(238px 99px 271px 50px);
+}
+
+#button-save:hover:active {
+  -moz-image-region: rect(238px 149px 271px 100px);
+}
+
+#button-save[disabled="true"] {
+  -moz-image-region: rect(238px 199px 271px 150px) !important;
+}
+
+#button-attendees {
+  -moz-image-region: rect(306px 49px 339px 0);
+}
+
+#button-attendees:hover {
+  -moz-image-region: rect(306px 99px 339px 50px);
+}
+
+#button-attendees:hover:active {
+  -moz-image-region: rect(306px 149px 339px 100px);
+}
+
+#button-attendees[disabled="true"] {
+  -moz-image-region: rect(306px 199px 339px 150px) !important;
+}
+
+#button-privacy {
+  -moz-image-region: rect(0px 49px 33px 0px);
+}
+
+#button-privacy:hover {
+  -moz-image-region: rect(0px 99px 33px 50px);
+}
+
+#button-privacy:hover:active {
+  -moz-image-region: rect(0px 149px 33px 100px);
+}
+
+#button-privacy[disabled="true"] {
+  -moz-image-region: rect(0px 199px 33px 150px) !important;
+}
+
+#button-url {
+  -moz-image-region: rect(340px 49px 373px 0);
+}
+
+#button-url:hover {
+  -moz-image-region: rect(340px 99px 373px 50px);
+}
+
+#button-url:hover:active {
+  -moz-image-region: rect(340px 149px 373px 100px);
+}
+
+#button-url[disabled="true"] {
+  -moz-image-region: rect(340px 199px 373px 150px) !important;
+}
+
+#button-delete {
+  -moz-image-region: rect(272px 45px 306px 0px) !important;
+}
+
+#button-delete:hover {
+  -moz-image-region: rect(272px 90px 306px 45px) !important;
+}
+
+#button-delete:hover:active {
+  -moz-image-region: rect(272px 135px 306px 90px) !important;
+}
+
+#button-delete[disabled="true"] {
+  -moz-image-region: rect(272px 180px 306px 135px) !important;
+}
