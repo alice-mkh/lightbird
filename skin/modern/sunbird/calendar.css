@@ -142,8 +142,9 @@ toolbar[printpreview="true"] {
     transition: none !important;
 }
 
-#unifinder-searchBox {
-    background: url("chrome://global/skin/toolbar/tb-mid.gif") #C7D0D9 repeat-x top !important;
+#unifinder-searchBox,
+#calendar-nav-control {
+    background: #C7D0D9 !important;
 }
 
 #unifinder-search-field,
