@@ -12,17 +12,6 @@ if (!calendarOfflineManager) {
 // the offline commands work in sunbird. Extend the offline manager here.
 var baseUpdateOfflineUI = calendarOfflineManager.updateOfflineUI;
 calendarOfflineManager.updateOfflineUI = function sunbird_updateOfflineUI(aIsOffline) {
-    var propName = (aIsOffline ? "offlineTooltip" : "onlineTooltip")
-    var tooltip = calGetString("calendar", propName);
-
-    setElementValue("offline-status", aIsOffline && "true", "offline");
-    setElementValue("offline-status", tooltip, "tooltiptext");
-
-    if (document.getElementById("offline-status-tb")) {
-        setElementValue("offline-status-tb", aIsOffline && "true", "offline");
-        setElementValue("offline-status-tb", tooltip, "tooltiptext");
-    }
-
     baseUpdateOfflineUI(aIsOffline);
 };
 
