@@ -3,9 +3,29 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!DOCTYPE overlay SYSTEM "chrome://calendar/locale/calendar.dtd">
+
 <overlay id="$NAMEMessengerOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
 
-    <script type="application/javascript"
-            src="chrome://calendar/content/calendar-item-editing.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-extract.js"/>
+
+  <menupopup id="mailContext">
+    <menu id="mailContext-calendar-convert-menu"
+          insertafter="mailContext-saveAs"
+          label="&calendar.context.convertmenu.label;"
+          accesskey="&calendar.context.convertmenu.accesskey.mail;">
+      <menupopup id="mailContext-calendar-convert-menupopup">
+        <menuitem id="mailContext-calendar-convert-event-menuitem"
+                  label="&calendar.context.convertmenu.event.label;"
+                  accesskey="&calendar.context.convertmenu.event.accesskey;"
+                  oncommand="calendarExtract.extractFromEmail(true)" />
+        <menuitem id="mailContext-calendar-convert-task-menuitem"
+                  label="&calendar.context.convertmenu.task.label;"
+                  accesskey="&calendar.context.convertmenu.task.accesskey;"
+                  oncommand="calendarExtract.extractFromEmail(false)" />
+      </menupopup>
+    </menu>
+  </menupopup>
 </overlay>
