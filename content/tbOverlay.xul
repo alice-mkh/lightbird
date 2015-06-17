@@ -4,11 +4,16 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 
-<!DOCTYPE overlay SYSTEM "chrome://$NAME/locale/lightbird.dtd" >
+<!DOCTYPE overlay
+[
+    <!ENTITY % dtd1 SYSTEM "chrome://$NAME/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd2 SYSTEM "chrome://lightning/locale/lightning-toolbar.dtd" > %dtd2;
+]>
 
 <!-- This is the overlay that adds Calendar to the (global) task menu. -->
 
 <?xml-stylesheet href="chrome://$NAME/skin/tasksOverlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://$NAME/skin/tbToolbar.css" type="text/css"?>
 
 <overlay id="$NAMEThunderbirdOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -49,4 +54,13 @@
         class="menuitem-iconic"
         insertafter="addressBook"/>
 </menupopup>
+
+<toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="calendar-button"
+                   class="toolbarbutton-1"
+                   label="&lightning.toolbar.calendar.label;"
+                   tooltiptext="&lightning.toolbar.calendar.tooltip;"
+                   command="Tasks:Calendar"/>
+</toolbarpalette>
+
 </overlay>

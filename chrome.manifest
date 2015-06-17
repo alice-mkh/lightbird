@@ -15,6 +15,7 @@ skin $NAME modern/1.0 skin/modern/
 
 style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/sunbird/calendar.css
 style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/sunbird/toolbar.css
+style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/tbToolbar.css
 
 override chrome://lightning/content/imip-bar-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
 override chrome://lightning/content/messenger-overlay-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
