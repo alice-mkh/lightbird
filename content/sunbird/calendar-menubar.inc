@@ -313,10 +313,7 @@
          </menupopup>
        </menu>
 
-       <menu id="tasksMenu">
-       </menu>
-       <menu id="windowMenu">
-       </menu>
-       <menu id="menu_Help">
-       </menu>
+       <menu id="tasksMenu" />
+       <menu id="windowMenu" />
+       <menu id="menu_Help" />
      </menubar>

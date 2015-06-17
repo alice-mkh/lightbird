@@ -13,7 +13,7 @@
 
   <menupopup id="mailContext">
     <menu id="mailContext-calendar-convert-menu"
-          insertafter="mailContext-saveAs"
+          insertafter="mailContext-copyMenu"
           label="&calendar.context.convertmenu.label;"
           accesskey="&calendar.context.convertmenu.accesskey.mail;">
       <menupopup id="mailContext-calendar-convert-menupopup">
