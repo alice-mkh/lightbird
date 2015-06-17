@@ -49,16 +49,4 @@ cp winstripe/sunbird/toolbar.css winstripe-aero/sunbird
 sed "s/\.png/-aero\.png/g" -i winstripe-aero/sunbird/toolbar.css
 cd ..
 
-for ARG in $@; do
-    if [[ $ARG == "-no-sidebar" ]]; then
-        rm content/tasksSidebar.js
-        rm content/tasksSidebar.xul
-        rm content/navigatorOverlay.xul
-        OVERLAY=`grep "navigatorOverlay" chrome.manifest`
-        OVERLAY=`echo $OVERLAY | sed -E "s/\{/\\\\\{/g"`
-        OVERLAY=`echo $OVERLAY | sed -E "s/\}/\\\\\}/g"`
-        sed -E "s|$OVERLAY||g" -i chrome.manifest
-    fi
-done
-
 zip ../$NAME-$VERSION-sm+tb.xpi * -rq
