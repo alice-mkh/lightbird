@@ -12,9 +12,6 @@ skin $NAME classic/1.0 skin/winstripe-aero/ os=WINNT osversion>=6
 skin $NAME classic/1.0 skin/pinstripe/ os=Darwin
 skin $NAME modern/1.0 skin/modern/
 
-style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/sunbird/calendar.css
-style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/sunbird/toolbar.css
-style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/tbToolbar.css
 
 override chrome://lightning/content/imip-bar-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
 override chrome://lightning/content/messenger-overlay-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
@@ -30,6 +27,8 @@ overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/messenge
 overlay chrome://calendar/content/calendar-common-sets.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
 overlay chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
 
+override chrome://lightning/skin/lightning-toolbar.css chrome://$NAME/skin/sunbird/toolbar.css
+
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder.xul application=$SM_ID appversion>=2.27
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder-old.xul application=$SM_ID appversion<2.27
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder.xul application=$TB_ID appversion>=30.0
@@ -44,6 +43,7 @@ overlay chrome://$NAME/content/sunbird/calendar.xul chrome://messenger/content/b
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://messenger/content/utilityOverlay.xul application=$TB_ID
 overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/tbOverlay.xul application=$TB_ID
 overlay chrome://messenger/content/addressbook/addressbook.xul chrome://$NAME/content/tbOverlayAddressBook.xul application=$TB_ID
+style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/tbToolbar.css
 
 #Locales
 locale $NAME ca locale/ca/
