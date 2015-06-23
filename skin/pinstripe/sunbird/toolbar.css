@@ -6,7 +6,7 @@
  *   Primary toolbar buttons
  *-------------------------------------------------------------------*/
 
-.toolbarbutton-1 {
+.cal-toolbarbutton-1 {
     list-style-image: url("chrome://calendar/skin/toolbar-large.png");
 }
 
@@ -14,7 +14,7 @@
  *   Primary toolbar buttons - small
  *-------------------------------------------------------------------*/
 
-toolbar[iconsize="small"] .toolbarbutton-1 {
+toolbar[iconsize="small"] .cal-toolbarbutton-1 {
     list-style-image: url("chrome://calendar/skin/toolbar-small.png");
 }
 

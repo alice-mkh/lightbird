@@ -8,7 +8,7 @@
  *   Primary toolbar buttons
  *-------------------------------------------------------------------*/
 
-.toolbarbutton-1 {
+.cal-toolbarbutton-1 {
     list-style-image: url("chrome://$NAME/skin/sunbird/btn1.png");
     background-color: transparent !important;
 }
