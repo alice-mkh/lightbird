@@ -3,7 +3,13 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <!ENTITY calendarCmd.label                 "Календарь" >
-<!ENTITY calendarCmd.accesskey             "к" >
+<!ENTITY calendarCmd.accesskey             "К" >
 <!ENTITY calendarCmd.commandkey            "8" >
 <!ENTITY startup.calendar.label            "Календарь" >
-<!ENTITY startup.calendar.accesskey        "к" >
+<!ENTITY startup.calendar.accesskey        "К" >
+
+<!ENTITY sidebar.events.title              "События" >
+<!ENTITY sidebar.tasks.title               "Задачи" >
+
+<!ENTITY sidebar.events.search.label       "Поиск в событиях" >
+

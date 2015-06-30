@@ -3,7 +3,13 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <!ENTITY calendarCmd.label                 "Kalendarz" >
-<!ENTITY calendarCmd.accesskey             "r" >
+<!ENTITY calendarCmd.accesskey             "K" >
 <!ENTITY calendarCmd.commandkey            "8" >
 <!ENTITY startup.calendar.label            "Kalendarz" >
-<!ENTITY startup.calendar.accesskey        "r" >
+<!ENTITY startup.calendar.accesskey        "K" >
+
+<!ENTITY sidebar.events.title              "Wydarzenia" >
+<!ENTITY sidebar.tasks.title               "Zadania" >
+
+<!ENTITY sidebar.events.search.label       "Search events" >
+

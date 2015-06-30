@@ -2,8 +2,14 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY calendarCmd.label                 "Calendar" >
-<!ENTITY calendarCmd.accesskey             "r" >
+<!ENTITY calendarCmd.label                 "行事曆" >
+<!ENTITY calendarCmd.accesskey             "C" >
 <!ENTITY calendarCmd.commandkey            "8" >
-<!ENTITY startup.calendar.label            "Calendar" >
-<!ENTITY startup.calendar.accesskey        "r" >
+<!ENTITY startup.calendar.label            "行事曆" >
+<!ENTITY startup.calendar.accesskey        "C" >
+
+<!ENTITY sidebar.events.title              "事件" >
+<!ENTITY sidebar.tasks.title               "工作" >
+
+<!ENTITY sidebar.events.search.label       "Search events" >
+
