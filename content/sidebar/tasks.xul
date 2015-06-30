@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/global.css" ?>
+<?xml-stylesheet type="text/css" href="chrome://calendar/content/calendar-bindings.css"?>
+<?xml-stylesheet type="text/css" href="chrome://calendar/skin/calendar-task-view.css"?>
+<?xml-stylesheet type="text/css" href="chrome://calendar/skin/calendar-views.css"?>
+
+<!DOCTYPE page
+[
+    <!ENTITY % dtd1 SYSTEM "chrome://$NAME/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd2 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd2;
+    <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar-event-dialog.dtd"> %dtd3;
+]>
+
+<?xul-overlay href="chrome://calendar/content/calendar-common-sets.xul"?>
+<?xul-overlay href="chrome://$NAME/content/sidebar/overlay.xul"?>
+<?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://calendar/content/calendar-unifinder-todo.js"/>
+  <script type="application/javascript" src="chrome://global/content/globalOverlay.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calUtils.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calFilter.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-clipboard.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-task-tree.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-task-editing.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-ui-utils.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-dnd-listener.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-management.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-views.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/mouseoverPreviews.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-common-sets.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/common.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/tasks.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/hooks.js"/>
+
+  <broadcasterset id="calendar_broadcasters"/>
+  <commandset id="calendar_commands">
+    <command id="cmd_selectAll" oncommand="goDoCommand('cmd_selectAll')"/>
+  </commandset>
+  <commandset id="calendar_commands2"
+              commandupdater="true"
+              events="clipboard"
+              oncommandupdate="calendarSidebarController.updateCommands()">
+    <command id="calendar_cut" oncommand="goDoCommand('calendar_cut')"/>
+    <command id="calendar_copy" oncommand="goDoCommand('calendar_copy')"/>
+    <command id="calendar_paste" oncommand="goDoCommand('calendar_paste')"/>
+  </commandset>
+  <keyset id="calendar-keys">
+    <key id="key_cut"/>
+    <key id="key_copy"/>
+    <key id="key_paste"/>
+    <key id="key_selectAll"/>
+  </keyset>
+  <popupset id="calendar-popupset"/>
+
+  <vbox flex="1">
+    <vbox id="todo-tab-panel" persist="height,collapsed" flex="1">
+      <checkbox id="show-completed-checkbox"
+                label="&calendar.unifinder.showcompletedtodos.label;"
+                crop="end"
+                oncommand="updateCalendarToDoUnifinder()"
+                persist="checked"/>
+      <vbox id="calendar-task-tree-detail" flex="1">
+        <calendar-task-tree id="unifinder-todo-tree" flex="1"
+                            visible-columns="completed priority title"
+                            persist="visible-columns ordinals widths sort-active sort-direction"
+                            context="taskitem-context-menu"/>
+        <textbox id="unifinder-task-edit-field"
+                 class="task-edit-field"
+                 onfocus="taskEdit.onFocus(event)"
+                 onblur="taskEdit.onBlur(event)"
+                 onkeypress="taskEdit.onKeyPress(event)"/>
+      </vbox>
+    </vbox>
+  </vbox>
+</page>

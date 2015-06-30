@@ -1,52 +1,59 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
-  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-var gCurrentMode = 'calendar';
-var agendaListbox = {
-    today: {
-        start: ""
-    }
+var currentViewObj = {
+    selectedDay: null,
+    getSelectedItems: function() {
+        let tree = unifinderTreeView.treeElement;
+        if (!tree.view.selection || tree.view.selection.getRangeCount() == 0) {
+            return;
+        }
+
+        let selectedItems = [];
+        gCalendarEventTreeClicked = true;
+
+        // Get the selected events from the tree
+        let start = {};
+        let end = {};
+        let numRanges = tree.view.selection.getRangeCount();
+
+        for (let t = 0; t < numRanges; t++) {
+            tree.view.selection.getRangeAt(t, start, end);
+
+            for (let v = start.value; v <= end.value; v++) {
+                try {
+                    selectedItems.push(unifinderTreeView.getItemAt(v));
+                } catch (e) {
+                    WARN("Error getting Event from row: " + e + "\n");
+                }
+            }
+        }
+
+        return selectedItems;
+    },
+    setSelectedItems: function() {}
 };
 
-function isSunbird() {
-    return true;
+function currentView() {
+    currentViewObj.selectedDay = now();
+    return currentViewObj;
 }
 
-function ltnSwitchCalendarView(aType, aShow) {
-    sbSwitchToView(aType);
+function ensureCalendarVisible(aCalendar) {
 }
 
-function switchCalendarView(aType, aShow) {
-    sbSwitchToView(aType);
-}
+function loadCalendarManager() {
+    let compositeCalendar = getCompositeCalendar();
 
-/*
-calendarController.isCalendarInForeground = function lightbird_isCalendarInForeground() {
-    return true;
-}
+    // Initialize our composite observer
+    compositeCalendar.addObserver(compositeObserver);
 
-calendarController.isInMode = function lightbird_isInMode(mode) {
-    return mode == "calendar";
-}
-*/
-function injectCalendarCommandController() {
-    // On Sunbird, we also need to set up our hacky command controller.
-    top.controllers.insertControllerAt(0, calendarController2);
-
-    // This needs to be done for all applications
-    top.controllers.insertControllerAt(0, calendarController);
-    document.commandDispatcher.updateCommands("calendar_commands");
-}
-
-function minimonthPick(aNewDate) {
-  let cdt = cal.jsDateToDateTime(aNewDate, currentView().timezone);
-  cdt.isDate = true;
-  currentView().goToDay(cdt);
-
-  // update date filter for task tree
-  let tree = document.getElementById("unifinder-todo-tree");
-  tree.updateFilter();
+    // Create the home calendar if no calendar exists.
+    let calendars = cal.getCalendarManager().getCalendars({});
+    if (!calendars.length) {
+        initHomeCalendar();
+    }
 }
 
 function changeContextMenuForTask (aEvent) {
@@ -73,9 +80,9 @@ function changeContextMenuForTask (aEvent) {
     }
 
     // make sure the paste menu item is enabled
-    goUpdateCommand("cmd_paste");
-    goUpdateCommand("cmd_cut");
-    
+    goUpdateCommand("calendar_paste");
+    goUpdateCommand("calendar_cut");
+
     // make sure the filter menu is enabled
     document.getElementById("task-context-menu-filter-todaypane").removeAttribute("disabled");
     applyAttributeToMenuChildren(document.getElementById("task-context-menu-filter-todaypane-popup"),
@@ -85,13 +92,4 @@ function changeContextMenuForTask (aEvent) {
 
     let menu = document.getElementById("task-context-menu-attendance-menu");
     setupAttendanceMenu(menu, items);
-}
-
-function prepareCalendarToDoUnifinder() {
-    document.getElementById("todo-label").removeAttribute("collapsed");
-
-    // add listener to update the date filters
-    getViewDeck().addEventListener("dayselect", updateCalendarToDoUnifinder, false);
-
-    updateCalendarToDoUnifinder();
 }

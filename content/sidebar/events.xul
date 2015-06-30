@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/global.css" ?>
+<?xml-stylesheet type="text/css" href="chrome://calendar/content/calendar-bindings.css"?>
+<?xml-stylesheet type="text/css" href="chrome://calendar/skin/calendar-views.css"?>
+
+<!DOCTYPE page
+[
+    <!ENTITY % dtd1 SYSTEM "chrome://$NAME/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd2 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd2;
+    <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar-event-dialog.dtd"> %dtd3;
+]>
+
+<?xul-overlay href="chrome://calendar/content/calendar-common-sets.xul"?>
+<?xul-overlay href="chrome://$NAME/content/sidebar/overlay.xul"?>
+<?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://global/content/globalOverlay.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calUtils.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calFilter.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-clipboard.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-task-tree.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-ui-utils.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-dnd-listener.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-management.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-views.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/mouseoverPreviews.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-common-sets.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/common.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/events.js"/>
+  <script type="application/javascript" src="chrome://$NAME/content/sidebar/hooks.js"/>
+
+  <broadcasterset id="calendar_broadcasters"/>
+  <commandset id="calendar_commands">
+    <command id="cmd_selectAll" oncommand="goDoCommand('cmd_selectAll')"/>
+  </commandset>
+  <commandset id="calendar_commands2"
+              commandupdater="true"
+              events="clipboard"
+              oncommandupdate="calendarSidebarController.updateCommands()">
+    <command id="calendar_cut" oncommand="goDoCommand('calendar_cut')"/>
+    <command id="calendar_copy" oncommand="goDoCommand('calendar_copy')"/>
+    <command id="calendar_paste" oncommand="goDoCommand('calendar_paste')"/>
+  </commandset>
+  <keyset id="calendar-keys">
+    <key id="key_cut"/>
+    <key id="key_copy"/>
+    <key id="key_paste"/>
+    <key id="key_selectAll"/>
+  </keyset>
+  <popupset id="calendar-popupset"/>
+
+  <vbox flex="1">
+    <vbox id="bottom-events-box" flex="1">
+      <menulist id="event-filter-menulist" value="P7D" persist="value">
+        <menupopup id="event-filter-menupopup" oncommand="refreshEventTree()">
+          <menuitem id="event-filter-all"
+                    label="&calendar.events.filter.all.label;"
+                    value="all"/>
+          <menuitem id="event-filter-today"
+                    label="&calendar.events.filter.today.label;"
+                    value="today"/>
+          <menuitem id="event-filter-next7days"
+                    label="&calendar.events.filter.next7Days.label;"
+                    value="P7D"/>
+          <menuitem id="event-filter-next14Days"
+                    label="&calendar.events.filter.next14Days.label;"
+                    value="P14D"/>
+          <menuitem id="event-filter-next31Days"
+                    label="&calendar.events.filter.next31Days.label;"
+                    value="P31D"/>
+          <menuitem id="event-filter-thisCalendarMonth"
+                    label="&calendar.events.filter.thisCalendarMonth.label;"
+                    value="thisCalendarMonth"/>
+          <menuitem id="event-filter-future"
+                    label="&calendar.events.filter.future.label;"
+                    value="future"/>
+        </menupopup>
+      </menulist>
+      <textbox id="unifinder-search-field" 
+               type="search"
+               oncommand="refreshEventTree();"
+               placeholder="&sidebar.events.search.label;"/>
+      <tree id="unifinder-search-results-tree"
+            class="plain"
+            flex="1"
+            onfocus="unifinderSelect(event)"
+            onselect="unifinderSelect(event)"
+            onkeypress="unifinderKeyPress(event)"
+            _selectDelay="500"
+            persist="sort-active sort-direction"
+            enableColumnDrag="true">
+        <treecols id="unifinder-search-results-tree-cols">
+          <treecol id="unifinder-search-results-tree-col-title"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   itemproperty="title"
+                   label="&calendar.unifinder.tree.title.label;"
+                   tooltiptext="&calendar.unifinder.tree.title.tooltip2;"/>
+          <splitter class="tree-splitter"/>
+          <treecol id="unifinder-search-results-tree-col-startdate"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="startDate"
+                   label="&calendar.unifinder.tree.startdate.label;"
+                   tooltiptext="&calendar.unifinder.tree.startdate.tooltip2;"/>
+          <splitter class="tree-splitter"/>
+          <treecol id="unifinder-search-results-tree-col-enddate"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="endDate"
+                   label="&calendar.unifinder.tree.enddate.label;"
+                   tooltiptext="&calendar.unifinder.tree.enddate.tooltip2;"/>
+          <splitter class="tree-splitter"/>
+          <treecol id="unifinder-search-results-tree-col-categories"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="categories"
+                   label="&calendar.unifinder.tree.categories.label;"
+                   tooltiptext="&calendar.unifinder.tree.categories.tooltip2;"/>
+          <splitter class="tree-splitter"/>
+          <treecol id="unifinder-search-results-tree-col-location"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="location"
+                   label="&calendar.unifinder.tree.location.label;"
+                   tooltiptext="&calendar.unifinder.tree.location.tooltip2;"/>
+          <splitter class="tree-splitter"/>
+          <treecol id="unifinder-search-results-tree-col-status"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="status"
+                   label="&calendar.unifinder.tree.status.label;"
+                   tooltiptext="&calendar.unifinder.tree.status.tooltip2;"/>
+          <treecol id="unifinder-search-results-tree-col-calendarname"
+                   persist="hidden ordinal width"
+                   flex="1"
+                   hidden="true"
+                   itemproperty="calendar"
+                   label="&calendar.unifinder.tree.calendarname.label;"
+                   tooltiptext="&calendar.unifinder.tree.calendarname.tooltip2;"/>
+        </treecols>
+
+        <!-- on mousedown here happens before onclick above -->
+        <treechildren tooltip="eventTreeTooltip"
+                      context="calendar-item-context-menu"
+                      onkeypress="if (event.keyCode == 13) unifinderEditCommand();"
+                      ondragenter="return false;"
+                      ondblclick="unifinderDoubleClick(event)"
+                      onfocus="focusFirstItemIfNoSelection( );"/>
+      </tree>
+    </vbox>
+  </vbox>
+</page>
