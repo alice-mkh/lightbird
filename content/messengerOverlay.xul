@@ -8,8 +8,14 @@
 <overlay id="$NAMEMessengerOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
 
-  <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js"/>
-  <script type="application/javascript" src="chrome://calendar/content/calendar-extract.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-item-editing.js" />
+  <script type="application/javascript" src="chrome://calendar/content/calendar-management.js" />
+  <script type="application/javascript" src="chrome://calendar/content/calendar-extract.js" />
+  <script type="application/javascript" src="resource://calendar/calendar-js/calUtils.js" />
+
+  <commandset id="mailCommands">
+    <command id="calendar_new_event_command" />
+  </commandset>
 
   <menupopup id="mailContext">
     <menu id="mailContext-calendar-convert-menu"
