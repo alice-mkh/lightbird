@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<overlay id="$NAMESeaMonkeyCompatOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <!-- Change these so they don't conflict with SM component opening shortcuts -->
+  <keyset id="calendar-keys">
+    <key id="calendar-day-view-key"
+         modifiers="accel alt"/>
+    <key id="calendar-week-view-key"
+         modifiers="accel alt"/>
+    <key id="calendar-multiweek-view-key"
+         modifiers="accel alt"/>
+    <key id="calendar-month-view-key"
+         modifiers="accel alt"/>
+  </keyset>
+</overlay>

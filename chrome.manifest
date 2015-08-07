@@ -51,6 +51,8 @@ overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/tbOverla
 overlay chrome://messenger/content/addressbook/addressbook.xul chrome://$NAME/content/tbOverlayAddressBook.xul application=$TB_ID
 style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/tbToolbar.css
 
+overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/smOverlay.xul application=$SM_ID
+
 #Locales
 locale $NAME ca    chrome/locale/ca/
 locale $NAME cs    chrome/locale/cs/

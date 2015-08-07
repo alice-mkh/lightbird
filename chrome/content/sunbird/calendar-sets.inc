@@ -80,4 +80,4 @@
 -->
 </keyset>
 
-<keyset id="tasksKeys"/>
+<keyset id="tasksKeys" />
