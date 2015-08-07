@@ -7,6 +7,10 @@ component {4af82fb4-8942-4644-874d-f768a149b4f3} components/cmd-line-handler.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 category command-line-handler m-calendar @mozilla.org/commandlinehandler/general-startup;1?type=calendar
 
+component {31ac7753-5616-43c2-a770-bd8379374360} components/alarm-service.js
+contract @lightbird/alarm-service;1 {31ac7753-5616-43c2-a770-bd8379374360}
+category profile-after-change LightbirdAlarmService @lightbird/alarm-service;1
+
 skin $NAME classic/1.0 chrome/skin/winstripe/
 skin $NAME classic/1.0 chrome/skin/winstripe-aero/ os=WINNT osversion>=6
 skin $NAME classic/1.0 chrome/skin/pinstripe/ os=Darwin

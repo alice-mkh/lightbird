@@ -4,65 +4,33 @@
 
 Components.utils.import("resource://gre/modules/Services.jsm");
 
-/*
-const calendarAlertObserver = {
-    observe: function(subject, topic, data) {
-        if (topic != "nsPref:changed" || data != "tempNotification"){
-            return;
-        }
-        var minical = document.getElementById("mini-cal");
-        if (!minical){
-            return;
-        }
-        let b = Services.prefs.getBoolPref("extensions.lightbird."+data);
-        if (b){
-            minical.setAttribute("BiffState", "Alarm");
-        }else{
-            minical.removeAttribute("BiffState");
-        }
-    },
-
-    onAlarmsLoaded: function onAlarmdLoaded() {},
-
-    onAlarm: function onAlarm(aAlarmItem) {
-        Services.prefs.setBoolPref("extensions.lightbird.tempNotification", true);
-    },
-
-    onRemoveAlarmsByItem: function onRemoveAlarmsByItem() {
-        Services.prefs.setBoolPref("extensions.lightbird.tempNotification", false);
-    },
-
-    onRemoveAlarmsByCalendar: function onRemoveAlarmsByCalendar() {
-        Services.prefs.setBoolPref("extensions.lightbird.tempNotification", false);
-    }
-};
-*/
+const ALARM_TOPIC = "lightbird:alarm-state-changed";
 
 var lightbirdObject = {
-    toCalendar: function() {
-        toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
+  toCalendar: function() {
+    toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
+  },
+
+  onLoad: function () {
+    Services.obs.addObserver(lightbirdObject.obs, ALARM_TOPIC, false);
+  },
+
+  onUnload: function () {
+    Services.obs.removeObserver(lightbirdObject.obs, ALARM_TOPIC, false);
+  },
+
+  obs: {
+    observe: function (aSubject, aTopic, aData) {
+      let alarm = aData == "true";
+      let minical = document.getElementById("mini-cal");
+
+      if (alarm)
+        minical.setAttribute("BiffState", "Alarm");
+      else
+        minical.removeAttribute("BiffState");
     }
-/*
-    onLoad: function() {
-        let prefs = Services.prefs.getBranch("extensions.lightbird.");
-        let alarmService = Components.classes['@mozilla.org/calendar/alarm-service;1']
-                           .getService(Components.interfaces.calIAlarmService);
-        alarmService.addObserver(calendarAlertObserver);
+  }
+};
 
-        prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
-        prefs.addObserver("", calendarAlertObserver, false);
-        calendarAlertObserver.observe("", "nsPref:changed", "tempNotification");
-
-        addEventListener("unload", this.onUnload, false);
-    },
-
-    onUnload: function() {
-        let prefs = Services.prefs.getBranch("extensions.lightbird.");
-        let alarmService = Components.classes['@mozilla.org/calendar/alarm-service;1']
-                        .getService(Components.interfaces.calIAlarmService);
-        alarmService.removeObserver(calendarAlertObserver);
-        prefs.removeObserver("", calendarAlertObserver);
-    }*/
-}
-
-//addEventListener("load", lightbirdObject.onLoad, false);
+addEventListener("load", lightbirdObject.onLoad, false);
+addEventListener("unload", lightbirdObject.onUnload, false);

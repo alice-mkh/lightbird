@@ -6,8 +6,6 @@
  * Called from calendar.xul window onload.
  */
 
-Components.utils.import("resource://gre/modules/Services.jsm");
-
 var gBrandBundle;
 
 function calendarInit() {
@@ -32,9 +30,10 @@ function calendarInit() {
         handleCommandLine(cl);
     }*/
 
-    Services.prefs.setBoolPref("extensions.lightbird.tempNotification", false);
-
     gBrandBundle = document.getElementById("bundle_brand");
+
+    Components.classes["@lightbird/alarm-service;1"].getService()
+      .wrappedJSObject.calendarWindowOpened();
 }
 
 function handleCommandLine(aComLine) {

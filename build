@@ -8,7 +8,6 @@ cp icon.png temp
 cp icon64.png temp
 cp chrome temp -r
 cp components temp -r
-cp defaults temp -r
 
 cd temp
 
