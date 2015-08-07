@@ -38,15 +38,4 @@ done
 sed -E "s/^#.*//g" -i *
 cd ../..
 
-cd skin
-for F in common/*; do
-    cp $F pinstripe
-    cp $F winstripe
-    cp $F winstripe-aero
-done
-rm -rf common
-cp winstripe/sunbird/toolbar.css winstripe-aero/sunbird
-sed "s/\.png/-aero\.png/g" -i winstripe-aero/sunbird/toolbar.css
-cd ..
-
 zip ../$NAME-$VERSION-sm+tb.xpi * -rq
