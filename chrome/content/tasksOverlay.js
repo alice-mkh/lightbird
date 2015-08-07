@@ -5,22 +5,38 @@
 Components.utils.import("resource://gre/modules/Services.jsm");
 
 const ALARM_TOPIC = "lightbird:alarm-state-changed";
+const BIFF_ELEMENTS = [
+  "mini-cal",
+  "calendar-button"
+];
 
 var lightbirdObject = {
-  minical: null,
+  biffElement: null,
 
   toCalendar: function() {
     toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
   },
 
   onLoad: function () {
-    lightbirdObject.minical = document.getElementById("mini-cal");
+    let elem = null;
+    for (let i = 0; i < BIFF_ELEMENTS.length; i++) {
+      elem = document.getElementById(BIFF_ELEMENTS[i]);
+      if (elem)
+        break;
+    }
 
-    if (Components.classes["@lightbird/alarm-service;1"].getService()
-        .wrappedJSObject.isAlarming())
-      lightbirdObject.minical.setAttribute("BiffState", "Alarm");
+    if (!elem)
+      return;
+
+    lightbirdObject.biffElement = elem;
+
+    let num = Components.classes["@lightbird/alarm-service;1"]
+        .getService().wrappedJSObject.getAlarmsCount();
+
+    lightbirdObject.setState(num);
 
     Services.obs.addObserver(lightbirdObject.obs, ALARM_TOPIC, false);
+    addEventListener("unload", lightbirdObject.onUnload, false);
   },
 
   onUnload: function () {
@@ -29,15 +45,17 @@ var lightbirdObject = {
 
   obs: {
     observe: function (aSubject, aTopic, aData) {
-      let alarm = aData == "true";
-
-      if (alarm)
-        lightbirdObject.minical.setAttribute("BiffState", "Alarm");
-      else
-        lightbirdObject.minical.removeAttribute("BiffState");
+      lightbirdObject.setState(aData);
     }
+  },
+
+  setState: function (aNum) {
+    dump(aNum+"\n");
+    if (aNum > 0)
+      lightbirdObject.biffElement.setAttribute("BiffState", "Alarm");
+    else
+      lightbirdObject.biffElement.removeAttribute("BiffState");
   }
 };
 
 addEventListener("load", lightbirdObject.onLoad, false);
-addEventListener("unload", lightbirdObject.onUnload, false);

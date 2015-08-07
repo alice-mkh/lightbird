@@ -32,8 +32,12 @@ function calendarInit() {
 
     gBrandBundle = document.getElementById("bundle_brand");
 
-    Components.classes["@lightbird/alarm-service;1"].getService()
-      .wrappedJSObject.calendarWindowOpened();
+    // Opening or focusing calendar window should reset alarm notification
+    // on taskbar or toolbar button
+    window.addEventListener("focus", () => {
+      Components.classes["@lightbird/alarm-service;1"].getService()
+          .wrappedJSObject.calendarWindowFocused();
+    });
 }
 
 function handleCommandLine(aComLine) {

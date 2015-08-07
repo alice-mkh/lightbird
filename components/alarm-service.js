@@ -11,7 +11,7 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
 const ALARM_TOPIC = "lightbird:alarm-state-changed";
 
-var gAlarming = false;
+var gAlarms = [];
 
 function LightbirdAlarmService() {
   this.wrappedJSObject = this;
@@ -26,12 +26,15 @@ LightbirdAlarmService.prototype.observe = function(aSubject, aTopic, aData) {
   Services.obs.addObserver(gCalStartupObserver, "calendar-startup-done", false);
 };
 
-LightbirdAlarmService.prototype.calendarWindowOpened = function() {
-  notify(false);
+LightbirdAlarmService.prototype.calendarWindowFocused = function() {
+  // Opening or even focusing calendar should always reset the biff state
+  gAlarms = [];
+
+  notify();
 };
 
-LightbirdAlarmService.prototype.isAlarming = function() {
-  return gAlarming;
+LightbirdAlarmService.prototype.getAlarmsCount = function() {
+  return gAlarms.length;
 }
 
 var gCalStartupObserver = {
@@ -43,22 +46,40 @@ var gCalStartupObserver = {
 };
 
 var gAlarmObserver = {
-  onAlarm: function (aAlarmItem) {
-    notify(true);
+  onAlarm: function (aItem, aAlarm) {
+    if (aAlarm.action != "DISPLAY")
+      // This monitor only looks for DISPLAY alarms.
+      return;
+
+    gAlarms.push([aItem, aAlarm]);
+
+    notify();
   },
 
-  onRemoveAlarmsByItem: function () {
-    notify(false);
+  onRemoveAlarmsByItem: function (aItem) {
+    gAlarms = gAlarms.filter(itemAlarm => {
+      let [thisItem, alarm] = itemAlarm;
+      return (aItem.hashId != thisItem.hashId);
+    });
+
+    notify();
   },
 
-  onRemoveAlarmsByCalendar: function () {
-    notify(false);
+  onRemoveAlarmsByCalendar: function (aCalendar) {
+    gAlarms = gAlarms.filter(itemAlarm => {
+      let [thisItem, alarm] = itemAlarm;
+      return (aCalendar.id != thisItem.calendar.id);
+    });
+
+    notify();
+  },
+
+  onAlarmsLoaded: function (aCalendar) {
   }
 };
 
-function notify(aAlarming) {
-  gAlarming = aAlarming;
-  Services.obs.notifyObservers(null, ALARM_TOPIC, aAlarming);
+function notify() {
+  Services.obs.notifyObservers(null, ALARM_TOPIC, gAlarms.length);
 }
 
 var NSGetFactory = XPCOMUtils.generateNSGetFactory([ LightbirdAlarmService ]);
