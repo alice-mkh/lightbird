@@ -7,11 +7,19 @@ Components.utils.import("resource://gre/modules/Services.jsm");
 const ALARM_TOPIC = "lightbird:alarm-state-changed";
 
 var lightbirdObject = {
+  minical: null,
+
   toCalendar: function() {
     toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
   },
 
   onLoad: function () {
+    lightbirdObject.minical = document.getElementById("mini-cal");
+
+    if (Components.classes["@lightbird/alarm-service;1"].getService()
+        .wrappedJSObject.isAlarming())
+      lightbirdObject.minical.setAttribute("BiffState", "Alarm");
+
     Services.obs.addObserver(lightbirdObject.obs, ALARM_TOPIC, false);
   },
 
@@ -22,12 +30,11 @@ var lightbirdObject = {
   obs: {
     observe: function (aSubject, aTopic, aData) {
       let alarm = aData == "true";
-      let minical = document.getElementById("mini-cal");
 
       if (alarm)
-        minical.setAttribute("BiffState", "Alarm");
+        lightbirdObject.minical.setAttribute("BiffState", "Alarm");
       else
-        minical.removeAttribute("BiffState");
+        lightbirdObject.minical.removeAttribute("BiffState");
     }
   }
 };

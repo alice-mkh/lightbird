@@ -11,6 +11,8 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
 const ALARM_TOPIC = "lightbird:alarm-state-changed";
 
+var gAlarming = false;
+
 function LightbirdAlarmService() {
   this.wrappedJSObject = this;
 }
@@ -21,30 +23,42 @@ LightbirdAlarmService.prototype = {
 };
 
 LightbirdAlarmService.prototype.observe = function(aSubject, aTopic, aData) {
-  let alarmService = Cc['@mozilla.org/calendar/alarm-service;1'].getService(Ci.calIAlarmService)
-  alarmService.addObserver(gAlarmObserver);
+  Services.obs.addObserver(gCalStartupObserver, "calendar-startup-done", false);
 };
 
 LightbirdAlarmService.prototype.calendarWindowOpened = function() {
-  Services.obs.notifyObservers(null, ALARM_TOPIC, "false");
-  dump("calendarWindowOpened\n");
+  notify(false);
+};
+
+LightbirdAlarmService.prototype.isAlarming = function() {
+  return gAlarming;
+}
+
+var gCalStartupObserver = {
+  observe: function(aSubject, aTopic, aData) {
+    let alarmService = Cc['@mozilla.org/calendar/alarm-service;1'].getService(Ci.calIAlarmService);
+    alarmService.startup();
+    alarmService.addObserver(gAlarmObserver);
+  }
 };
 
 var gAlarmObserver = {
   onAlarm: function (aAlarmItem) {
-    Services.obs.notifyObservers(null, ALARM_TOPIC, "true");
-    dump("onAlarm\n");
+    notify(true);
   },
 
   onRemoveAlarmsByItem: function () {
-    Services.obs.notifyObservers(null, ALARM_TOPIC, "false");
-    dump("onRemoveAlarmsByItem\n");
+    notify(false);
   },
 
   onRemoveAlarmsByCalendar: function () {
-    Services.obs.notifyObservers(null, ALARM_TOPIC, "false");
-    dump("onRemoveAlarmsByCalendar\n");
+    notify(false);
   }
 };
+
+function notify(aAlarming) {
+  gAlarming = aAlarming;
+  Services.obs.notifyObservers(null, ALARM_TOPIC, aAlarming);
+}
 
 var NSGetFactory = XPCOMUtils.generateNSGetFactory([ LightbirdAlarmService ]);
