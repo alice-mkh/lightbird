@@ -6,6 +6,14 @@
   list-style-image: url("chrome://calendar/skin/cal-icon24.png");
 }
 
+#calendar-button[BiffState="Alarm"] {
+  list-style-image: url("chrome://$NAME/skin/cal-icon24-alarm.png");
+}
+
 toolbar[iconsize="small"] #calendar-button {
   list-style-image: url("chrome://$NAME/skin/cal-icon16.png");
+}
+
+toolbar[iconsize="small"] #calendar-button[BiffState="Alarm"] {
+  list-style-image: url("chrome://$NAME/skin/cal-icon16-alarm.png");
 }
