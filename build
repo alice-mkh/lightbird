@@ -8,10 +8,7 @@ cp icon.png temp
 cp icon64.png temp
 cp chrome temp -r
 cp components temp -r
-cp content temp -r
 cp defaults temp -r
-cp locale temp -r
-cp skin temp -r
 
 cd temp
 
@@ -26,7 +23,7 @@ while read LINE; do
     eval "$LINE1=\"$LINE2\""
 done < "../config.txt"
 
-cd content/sunbird
+cd chrome/content/sunbird
 
 for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sunbird-scripts calendar-menubar sunbird-toolbar; do
     tail -n +5 "$F.inc" > "$F.inc.temp"
@@ -36,6 +33,6 @@ for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sun
     rm "$F.inc.temp"
 done
 sed -E "s/^#.*//g" -i *
-cd ../..
+cd ../../..
 
 zip ../$NAME-$VERSION-sm+tb.xpi * -rq

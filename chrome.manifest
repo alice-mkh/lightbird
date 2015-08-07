@@ -1,4 +1,4 @@
-content $NAME content/
+content $NAME chrome/content/
 
 overlay chrome://editor/content/editorTasksOverlay.xul chrome://$NAME/content/tasksOverlay.xul application=$SM_ID
 overlay chrome://communicator/content/pref/pref-appearance.xul chrome://$NAME/content/prefsOverlay.xul application=$SM_ID
@@ -7,10 +7,10 @@ component {4af82fb4-8942-4644-874d-f768a149b4f3} components/cmd-line-handler.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
 category command-line-handler m-calendar @mozilla.org/commandlinehandler/general-startup;1?type=calendar
 
-skin $NAME classic/1.0 skin/winstripe/
-skin $NAME classic/1.0 skin/winstripe-aero/ os=WINNT osversion>=6
-skin $NAME classic/1.0 skin/pinstripe/ os=Darwin
-skin $NAME modern/1.0 skin/modern/
+skin $NAME classic/1.0 chrome/skin/winstripe/
+skin $NAME classic/1.0 chrome/skin/winstripe-aero/ os=WINNT osversion>=6
+skin $NAME classic/1.0 chrome/skin/pinstripe/ os=Darwin
+skin $NAME modern/1.0  chrome/skin/modern/
 
 
 override chrome://lightning/content/imip-bar-sidebar.xul chrome://$NAME/content/emptyOverlay.xul
@@ -48,34 +48,34 @@ overlay chrome://messenger/content/addressbook/addressbook.xul chrome://$NAME/co
 style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/tbToolbar.css
 
 #Locales
-locale $NAME ca locale/ca/
-locale $NAME cs locale/cs/
-locale $NAME da locale/da/
-locale $NAME de locale/de/
-locale $NAME en-GB locale/en-GB/
-locale $NAME en-US locale/en-US/
-locale $NAME es-AR locale/es-AR/
-locale $NAME es-ES locale/es-ES/
-locale $NAME et locale/et/
-locale $NAME eu locale/eu/
-locale $NAME fi locale/fi/
-locale $NAME fr locale/fr/
-locale $NAME fy-NL locale/fy-NL/
-locale $NAME ga-IE locale/ga-IE/
-locale $NAME gd locale/gd/
-locale $NAME hr locale/hr/
-locale $NAME hu locale/hu/
-locale $NAME is locale/is/
-locale $NAME it locale/it/
-locale $NAME ja locale/ja/
-locale $NAME ko locale/ko/
-locale $NAME lt locale/lt/
-locale $NAME nb-NO locale/nb-NO/
-locale $NAME nl locale/nl/
-locale $NAME nn-NO locale/nn-NO/
-locale $NAME pl locale/pl/
-locale $NAME pt-PT locale/pt-PT/
-locale $NAME ru locale/ru/
-locale $NAME sk locale/sk/
-locale $NAME zh-CN locale/zh-CN/
-locale $NAME zh-TW locale/zh-TW/
+locale $NAME ca    chrome/locale/ca/
+locale $NAME cs    chrome/locale/cs/
+locale $NAME da    chrome/locale/da/
+locale $NAME de    chrome/locale/de/
+locale $NAME en-GB chrome/locale/en-GB/
+locale $NAME en-US chrome/locale/en-US/
+locale $NAME es-AR chrome/locale/es-AR/
+locale $NAME es-ES chrome/locale/es-ES/
+locale $NAME et    chrome/locale/et/
+locale $NAME eu    chrome/locale/eu/
+locale $NAME fi    chrome/locale/fi/
+locale $NAME fr    chrome/locale/fr/
+locale $NAME fy-NL chrome/locale/fy-NL/
+locale $NAME ga-IE chrome/locale/ga-IE/
+locale $NAME gd    chrome/locale/gd/
+locale $NAME hr    chrome/locale/hr/
+locale $NAME hu    chrome/locale/hu/
+locale $NAME is    chrome/locale/is/
+locale $NAME it    chrome/locale/it/
+locale $NAME ja    chrome/locale/ja/
+locale $NAME ko    chrome/locale/ko/
+locale $NAME lt    chrome/locale/lt/
+locale $NAME nb-NO chrome/locale/nb-NO/
+locale $NAME nl    chrome/locale/nl/
+locale $NAME nn-NO chrome/locale/nn-NO/
+locale $NAME pl    chrome/locale/pl/
+locale $NAME pt-PT chrome/locale/pt-PT/
+locale $NAME ru    chrome/locale/ru/
+locale $NAME sk    chrome/locale/sk/
+locale $NAME zh-CN chrome/locale/zh-CN/
+locale $NAME zh-TW chrome/locale/zh-TW/
