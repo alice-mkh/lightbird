@@ -50,7 +50,6 @@ var lightbirdObject = {
   },
 
   setState: function (aNum) {
-    dump(aNum+"\n");
     if (aNum > 0)
       lightbirdObject.biffElement.setAttribute("BiffState", "Alarm");
     else
