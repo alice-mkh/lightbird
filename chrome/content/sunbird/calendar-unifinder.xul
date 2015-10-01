@@ -54,7 +54,7 @@
         </box>
         <toolbarbutton id="unifinder-closer"
                        class="unifinder-closebutton"
-                       command="calendar_show_unifinder_command"
+                       oncommand="toggleUnifinder();"
                        tooltiptext="&calendar.unifinder.close.tooltip;"/>
       </hbox>
       <tree id="unifinder-search-results-tree" flex="1"
