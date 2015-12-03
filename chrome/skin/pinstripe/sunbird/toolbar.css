@@ -7,7 +7,7 @@
  *-------------------------------------------------------------------*/
 
 .cal-toolbarbutton-1 {
-    list-style-image: url("chrome://calendar/skin/toolbar-large.png");
+    list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-large.png");
 }
 
 /*--------------------------------------------------------------------
@@ -15,7 +15,7 @@
  *-------------------------------------------------------------------*/
 
 toolbar[iconsize="small"] .cal-toolbarbutton-1 {
-    list-style-image: url("chrome://calendar/skin/toolbar-small.png");
+    list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-small.png");
 }
 
 /*--------------------------------------------------------------------
