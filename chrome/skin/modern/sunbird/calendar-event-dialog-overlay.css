@@ -22,7 +22,7 @@
   list-style-image: url("chrome://messenger/skin/smime/icons/smbtn1.gif") !important;
 }
 
-#button-delete {
+#button-delete.cal-event-toolbarbutton {
   list-style-image: url("chrome://$NAME/skin/sunbird/btn1.png") !important;
 }
 
@@ -90,18 +90,18 @@
   -moz-image-region: rect(340px 199px 373px 150px) !important;
 }
 
-#button-delete {
+#button-delete.cal-event-toolbarbutton {
   -moz-image-region: rect(272px 45px 306px 0px) !important;
 }
 
-#button-delete:hover {
+#button-delete.cal-event-toolbarbutton:hover {
   -moz-image-region: rect(272px 90px 306px 45px) !important;
 }
 
-#button-delete:hover:active {
+#button-delete.cal-event-toolbarbutton:hover:active {
   -moz-image-region: rect(272px 135px 306px 90px) !important;
 }
 
-#button-delete[disabled="true"] {
+#button-delete.cal-event-toolbarbutton[disabled="true"] {
   -moz-image-region: rect(272px 180px 306px 135px) !important;
 }
