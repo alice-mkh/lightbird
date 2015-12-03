@@ -35,6 +35,7 @@ overlay chrome://calendar/content/calendar-common-sets.xul chrome://$NAME/conten
 overlay chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/sunbird/lightning-hooks.xul
 
 override chrome://lightning/skin/lightning-toolbar.css chrome://$NAME/skin/sunbird/toolbar.css
+style chrome://global/content/customizeToolbar.xul chrome://$NAME/skin/sunbird/calendar-event-dialog-overlay.css
 
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder.xul application=$SM_ID appversion>=2.27
 overlay chrome://$NAME/content/sunbird/calendar.xul chrome://$NAME/content/sunbird/calendar-unifinder-old.xul application=$SM_ID appversion<2.27
