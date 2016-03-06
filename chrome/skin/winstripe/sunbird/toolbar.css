@@ -30,8 +30,9 @@ toolbar[iconsize="small"] .cal-toolbarbutton-1 {
     -moz-image-region: rect(24px 192px 48px 168px);
 }
 
-#calendar-cut-button[disabled="true"] {
-    -moz-image-region: rect(48px 192px 72px 168px) !important;
+#calendar-cut-button[disabled="true"],
+#calendar-cut-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 192px 72px 168px);
 }
 
 /*--------------------------------------------------------------------
@@ -46,8 +47,9 @@ toolbar[iconsize="small"] #calendar-cut-button:hover {
     -moz-image-region: rect(16px 128px 32px 112px);
 }
 
-toolbar[iconsize="small"] #calendar-cut-button[disabled="true"] {
-    -moz-image-region: rect(32px 128px 48px 112px) !important;
+toolbar[iconsize="small"] #calendar-cut-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-cut-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 128px 48px 112px);
 }
 
 /*--------------------------------------------------------------------
@@ -62,8 +64,9 @@ toolbar[iconsize="small"] #calendar-cut-button[disabled="true"] {
     -moz-image-region: rect(24px 216px 48px 192px);
 }
 
-#calendar-copy-button[disabled="true"] {
-    -moz-image-region: rect(48px 216px 72px 192px) !important;
+#calendar-copy-button[disabled="true"],
+#calendar-copy-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 216px 72px 192px);
 }
 
 /*--------------------------------------------------------------------
@@ -78,8 +81,9 @@ toolbar[iconsize="small"] #calendar-copy-button:hover {
     -moz-image-region: rect(16px 144px 32px 128px);
 }
 
-toolbar[iconsize="small"] #calendar-copy-button[disabled="true"] {
-    -moz-image-region: rect(32px 144px 48px 128px) !important;
+toolbar[iconsize="small"] #calendar-copy-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-copy-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 144px 48px 128px);
 }
 
 /*--------------------------------------------------------------------
@@ -94,8 +98,9 @@ toolbar[iconsize="small"] #calendar-copy-button[disabled="true"] {
     -moz-image-region: rect(24px 240px 48px 216px);
 }
 
-#calendar-paste-button[disabled="true"] {
-    -moz-image-region: rect(48px 240px 72px 216px) !important;
+#calendar-paste-button[disabled="true"],
+#calendar-paste-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 240px 72px 216px);
 }
 
 /*--------------------------------------------------------------------
@@ -110,8 +115,9 @@ toolbar[iconsize="small"] #calendar-paste-button:hover {
     -moz-image-region: rect(16px 160px 32px 144px);
 }
 
-toolbar[iconsize="small"] #calendar-paste-button[disabled="true"] {
-    -moz-image-region: rect(32px 160px 48px 144px) !important;
+toolbar[iconsize="small"] #calendar-paste-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-paste-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 160px 48px 144px);
 }
 
 /*--------------------------------------------------------------------
@@ -125,8 +131,9 @@ toolbar[iconsize="small"] #calendar-paste-button[disabled="true"] {
     -moz-image-region: rect(24px 432px 48px 408px);
 }
 
-#calendar-choose-date-button[disabled="true"] {
-    -moz-image-region: rect(48px 432px 72px 408px) !important;
+#calendar-choose-date-button[disabled="true"],
+#calendar-choose-date-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 432px 72px 408px);
 }
 
 /*--------------------------------------------------------------------
@@ -141,8 +148,9 @@ toolbar[iconsize="small"] #calendar-choose-date-button:hover {
     -moz-image-region: rect(16px 288px 32px 272px);
 }
 
-toolbar[iconsize="small"] #calendar-choose-date-button[disabled="true"] {
-    -moz-image-region: rect(32px 288px 48px 272px) !important;
+toolbar[iconsize="small"] #calendar-choose-date-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-choose-date-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 288px 48px 272px);
 }
 
 /*--------------------------------------------------------------------
@@ -157,8 +165,9 @@ toolbar[iconsize="small"] #calendar-choose-date-button[disabled="true"] {
     -moz-image-region: rect(24px 72px 48px 48px);
 }
 
-#calendar-delete-button[disabled="true"] {
-    -moz-image-region: rect(48px 72px 72px 48px) !important;
+#calendar-delete-button[disabled="true"],
+#calendar-delete-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 72px 72px 48px);
 }
 
 /*--------------------------------------------------------------------
@@ -173,8 +182,9 @@ toolbar[iconsize="small"] #calendar-delete-button:hover {
     -moz-image-region: rect(16px 48px 32px 32px);
 }
 
-toolbar[iconsize="small"] #calendar-delete-button[disabled="true"] {
-    -moz-image-region: rect(32px 48px 48px 32px) !important;
+toolbar[iconsize="small"] #calendar-delete-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-delete-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 48px 48px 32px);
 }
 
 /*--------------------------------------------------------------------
@@ -189,8 +199,9 @@ toolbar[iconsize="small"] #calendar-delete-button[disabled="true"] {
     -moz-image-region: rect(24px 360px 48px 336px);
 }
 
-#calendar-print-button[disabled="true"] {
-    -moz-image-region: rect(48px 360px 72px 336px) !important;
+#calendar-print-button[disabled="true"],
+#calendar-print-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 360px 72px 336px);
 }
 
 /*--------------------------------------------------------------------
@@ -205,8 +216,9 @@ toolbar[iconsize="small"] #calendar-print-button:hover {
     -moz-image-region: rect(16px 240px 32px 224px);
 }
 
-toolbar[iconsize="small"] #calendar-print-button[disabled="true"] {
-    -moz-image-region: rect(32px 240px 48px 224px) !important;
+toolbar[iconsize="small"] #calendar-print-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-print-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 240px 48px 224px);
 }
 
 /*--------------------------------------------------------------------
@@ -221,8 +233,9 @@ toolbar[iconsize="small"] #calendar-print-button[disabled="true"] {
     -moz-image-region: rect(24px 408px 48px 384px);
 }
 
-#calendar-go-to-today-button[disabled="true"] {
-    -moz-image-region: rect(48px 408px 72px 384px) !important;
+#calendar-go-to-today-button[disabled="true"],
+#calendar-go-to-today-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 408px 72px 384px);
 }
 
 /*--------------------------------------------------------------------
@@ -237,8 +250,9 @@ toolbar[iconsize="small"] #calendar-go-to-today-button:hover {
     -moz-image-region: rect(16px 272px 32px 256px);
 }
 
-toolbar[iconsize="small"] #calendar-go-to-today-button[disabled="true"] {
-    -moz-image-region: rect(32px 272px 48px 256px) !important;
+toolbar[iconsize="small"] #calendar-go-to-today-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-go-to-today-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 272px 48px 256px);
 }
 
 /*--------------------------------------------------------------------
@@ -253,8 +267,9 @@ toolbar[iconsize="small"] #calendar-go-to-today-button[disabled="true"] {
     -moz-image-region: rect(24px 480px 48px 456px);
 }
 
-#calendar-remote-reload-button[disabled="true"] {
-    -moz-image-region: rect(48px 480px 72px 456px) !important;
+#calendar-remote-reload-button[disabled="true"],
+#calendar-remote-reload-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 480px 72px 456px);
 }
 
 /*--------------------------------------------------------------------
@@ -269,8 +284,9 @@ toolbar[iconsize="small"] #calendar-remote-reload-button:hover {
     -moz-image-region: rect(16px 320px 32px 304px);
 }
 
-toolbar[iconsize="small"] #calendar-remote-reload-button[disabled="true"] {
-    -moz-image-region: rect(32px 320px 48px 304px) !important;
+toolbar[iconsize="small"] #calendar-remote-reload-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-remote-reload-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 320px 48px 304px);
 }
 
 /*--------------------------------------------------------------------
@@ -285,8 +301,9 @@ toolbar[iconsize="small"] #calendar-remote-reload-button[disabled="true"] {
     -moz-image-region: rect(24px 24px 48px 0px);
 }
 
-#calendar-new-event-button[disabled="true"] {
-    -moz-image-region: rect(48px 24px 72px 0px) !important;
+#calendar-new-event-button[disabled="true"],
+#calendar-new-event-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 24px 72px 0px);
 }
 
 /*--------------------------------------------------------------------
@@ -301,8 +318,9 @@ toolbar[iconsize="small"] #calendar-new-event-button:hover {
     -moz-image-region: rect(16px 16px 32px 0px);
 }
 
-toolbar[iconsize="small"] #calendar-new-event-button[disabled="true"] {
-    -moz-image-region: rect(32px 16px 48px 0px) !important;
+toolbar[iconsize="small"] #calendar-new-event-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-new-event-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 16px 48px 0px);
 }
 
 /*--------------------------------------------------------------------
@@ -317,8 +335,9 @@ toolbar[iconsize="small"] #calendar-new-event-button[disabled="true"] {
     -moz-image-region: rect(24px 384px 48px 360px);
 }
 
-#calendar-new-task-button[disabled="true"] {
-    -moz-image-region: rect(48px 384px 72px 360px) !important;
+#calendar-new-task-button[disabled="true"],
+#calendar-new-task-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 384px 72px 360px);
 }
 
 /*--------------------------------------------------------------------
@@ -333,8 +352,9 @@ toolbar[iconsize="small"] #calendar-new-task-button:hover {
     -moz-image-region: rect(16px 256px 32px 240px);
 }
 
-toolbar[iconsize="small"] #calendar-new-task-button[disabled="true"] {
-    -moz-image-region: rect(32px 256px 48px 240px) !important;
+toolbar[iconsize="small"] #calendar-new-task-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-new-task-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 256px 48px 240px);
 }
 
 /*--------------------------------------------------------------------
@@ -349,8 +369,9 @@ toolbar[iconsize="small"] #calendar-new-task-button[disabled="true"] {
     -moz-image-region: rect(24px 48px 48px 24px);
 }
 
-#calendar-edit-button[disabled="true"] {
-    -moz-image-region: rect(48px 48px 72px 24px) !important;
+#calendar-edit-button[disabled="true"],
+#calendar-edit-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 48px 72px 24px);
 }
 
 /*--------------------------------------------------------------------
@@ -365,8 +386,9 @@ toolbar[iconsize="small"] #calendar-edit-button:hover {
     -moz-image-region: rect(16px 32px 32px 16px);
 }
 
-toolbar[iconsize="small"] #calendar-edit-button[disabled="true"] {
-    -moz-image-region: rect(32px 32px 48px 16px) !important;
+toolbar[iconsize="small"] #calendar-edit-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-edit-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 32px 48px 16px);
 }
 
 /*--------------------------------------------------------------------
@@ -381,8 +403,9 @@ toolbar[iconsize="small"] #calendar-edit-button[disabled="true"] {
     -moz-image-region: rect(24px 528px 48px 504px);
 }
 
-#calendar-unifinder-button[disabled="true"] {
-    -moz-image-region: rect(48px 528px 72px 504px) !important;
+#calendar-unifinder-button[disabled="true"],
+#calendar-unifinder-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 528px 72px 504px);
 }
 
 /*--------------------------------------------------------------------
@@ -397,8 +420,9 @@ toolbar[iconsize="small"] #calendar-unifinder-button:hover {
     -moz-image-region: rect(16px 352px 32px 336px);
 }
 
-toolbar[iconsize="small"] #calendar-unifinder-button[disabled="true"] {
-    -moz-image-region: rect(32px 352px 48px 336px) !important;
+toolbar[iconsize="small"] #calendar-unifinder-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-unifinder-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 352px 48px 336px);
 }
 
 /*--------------------------------------------------------------------
@@ -413,8 +437,9 @@ toolbar[iconsize="small"] #calendar-unifinder-button[disabled="true"] {
     -moz-image-region: rect(24px 264px 48px 240px);
 }
 
-#calendar-import-button[disabled="true"] {
-    -moz-image-region: rect(48px 264px 72px 240px) !important;
+#calendar-import-button[disabled="true"],
+#calendar-import-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 264px 72px 240px);
 }
 
 /*--------------------------------------------------------------------
@@ -429,8 +454,9 @@ toolbar[iconsize="small"] #calendar-import-button:hover {
     -moz-image-region: rect(16px 176px 32px 160px);
 }
 
-toolbar[iconsize="small"] #calendar-import-button[disabled="true"] {
-    -moz-image-region: rect(32px 176px 48px 160px) !important;
+toolbar[iconsize="small"] #calendar-import-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-import-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 176px 48px 160px);
 }
 
 /*--------------------------------------------------------------------
@@ -445,8 +471,9 @@ toolbar[iconsize="small"] #calendar-import-button[disabled="true"] {
     -moz-image-region: rect(24px 288px 48px 264px);
 }
 
-#calendar-export-button[disabled="true"] {
-    -moz-image-region: rect(48px 288px 72px 264px) !important;
+#calendar-export-button[disabled="true"],
+#calendar-export-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 288px 72px 264px);
 }
 
 /*--------------------------------------------------------------------
@@ -461,8 +488,9 @@ toolbar[iconsize="small"] #calendar-export-button:hover {
     -moz-image-region: rect(16px 192px 32px 176px);
 }
 
-toolbar[iconsize="small"] #calendar-export-button[disabled="true"] {
-    -moz-image-region: rect(32px 192px 48px 176px) !important;
+toolbar[iconsize="small"] #calendar-export-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-export-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 192px 48px 176px);
 }
 
 /*--------------------------------------------------------------------
@@ -477,8 +505,9 @@ toolbar[iconsize="small"] #calendar-export-button[disabled="true"] {
     -moz-image-region: rect(24px 312px 48px 288px);
 }
 
-#calendar-subscribe-button[disabled="true"] {
-    -moz-image-region: rect(48px 312px 72px 288px) !important;
+#calendar-subscribe-button[disabled="true"],
+#calendar-subscribe-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 312px 72px 288px);
 }
 
 /*--------------------------------------------------------------------
@@ -493,8 +522,9 @@ toolbar[iconsize="small"] #calendar-subscribe-button:hover {
     -moz-image-region: rect(16px 208px 32px 192px);
 }
 
-toolbar[iconsize="small"] #calendar-subscribe-button[disabled="true"] {
-    -moz-image-region: rect(32px 208px 48px 192px) !important;
+toolbar[iconsize="small"] #calendar-subscribe-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-subscribe-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 208px 48px 192px);
 }
 
 /*--------------------------------------------------------------------
@@ -509,8 +539,9 @@ toolbar[iconsize="small"] #calendar-subscribe-button[disabled="true"] {
     -moz-image-region: rect(24px 336px 48px 312px);
 }
 
-#calendar-publish-button[disabled="true"] {
-    -moz-image-region: rect(48px 336px 72px 312px) !important;
+#calendar-publish-button[disabled="true"],
+#calendar-publish-button[disabled="true"]:hover {
+    -moz-image-region: rect(48px 336px 72px 312px);
 }
 
 /*--------------------------------------------------------------------
@@ -525,8 +556,9 @@ toolbar[iconsize="small"] #calendar-publish-button:hover {
     -moz-image-region: rect(16px 224px 32px 208px);
 }
 
-toolbar[iconsize="small"] #calendar-publish-button[disabled="true"] {
-    -moz-image-region: rect(32px 224px 48px 208px) !important;
+toolbar[iconsize="small"] #calendar-publish-button[disabled="true"],
+toolbar[iconsize="small"] #calendar-publish-button[disabled="true"]:hover {
+    -moz-image-region: rect(32px 224px 48px 208px);
 }
 
 /*--------------------------------------------------------------------
