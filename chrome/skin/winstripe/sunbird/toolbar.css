@@ -689,7 +689,7 @@ toolbar[iconsize="small"] #calendar-day-view-tbutton {
 }
 
 toolbar[iconsize="small"] #calendar-day-view-tbutton:hover {
-    -moz-image-region: rect(16px 64px 48px 48px);
+    -moz-image-region: rect(16px 64px 32px 48px);
 }
 
 toolbar[iconsize="small"] #calendar-day-view-tbutton:hover:active,
