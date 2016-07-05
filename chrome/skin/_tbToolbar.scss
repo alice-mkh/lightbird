@@ -3,17 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #calendar-button {
-  list-style-image: url("chrome://calendar/skin/cal-icon24.png");
+  list-style-image: url("chrome://lightbird/skin/cal-icon24.png");
 
   &[BiffState="Alarm"] {
-    list-style-image: url("chrome://$NAME/skin/cal-icon24-alarm.png");
+    list-style-image: url("chrome://lightbird/skin/cal-icon24-alarm.png");
   }
 
   toolbar[iconsize="small"] & {
-    list-style-image: url("chrome://$NAME/skin/cal-icon16.png");
+    list-style-image: url("chrome://lightbird/skin/cal-icon16.png");
 
     &[BiffState="Alarm"] {
-      list-style-image: url("chrome://$NAME/skin/cal-icon16-alarm.png");
+      list-style-image: url("chrome://lightbird/skin/cal-icon16-alarm.png");
     }
   }
 }
