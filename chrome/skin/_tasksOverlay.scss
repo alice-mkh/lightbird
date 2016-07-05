@@ -1,0 +1,35 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+$_icon_x: 21px;
+$_icon_y: 13px;
+
+#mini-cal {
+  list-style-image: url("chrome://$NAME/skin/taskbar.png");
+  -moz-image-region: rect(0 $_icon_x $_icon_y 0);
+
+  &:hover {
+    -moz-image-region: rect($_icon_y $_icon_x $_icon_y*2 0);
+
+    &:active {
+      -moz-image-region: rect($_icon_y*2 $_icon_x $_icon_y*3 0);
+    }
+  }
+
+  &[BiffState="Alarm"] {
+    -moz-image-region: rect(0 $_icon_x*2 $_icon_y $_icon_x);
+
+    &:hover {
+      -moz-image-region: rect($_icon_y $_icon_x*2 $_icon_y*2 $_icon_x);
+
+      &:active {
+        -moz-image-region: rect($_icon_y*2 $_icon_x*2 $_icon_y*3 $_icon_x);
+      }
+    }
+  }
+}
+
+#tasksMenuCalendar {
+  list-style-image: url("chrome://$NAME/skin/cal-icon16.png");
+}

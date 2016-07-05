@@ -1,0 +1,37 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+$_l_icon: 24px;
+$_s_icon: 16px;
+$_pinstripe: false;
+@import "util";
+
+.cal-event-toolbarbutton,
+#button-delete.cal-event-toolbarbutton {
+  list-style-image: url("chrome://lightbird/skin/sunbird/calendar-event-dialog-toolbar.png") !important;
+
+  .toolbarbutton-icon {
+    width: $_l_icon !important;
+    height: $_l_icon !important;
+  }
+
+  toolbar[iconsize="small"] & {
+    list-style-image: url("chrome://lightbird/skin/sunbird/calendar-event-dialog-toolbar-small.png") !important;
+
+    .toolbarbutton-icon {
+      width: $_s_icon !important;
+      height: $_s_icon !important;
+    }
+  }
+}
+
+@include toolbar_button(button-attendees, 2);
+@include toolbar_button(button-url, 4);
+@include toolbar_button(button-privacy, 5);
+@include toolbar_button(button-save, 6);
+@include toolbar_button("button-delete.cal-event-toolbarbutton", 17, $important:true);
+@include toolbar_button(button-priority, 25);
+@include toolbar_button(button-status, 26);
+@include toolbar_button(button-freebusy, 27);
+@include toolbar_button(button-timezones, 28);

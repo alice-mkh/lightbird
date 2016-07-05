@@ -11,6 +11,11 @@ cp components temp -r
 
 cd temp
 
+cd chrome/skin
+sass --sourcemap=none --update .
+find -name "*.scss" -delete
+cd ../..
+
 #Substitute variables
 while read LINE; do
     if [[ $LINE != [A-Z]* ]]; then
@@ -23,7 +28,6 @@ while read LINE; do
 done < "../config.txt"
 
 cd chrome/content/sunbird
-
 for F in calendar-doctype calendar-sets calendar-sets-extra calendar-scripts sunbird-scripts calendar-menubar sunbird-toolbar; do
     tail -n +5 "$F.inc" > "$F.inc.temp"
     sed "/#include $F.inc/r $F.inc.temp" -i calendar.xul

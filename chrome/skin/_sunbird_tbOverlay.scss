@@ -1,0 +1,61 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#navigator-throbber {
+  width: 16px + $_thr;
+  min-width: 16px + $_thr;
+  min-height: 16px;
+  margin: 0 3px + $_thr;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+
+  &[busy="true"] {
+    list-style-image: url("chrome://global/skin/icons/loading_16.png");
+  }
+}
+
+#throbber-box {
+  &, #wrapper-throbber-box > & {
+    list-style-image: url("chrome://global/skin/icons/notloading_16.png");
+  }
+}
+
+#offline-status-tb {
+  padding: 0 2px;
+  list-style-image: url("chrome://messenger/skin/icons/online.png");
+
+  &[offline="true"] {
+    list-style-image: url("chrome://messenger/skin/icons/offline.png");
+  }
+}
+
+.toolbarbutton-1 {
+  -moz-box-orient: vertical;
+}
+
+toolbox[labelalign="end"] {
+  .toolbarbutton-1,
+  .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-button {
+    -moz-box-orient: horizontal;
+  }
+
+  > toolbar[mode="full"] {
+    .toolbarbutton-1 .toolbarbutton-text {
+      -moz-padding-start: 2px;
+    }
+
+    deck .toolbarbutton-text {
+      text-align: start;
+    }
+  }
+}
+
+.toolbarbutton-1[type="menu"] {
+  -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
+
+  toolbox[labelalign="end"] & {
+    -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu");
+  }
+}

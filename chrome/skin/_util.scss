@@ -1,0 +1,58 @@
+@mixin toolbar_button($name, $num, $toggle:false, $important:false) {
+  $_s: if($_pinstripe, active, unquote("hover:active"));
+  $_imp: if($important, " !important", "");
+
+  ##{$name} {
+    -moz-image-region: rect($_l_icon*0 $_l_icon*$num $_l_icon*1 $_l_icon*($num - 1)) #{$_imp};
+
+    &:#{$_s} {
+      -moz-image-region: rect($_l_icon*1 $_l_icon*$num $_l_icon*2 $_l_icon*($num - 1)) #{$_imp};
+    }
+
+    @if $toggle==true {
+      &:hover:active,
+      &[checked="true"] {
+        -moz-image-region: rect($_l_icon*3 $_l_icon*$num $_l_icon*4 $_l_icon*($num - 1)) #{$_imp};
+      }
+    }
+
+    &[disabled="true"] {
+      &, &:#{$_s} {
+        -moz-image-region: rect($_l_icon*2 $_l_icon*$num $_l_icon*3 $_l_icon*($num - 1)) #{$_imp};
+      }
+    }
+
+    toolbar[iconsize="small"] & {
+      -moz-image-region: rect($_s_icon*0 $_s_icon*$num $_s_icon*1 $_s_icon*($num - 1)) #{$_imp};
+
+      &:#{$_s} {
+        -moz-image-region: rect($_s_icon*1 $_s_icon*$num $_s_icon*2 $_s_icon*($num - 1)) #{$_imp};
+      }
+
+      @if $toggle==true {
+        &:hover:active,
+        &[checked="true"] {
+          -moz-image-region: rect($_s_icon*3 $_s_icon*$num $_s_icon*4 $_s_icon*($num - 1)) #{$_imp};
+        }
+      }
+
+      &[disabled="true"] {
+        &, &:#{$_s} {
+          -moz-image-region: rect($_s_icon*2 $_s_icon*$num $_s_icon*3 $_s_icon*($num - 1)) #{$_imp};
+        }
+      }
+    }
+  }
+}
+
+@mixin toolbar_button_mono($name, $num, $important:false) {
+  $_imp: if($important, " !important", "");
+
+  #{$name} {
+    -moz-image-region: rect($_s_icon*0 $_s_icon*$num $_s_icon*1 $_s_icon*($num - 1)) #{$_imp};
+
+    &:not([disabled]):active {
+      -moz-image-region: rect($_s_icon*1 $_s_icon*$num $_s_icon*2 $_s_icon*($num - 1)) #{$_imp};
+    }
+  }
+}

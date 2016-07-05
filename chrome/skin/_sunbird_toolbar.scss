@@ -1,0 +1,34 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.cal-toolbarbutton-1 {
+  list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-large.png");
+
+  toolbar[iconsize="small"] & {
+    list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-small.png");
+  }
+}
+
+@import "util";
+
+@include toolbar_button(calendar-new-event-button, 1);
+@include toolbar_button(calendar-edit-button, 2);
+@include toolbar_button(calendar-delete-button, 3);
+@include toolbar_button(calendar-day-view-tbutton, 4, $toggle:true);
+@include toolbar_button(calendar-week-view-tbutton, 5, $toggle:true);
+@include toolbar_button(calendar-multiweek-view-tbutton, 6, $toggle:true);
+@include toolbar_button(calendar-month-view-tbutton, 7, $toggle:true);
+@include toolbar_button(calendar-cut-button, 8);
+@include toolbar_button(calendar-copy-button, 9);
+@include toolbar_button(calendar-paste-button, 10);
+@include toolbar_button(calendar-import-button, 11);
+@include toolbar_button(calendar-export-button, 12);
+@include toolbar_button(calendar-subscribe-button, 13);
+@include toolbar_button(calendar-publish-button, 14);
+@include toolbar_button(calendar-print-button, 15);
+@include toolbar_button(calendar-new-task-button, 16);
+@include toolbar_button(calendar-go-to-today-button, 17);
+@include toolbar_button(calendar-choose-date-button, 18);
+@include toolbar_button(calendar-remote-reload-button, 20);
+@include toolbar_button(calendar-unifinder-button, 22);

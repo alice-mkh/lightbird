@@ -1,0 +1,9 @@
+@import "sunbird_calendar";
+
+toolbarbutton.chevron {
+  list-style-image: url("chrome://global/skin/icons/chevron.png") !important;
+
+  & > .toolbarbutton-menu-dropmarker {
+    display: none;
+  }
+}

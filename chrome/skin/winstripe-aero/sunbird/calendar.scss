@@ -1,0 +1,37 @@
+@import "winstripe/sunbird/calendar";
+
+/*--------------------------------------------------------------------
+ * reverting custom splitter style
+ *-------------------------------------------------------------------*/
+#calsidebar_splitter {
+  border-width: 0 2px !important;
+  border-style: solid !important;
+  -moz-border-left-colors: ThreeDShadow ThreeDHighlight !important;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDFace !important;
+  min-width: 6px !important;
+  width: 8px !important;
+  background-color: ThreeDFace !important;
+  margin-top: 0 !important;
+  -moz-margin-end: 0 !important;
+  position: static !important;
+  z-index: auto !important;
+  transition: none !important;
+/*
+  &:-moz-locale-dir(rtl) {
+    border-width: 0 2px;
+    -moz-border-right-colors: ThreeDDarkShadow ThreeDFace;
+  }
+
+  &[state="collapsed"]:hover {
+    &:-moz-locale-dir(rtl) {
+      border-width: 0 2px;
+      -moz-border-right-colors: ThreeDDarkShadow ThreeDFace;
+    }
+
+    &:-moz-locale-dir(ltr) {
+      border-width: 0 2px;
+      -moz-border-right-colors: ThreeDDarkShadow ThreeDFace;
+    }
+  }
+*/
+}

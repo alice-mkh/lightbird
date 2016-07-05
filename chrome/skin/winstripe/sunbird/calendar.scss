@@ -1,0 +1,12 @@
+@import "sunbird_calendar";
+
+/*--------------------------------------------------------------------
+ *   menubar
+ *-------------------------------------------------------------------*/
+#menubar-items {
+  -moz-box-orient: vertical; /* for flex hack */
+
+  > menubar {
+    -moz-box-flex: 1; /* make menu items expand to fill toolbar height */
+  }
+}
