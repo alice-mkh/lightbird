@@ -12,8 +12,8 @@ contract @lightbird/alarm-service;1 {31ac7753-5616-43c2-a770-bd8379374360}
 category profile-after-change LightbirdAlarmService @lightbird/alarm-service;1
 
 skin $NAME classic/1.0 chrome/skin/gnomestripe/
-skin $NAME classic/1.0 chrome/skin/winstripe-aero/ os=WINNT osversion>=6
 skin $NAME classic/1.0 chrome/skin/winstripe/ os=WINNT
+skin $NAME classic/1.0 chrome/skin/winstripe-aero/ os=WINNT osversion>=6
 skin $NAME classic/1.0 chrome/skin/pinstripe/ os=Darwin
 skin $NAME modern/1.0  chrome/skin/modern/
 
