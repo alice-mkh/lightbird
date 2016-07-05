@@ -5,6 +5,16 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
+.cal-event-toolbarbutton .toolbarbutton-icon {
+  height: 33px !important;
+  width: 49px !important;
+}
+
+#button-delete.cal-event-toolbarbutton .toolbarbutton-icon {
+  height: 34px !important;
+  width: 45px !important;
+}
+
 .toolbar-primary-icon {
   background-image: url("chrome://$NAME/skin/sunbird/calendar_topbar.gif");
 }
