@@ -20,15 +20,17 @@ function calendarInit() {
     calendarOfflineManager.init();
 
     // Handle commandline args
-/*    for (var i = 0; i < window.arguments.length; i++) {
-        try {
-            var cl = window.arguments[i].QueryInterface(Components.interfaces.nsICommandLine);
-        } catch (ex) {
-            dump("unknown argument passed to main window\n");
-            continue;
+    if (window.arguments) {
+        for (var i = 0; i < window.arguments.length; i++) {
+            try {
+                var cl = window.arguments[i].QueryInterface(Components.interfaces.nsICommandLine);
+            } catch (ex) {
+                dump("unknown argument passed to main window\n");
+                continue;
+            }
+            handleCommandLine(cl);
         }
-        handleCommandLine(cl);
-    }*/
+    }
 
     gBrandBundle = document.getElementById("bundle_brand");
 
