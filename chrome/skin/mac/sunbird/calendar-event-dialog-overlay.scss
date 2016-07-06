@@ -1,21 +1,4 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
-
-.cal-event-toolbarbutton,
-#button-delete.cal-event-toolbarbutton {
-  list-style-image: url("chrome://lightbird/skin/sunbird/calendar-event-dialog-toolbar.png") !important;
-}
-
-$_s_icon: 18px;
-@import "util";
-
-@include toolbar_button_mono(button-attendees, 2);
-@include toolbar_button_mono(button-url, 4);
-@include toolbar_button_mono(button-privacy, 5);
-@include toolbar_button_mono(button-save, 6);
-@include toolbar_button_mono("button-delete.cal-event-toolbarbutton", 17, $important:true);
-@include toolbar_button_mono(button-priority, 24);
-@include toolbar_button_mono(button-status, 25);
-@include toolbar_button_mono(button-freebusy, 26);
-@include toolbar_button_mono(button-timezones, 27);
+/*
