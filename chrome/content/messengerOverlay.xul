@@ -13,6 +13,7 @@
   <script type="application/javascript" src="chrome://calendar/content/calendar-extract.js" />
   <script type="application/javascript" src="resource://calendar/calendar-js/calUtils.js" />
   <script type="application/javascript" src="chrome://lightbird/content/lightning-hooks.js" />
+  <script type="application/javascript" src="chrome://lightbird/content/tasksOverlay.js" />
 
   <commandset id="mailCommands">
     <command id="calendar_new_event_command" />
