@@ -27,6 +27,7 @@ override chrome://calendar/content/today-pane.xul chrome://$NAME/content/emptyOv
 override chrome://calendar/content/calendar-task-view.xul chrome://$NAME/content/emptyOverlay.xul
 override chrome://calendar/content/calendar-unifinder.xul chrome://$NAME/content/emptyOverlay.xul
 overlay chrome://messenger/content/messenger.xul chrome://$NAME/content/messengerOverlay.xul
+overlay chrome://messenger/content/messenger.xul chrome://lightning/content/imip-bar-overlay.xul
 
 overlay chrome://navigator/content/navigator.xul chrome://$NAME/content/sidebar/navigatorOverlay.xul application=$SM_ID
 
