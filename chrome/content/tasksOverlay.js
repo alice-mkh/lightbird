@@ -4,12 +4,6 @@
 
 Components.utils.import("resource://gre/modules/Services.jsm");
 
-const ALARM_TOPIC = "lightbird:alarm-state-changed";
-const BIFF_ELEMENTS = [
-  "mini-cal",
-  "calendar-button"
-];
-
 var lightbirdObject = {
   biffElement: null,
 
@@ -18,15 +12,13 @@ var lightbirdObject = {
   },
 
   onLoad: function () {
-    let elem = null;
-    for (let i = 0; i < BIFF_ELEMENTS.length; i++) {
-      elem = document.getElementById(BIFF_ELEMENTS[i]);
-      if (elem)
-        break;
-    }
+    let elem = document.getElementById("mini-cal");
 
     if (!elem)
-      return;
+      elem = document.getElementById("calendar-button");
+
+    if (!elem)
+      return
 
     lightbirdObject.biffElement = elem;
 
@@ -35,12 +27,12 @@ var lightbirdObject = {
 
     lightbirdObject.setState(num);
 
-    Services.obs.addObserver(lightbirdObject.obs, ALARM_TOPIC, false);
+    Services.obs.addObserver(lightbirdObject.obs, "lightbird:alarm-state-changed", false);
     addEventListener("unload", lightbirdObject.onUnload, false);
   },
 
   onUnload: function () {
-    Services.obs.removeObserver(lightbirdObject.obs, ALARM_TOPIC, false);
+    Services.obs.removeObserver(lightbirdObject.obs, "lightbird:alarm-state-changed", false);
   },
 
   obs: {
