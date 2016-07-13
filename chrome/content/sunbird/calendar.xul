@@ -6,8 +6,8 @@
 <!-- Style sheets -->
 
 <?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
-<?xml-stylesheet href="chrome://$NAME/skin/sunbird/calendar.css" type="text/css"?>
-<?xml-stylesheet href="chrome://$NAME/skin/sunbird/toolbar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/sunbird/calendar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/sunbird/toolbar.css" type="text/css"?>
 <?xml-stylesheet href="chrome://calendar/skin/calendar-views.css" type="text/css"?>
 <?xml-stylesheet href="chrome://calendar/skin/widgets/minimonth.css" type="text/css"?>
 <?xml-stylesheet href="chrome://calendar/skin/widgets/calendar-widgets.css" type="text/css"?>

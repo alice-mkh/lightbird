@@ -16,7 +16,7 @@
 }
 
 .toolbar-primary-icon {
-  background-image: url("chrome://$NAME/skin/sunbird/calendar_topbar.gif");
+  background-image: url("chrome://lightbird/skin/sunbird/calendar_topbar.gif");
 }
 
 #button-save {
@@ -33,7 +33,7 @@
 }
 
 #button-delete.cal-event-toolbarbutton {
-  list-style-image: url("chrome://$NAME/skin/sunbird/btn1.png") !important;
+  list-style-image: url("chrome://lightbird/skin/sunbird/btn1.png") !important;
 }
 
 #button-save {

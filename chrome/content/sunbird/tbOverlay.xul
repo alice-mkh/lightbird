@@ -3,19 +3,19 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<?xml-stylesheet href="chrome://$NAME/skin/sunbird/tbOverlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/sunbird/tbOverlay.css" type="text/css"?>
 
 <!DOCTYPE overlay
 [
-  <!ENTITY % sunbirdDTD SYSTEM "chrome://$NAME/locale/sunbird.dtd" > %sunbirdDTD;
+  <!ENTITY % sunbirdDTD SYSTEM "chrome://lightbird/locale/sunbird.dtd" > %sunbirdDTD;
   <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
-  <!ENTITY % menuOverlayDTD SYSTEM "chrome://$NAME/locale/menuOverlay.dtd" > %menuOverlayDTD;
+  <!ENTITY % menuOverlayDTD SYSTEM "chrome://lightbird/locale/menuOverlay.dtd" > %menuOverlayDTD;
   <!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd" > %messengerDTD;
 ]>
 
-<overlay id="$NAMEThunderbirdCompatOverlay"
+<overlay id="lightbirdThunderbirdCompatOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script type="application/javascript" src="chrome://$NAME/content/sunbird/tbOverlay.js"/>
+    <script type="application/javascript" src="chrome://lightbird/content/sunbird/tbOverlay.js"/>
 
     <broadcasterset id="calendar_broadcasters">
         <broadcaster id="cmd_CustomizeToolbars" removeelement="true"/>

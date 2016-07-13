@@ -6,9 +6,9 @@
 <?xul-overlay href="chrome://communicator/content/tasksOverlay.xul"?>
 <?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
 
-<?xml-stylesheet href="chrome://$NAME/skin/sunbird/calendar-event-dialog-overlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/sunbird/calendar-event-dialog-overlay.css" type="text/css"?>
 
-<overlay id="$NAMECalendarEventDialogOverlay"
+<overlay id="lightbirdCalendarEventDialogOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <menubar id="event-menubar">
     <menu id="tasksMenu" />

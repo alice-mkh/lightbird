@@ -3,21 +3,21 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #mini-cal {
-  list-style-image: url("chrome://$NAME/skin/taskbar-cal.gif");
+  list-style-image: url("chrome://lightbird/skin/taskbar-cal.gif");
 
   &:hover:active {
-    list-style-image: url("chrome://$NAME/skin/taskbar-cal-act.gif");
+    list-style-image: url("chrome://lightbird/skin/taskbar-cal-act.gif");
   }
 
   &[BiffState="Alarm"] {
-    list-style-image: url("chrome://$NAME/skin/taskbar-calalarm.gif");
+    list-style-image: url("chrome://lightbird/skin/taskbar-calalarm.gif");
 
     &:hover:active {
-      list-style-image: url("chrome://$NAME/skin/taskbar-calalarm-act.gif");
+      list-style-image: url("chrome://lightbird/skin/taskbar-calalarm-act.gif");
     }
   }
 }
 
 #tasksMenuCalendar {
-  list-style-image: url("chrome://$NAME/skin/calendar-16.gif");
+  list-style-image: url("chrome://lightbird/skin/calendar-16.gif");
 }

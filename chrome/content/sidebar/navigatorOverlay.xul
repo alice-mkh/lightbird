@@ -3,27 +3,27 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!DOCTYPE overlay SYSTEM "chrome://$NAME/locale/lightbird.dtd" >
+<!DOCTYPE overlay SYSTEM "chrome://lightbird/locale/lightbird.dtd" >
 
-<overlay id="$NAMENavigatorOverlay"
+<overlay id="lightbirdNavigatorOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <broadcasterset id="mainBroadcasterSet">
-        <broadcaster id="view$NAMEEventsSidebar"
+        <broadcaster id="viewlightbirdEventsSidebar"
                      autoCheck="false"
                      label="&sidebar.events.title;"
                      type="checkbox"
                      group="sidebar"
-                     sidebarurl="chrome://$NAME/content/sidebar/events.xul"
+                     sidebarurl="chrome://lightbird/content/sidebar/events.xul"
                      sidebartitle="&sidebar.events.title;"
-                     oncommand="toggleSidebar('view$NAMEEventsSidebar');"/>
-        <broadcaster id="view$NAMETasksSidebar"
+                     oncommand="toggleSidebar('viewlightbirdEventsSidebar');"/>
+        <broadcaster id="viewlightbirdTasksSidebar"
                      autoCheck="false"
                      label="&sidebar.tasks.title;"
                      type="checkbox"
                      group="sidebar"
-                     sidebarurl="chrome://$NAME/content/sidebar/tasks.xul"
+                     sidebarurl="chrome://lightbird/content/sidebar/tasks.xul"
                      sidebartitle="&sidebar.tasks.title;"
-                     oncommand="toggleSidebar('view$NAMETasksSidebar');"/>
+                     oncommand="toggleSidebar('viewlightbirdTasksSidebar');"/>
     </broadcasterset>
 </overlay>

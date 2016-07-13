@@ -3,7 +3,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<overlay id="$NAMESeaMonkeyCompatOverlay"
+<overlay id="lightbirdSeaMonkeyCompatOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <!-- Change these so they don't conflict with SM component opening shortcuts -->

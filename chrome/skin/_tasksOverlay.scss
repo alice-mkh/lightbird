@@ -6,7 +6,7 @@ $_icon_x: 21px;
 $_icon_y: 13px;
 
 #mini-cal {
-  list-style-image: url("chrome://$NAME/skin/taskbar.png");
+  list-style-image: url("chrome://lightbird/skin/taskbar.png");
   -moz-image-region: rect(0 $_icon_x $_icon_y 0);
 
   &:hover {
@@ -31,5 +31,5 @@ $_icon_y: 13px;
 }
 
 #tasksMenuCalendar {
-  list-style-image: url("chrome://$NAME/skin/cal-icon16.png");
+  list-style-image: url("chrome://lightbird/skin/cal-icon16.png");
 }

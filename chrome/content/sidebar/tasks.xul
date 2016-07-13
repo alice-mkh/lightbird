@@ -10,13 +10,13 @@
 
 <!DOCTYPE page
 [
-    <!ENTITY % dtd1 SYSTEM "chrome://$NAME/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd1 SYSTEM "chrome://lightbird/locale/lightbird.dtd" > %dtd1;
     <!ENTITY % dtd2 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd2;
     <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar-event-dialog.dtd"> %dtd3;
 ]>
 
 <?xul-overlay href="chrome://calendar/content/calendar-common-sets.xul"?>
-<?xul-overlay href="chrome://$NAME/content/sidebar/overlay.xul"?>
+<?xul-overlay href="chrome://lightbird/content/sidebar/overlay.xul"?>
 <?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
 
 <page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -34,9 +34,9 @@
   <script type="application/javascript" src="chrome://calendar/content/calendar-views.js"/>
   <script type="application/javascript" src="chrome://calendar/content/mouseoverPreviews.js"/>
   <script type="application/javascript" src="chrome://calendar/content/calendar-common-sets.js"/>
-  <script type="application/javascript" src="chrome://$NAME/content/sidebar/common.js"/>
-  <script type="application/javascript" src="chrome://$NAME/content/sidebar/tasks.js"/>
-  <script type="application/javascript" src="chrome://$NAME/content/sidebar/hooks.js"/>
+  <script type="application/javascript" src="chrome://lightbird/content/sidebar/common.js"/>
+  <script type="application/javascript" src="chrome://lightbird/content/sidebar/tasks.js"/>
+  <script type="application/javascript" src="chrome://lightbird/content/sidebar/hooks.js"/>
 
   <broadcasterset id="calendar_broadcasters"/>
   <commandset id="calendar_commands">

@@ -10,12 +10,12 @@
  *-------------------------------------------------------------------*/
 
 #calendar-bar > .toolbar-holder > .toolbar-primary-icon {
-  background-image: url("chrome://$NAME/skin/sunbird/calendar_topbar.gif");
+  background-image: url("chrome://lightbird/skin/sunbird/calendar_topbar.gif");
 }
 
 #calendar-controls-box
 {
-   background-image        : url("chrome://$NAME/skin/sunbird/calendar_topbar.gif");
+   background-image        : url("chrome://lightbird/skin/sunbird/calendar_topbar.gif");
    background-repeat       : no-repeat;
    min-height              : 33px;
    max-height              : 33px;

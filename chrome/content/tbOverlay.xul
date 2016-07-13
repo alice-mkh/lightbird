@@ -6,20 +6,20 @@
 
 <!DOCTYPE overlay
 [
-    <!ENTITY % dtd1 SYSTEM "chrome://$NAME/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd1 SYSTEM "chrome://lightbird/locale/lightbird.dtd" > %dtd1;
     <!ENTITY % dtd2 SYSTEM "chrome://lightning/locale/lightning-toolbar.dtd" > %dtd2;
 ]>
 
 <!-- This is the overlay that adds Calendar to the (global) task menu. -->
 
-<?xml-stylesheet href="chrome://$NAME/skin/tasksOverlay.css" type="text/css"?>
-<?xml-stylesheet href="chrome://$NAME/skin/tbToolbar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/tasksOverlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/tbToolbar.css" type="text/css"?>
 
-<overlay id="$NAMEThunderbirdOverlay"
+<overlay id="lightbirdThunderbirdOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/x-javascript"
-        src="chrome://$NAME/content/tasksOverlay.js"/>
+        src="chrome://lightbird/content/tasksOverlay.js"/>
 
 <keyset id="tasksKeys">
   <key id="key_calendar"

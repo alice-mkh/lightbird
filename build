@@ -38,4 +38,4 @@ done
 sed -E "s/^#.*//g" -i *
 cd ../../..
 
-zip ../$NAME-$VERSION-sm+tb.xpi * -rq
+zip ../lightbird-$VERSION-sm+tb.xpi * -rq

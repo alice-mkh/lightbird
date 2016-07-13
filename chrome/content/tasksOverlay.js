@@ -8,7 +8,7 @@ var lightbirdObject = {
   biffElement: null,
 
   toCalendar: function() {
-    toOpenWindowByType("calendarMainWindow", "chrome://$NAME/content/sunbird/calendar.xul");
+    toOpenWindowByType("calendarMainWindow", "chrome://lightbird/content/sunbird/calendar.xul");
   },
 
   onLoad: function () {

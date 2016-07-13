@@ -16,7 +16,7 @@ CalendarCmdLineHandler.prototype = {
 
   handle: function (aCmdLine) {
     if (aCmdLine.handleFlag("calendar", false)) {
-      Services.ww.openWindow(null, "chrome://$NAME/content/sunbird/calendar.xul",
+      Services.ww.openWindow(null, "chrome://lightbird/content/sunbird/calendar.xul",
         "_blank", null, aCmdLine);
       aCmdLine.preventDefault = true;
     }
