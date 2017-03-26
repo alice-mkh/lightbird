@@ -1,89 +1,90 @@
-content lightbird chrome/content/
+content	lightbird	chrome/content/
 
-overlay chrome://editor/content/editorTasksOverlay.xul chrome://lightbird/content/tasksOverlay.xul application=$SM_ID
-overlay chrome://communicator/content/pref/pref-appearance.xul chrome://lightbird/content/prefsOverlay.xul application=$SM_ID
+overlay	chrome://editor/content/editorTasksOverlay.xul			chrome://lightbird/content/tasksOverlay.xul	application=$SM_ID
+overlay	chrome://communicator/content/pref/pref-appearance.xul	chrome://lightbird/content/prefsOverlay.xul	application=$SM_ID
 
-component {4af82fb4-8942-4644-874d-f768a149b4f3} components/cmd-line-handler.js
-contract @mozilla.org/commandlinehandler/general-startup;1?type=calendar {4af82fb4-8942-4644-874d-f768a149b4f3}
-category command-line-handler m-calendar @mozilla.org/commandlinehandler/general-startup;1?type=calendar
+component	{4af82fb4-8942-4644-874d-f768a149b4f3}							components/cmd-line-handler.js
+contract	@mozilla.org/commandlinehandler/general-startup;1?type=calendar	{4af82fb4-8942-4644-874d-f768a149b4f3}
+category	command-line-handler			m-calendar						@mozilla.org/commandlinehandler/general-startup;1?type=calendar
 
-component {31ac7753-5616-43c2-a770-bd8379374360} components/alarm-service.js
-contract @lightbird/alarm-service;1 {31ac7753-5616-43c2-a770-bd8379374360}
-category profile-after-change LightbirdAlarmService @lightbird/alarm-service;1
+component	{31ac7753-5616-43c2-a770-bd8379374360}							components/alarm-service.js
+contract	@lightbird/alarm-service;1										{31ac7753-5616-43c2-a770-bd8379374360}
+category	profile-after-change			LightbirdAlarmService			@lightbird/alarm-service;1
 
-skin lightbird classic/1.0 chrome/skin/unix/
-skin lightbird classic/1.0 chrome/skin/win/ os=WINNT
-skin lightbird classic/1.0 chrome/skin/win-aero/ os=WINNT osversion>=6
-skin lightbird classic/1.0 chrome/skin/mac/ os=Darwin
-skin lightbird modern/1.0  chrome/skin/modern/
+skin	lightbird classic/1.0	chrome/skin/unix/
+skin	lightbird classic/1.0	chrome/skin/win/		os=WINNT
+skin	lightbird classic/1.0	chrome/skin/win-aero/	os=WINNT	osversion>=6
+skin	lightbird classic/1.0	chrome/skin/mac/		os=Darwin
+skin	lightbird modern/1.0	chrome/skin/modern/
 
-override chrome://lightning/content/imip-bar-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-accountCentral.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/messenger-overlay-messageWindow.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/lightning-migration.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://lightning/content/suite-overlay-sidebar.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/today-pane.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/calendar-task-view.xul chrome://lightbird/content/emptyOverlay.xul
-override chrome://calendar/content/calendar-unifinder.xul chrome://lightbird/content/emptyOverlay.xul
-overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/messengerOverlay.xul
-overlay chrome://messenger/content/messenger.xul chrome://lightning/content/imip-bar-overlay.xul
+override	chrome://lightning/content/imip-bar-sidebar.xul					chrome://lightbird/content/emptyOverlay.xul
+override	chrome://lightning/content/messenger-overlay-sidebar.xul		chrome://lightbird/content/emptyOverlay.xul
+override	chrome://lightning/content/messenger-overlay-accountCentral.xul	chrome://lightbird/content/emptyOverlay.xul
+override	chrome://lightning/content/messenger-overlay-messageWindow.xul	chrome://lightbird/content/emptyOverlay.xul
+override	chrome://lightning/content/lightning-migration.xul				chrome://lightbird/content/emptyOverlay.xul
+override	chrome://lightning/content/suite-overlay-sidebar.xul			chrome://lightbird/content/emptyOverlay.xul
+override	chrome://calendar/content/today-pane.xul						chrome://lightbird/content/emptyOverlay.xul
+override	chrome://calendar/content/calendar-task-view.xul				chrome://lightbird/content/emptyOverlay.xul
+override	chrome://calendar/content/calendar-unifinder.xul				chrome://lightbird/content/emptyOverlay.xul
 
-overlay chrome://navigator/content/navigator.xul chrome://lightbird/content/sidebar/navigatorOverlay.xul application=$SM_ID
+overlay	chrome://messenger/content/messenger.xul	chrome://lightbird/content/messengerOverlay.xul
+overlay	chrome://messenger/content/messenger.xul	chrome://lightning/content/imip-bar-overlay.xul
 
-overlay chrome://calendar/content/calendar-common-sets.xul chrome://lightbird/content/sunbird/lightning-hooks.xul
-overlay chrome://calendar/content/calendar-unifinder.xul chrome://lightbird/content/sunbird/lightning-hooks.xul
+overlay	chrome://navigator/content/navigator.xul	chrome://lightbird/content/sidebar/navigatorOverlay.xul	application=$SM_ID
 
-override chrome://lightning/skin/lightning-toolbar.css chrome://lightbird/skin/sunbird/toolbar.css
-style chrome://global/content/customizeToolbar.xul chrome://lightbird/skin/sunbird/calendar-event-dialog-overlay.css
+overlay	chrome://calendar/content/calendar-common-sets.xul	chrome://lightbird/content/sunbird/lightning-hooks.xul
+overlay	chrome://calendar/content/calendar-unifinder.xul	chrome://lightbird/content/sunbird/lightning-hooks.xul
 
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/calendar-unifinder.xul application=$SM_ID appversion>=2.27
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/calendar-unifinder-old.xul application=$SM_ID appversion<2.27
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/calendar-unifinder.xul application=$TB_ID appversion>=30.0
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/calendar-unifinder-old.xul application=$TB_ID appversion<30.0
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/smOverlay.xul application=$SM_ID
+override	chrome://lightning/skin/lightning-toolbar.css	chrome://lightbird/skin/sunbird/toolbar.css
+style	chrome://global/content/customizeToolbar.xul		chrome://lightbird/skin/sunbird/calendar-event-dialog-overlay.css
 
-overlay chrome://calendar/content/calendar-event-dialog.xul chrome://lightbird/content/sunbird/calendar-event-dialog-overlay.xul application=$SM_ID
+overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder.xul		application=$SM_ID	appversion>=2.27
+overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder-old.xul	application=$SM_ID	appversion<2.27
+overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder.xul		application=$TB_ID	appversion>=30.0
+overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder-old.xul	application=$TB_ID	appversion<30.0
+overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/smOverlay.xul				application=$SM_ID
+
+overlay	chrome://calendar/content/calendar-event-dialog.xul	chrome://lightbird/content/sunbird/calendar-event-dialog-overlay.xul	application=$SM_ID
 
 #Thunderbird-specific stuff
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/tbOverlay.xul application=$TB_ID
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://messenger/content/baseMenuOverlay.xul application=$TB_ID
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://messenger/content/utilityOverlay.xul application=$TB_ID
-overlay chrome://messenger/content/messenger.xul chrome://lightbird/content/tbOverlay.xul application=$TB_ID
-overlay chrome://messenger/content/addressbook/addressbook.xul chrome://lightbird/content/tbOverlayAddressBook.xul application=$TB_ID
-style chrome://global/content/customizeToolbar.xul chrome://lightbird/skin/tbToolbar.css
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/tbOverlay.xul	application=$TB_ID
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://messenger/content/baseMenuOverlay.xul		application=$TB_ID
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://messenger/content/utilityOverlay.xul		application=$TB_ID
+overlay	chrome://messenger/content/messenger.xul				chrome://lightbird/content/tbOverlay.xul			application=$TB_ID
+overlay	chrome://messenger/content/addressbook/addressbook.xul	chrome://lightbird/content/tbOverlayAddressBook.xul	application=$TB_ID
+style	chrome://global/content/customizeToolbar.xul			chrome://lightbird/skin/tbToolbar.css
 
-overlay chrome://lightbird/content/sunbird/calendar.xul chrome://lightbird/content/sunbird/smOverlay.xul application=$SM_ID
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/smOverlay.xul	application=$SM_ID
 
 #Locales
-locale lightbird ca    chrome/locale/ca/
-locale lightbird cs    chrome/locale/cs/
-locale lightbird da    chrome/locale/da/
-locale lightbird de    chrome/locale/de/
-locale lightbird en-GB chrome/locale/en-GB/
-locale lightbird en-US chrome/locale/en-US/
-locale lightbird es-AR chrome/locale/es-AR/
-locale lightbird es-ES chrome/locale/es-ES/
-locale lightbird et    chrome/locale/et/
-locale lightbird eu    chrome/locale/eu/
-locale lightbird fi    chrome/locale/fi/
-locale lightbird fr    chrome/locale/fr/
-locale lightbird fy-NL chrome/locale/fy-NL/
-locale lightbird ga-IE chrome/locale/ga-IE/
-locale lightbird gd    chrome/locale/gd/
-locale lightbird hr    chrome/locale/hr/
-locale lightbird hu    chrome/locale/hu/
-locale lightbird is    chrome/locale/is/
-locale lightbird it    chrome/locale/it/
-locale lightbird ja    chrome/locale/ja/
-locale lightbird ko    chrome/locale/ko/
-locale lightbird lt    chrome/locale/lt/
-locale lightbird nb-NO chrome/locale/nb-NO/
-locale lightbird nl    chrome/locale/nl/
-locale lightbird nn-NO chrome/locale/nn-NO/
-locale lightbird pl    chrome/locale/pl/
-locale lightbird pt-PT chrome/locale/pt-PT/
-locale lightbird ru    chrome/locale/ru/
-locale lightbird sk    chrome/locale/sk/
-locale lightbird zh-CN chrome/locale/zh-CN/
-locale lightbird zh-TW chrome/locale/zh-TW/
+locale	lightbird	ca		chrome/locale/ca/
+locale	lightbird	cs		chrome/locale/cs/
+locale	lightbird	da		chrome/locale/da/
+locale	lightbird	de		chrome/locale/de/
+locale	lightbird	en-GB	chrome/locale/en-GB/
+locale	lightbird	en-US	chrome/locale/en-US/
+locale	lightbird	es-AR	chrome/locale/es-AR/
+locale	lightbird	es-ES	chrome/locale/es-ES/
+locale	lightbird	et		chrome/locale/et/
+locale	lightbird	eu		chrome/locale/eu/
+locale	lightbird	fi		chrome/locale/fi/
+locale	lightbird	fr		chrome/locale/fr/
+locale	lightbird	fy-NL	chrome/locale/fy-NL/
+locale	lightbird	ga-IE	chrome/locale/ga-IE/
+locale	lightbird	gd		chrome/locale/gd/
+locale	lightbird	hr		chrome/locale/hr/
+locale	lightbird	hu		chrome/locale/hu/
+locale	lightbird	is		chrome/locale/is/
+locale	lightbird	it		chrome/locale/it/
+locale	lightbird	ja		chrome/locale/ja/
+locale	lightbird	ko		chrome/locale/ko/
+locale	lightbird	lt		chrome/locale/lt/
+locale	lightbird	nb-NO	chrome/locale/nb-NO/
+locale	lightbird	nl		chrome/locale/nl/
+locale	lightbird	nn-NO	chrome/locale/nn-NO/
+locale	lightbird	pl		chrome/locale/pl/
+locale	lightbird	pt-PT	chrome/locale/pt-PT/
+locale	lightbird	ru		chrome/locale/ru/
+locale	lightbird	sk		chrome/locale/sk/
+locale	lightbird	zh-CN	chrome/locale/zh-CN/
+locale	lightbird	zh-TW	chrome/locale/zh-TW/
