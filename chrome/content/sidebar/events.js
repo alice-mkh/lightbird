@@ -843,8 +843,7 @@ function addItemsFromCalendar(aCalendar, aAddItemsInternalFunc) {
 
 function deleteItemsFromCalendar(aCalendar) {
     let filter = unifinderTreeView.mFilter;
-    let items = [ item for each (item in unifinderTreeView.eventArray)
-                    if (item.calendar.id == aCalendar.id) ];
+    let items = unifinderTreeView.eventArray.slice().filter(item => { item.calendar.id == aCalendar.id });
 
     unifinderTreeView.removeItems(items.filter(filter.isItemInFilters, filter));
 }
