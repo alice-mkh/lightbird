@@ -2,7 +2,7 @@ EXT_ID={df846912-2659-4705-acb0-8bc0c0520e1a}
 EXT_NAME=Lightbird
 EXT_DESC=Standalone calendar UI for Lightning
 
-VERSION=0.6
+VERSION=0.6.1
 
 PREF_STARTUP=general.startup.calendar
 
