@@ -16,8 +16,12 @@ CalendarCmdLineHandler.prototype = {
 
   handle: function (aCmdLine) {
     if (aCmdLine.handleFlag("calendar", false)) {
-      Services.ww.openWindow(null, "chrome://lightbird/content/sunbird/calendar.xul",
-        "_blank", null, aCmdLine);
+      let topWindow = Services.wm.getMostRecentWindow("calendarMainWindow");
+      if (topWindow)
+        topWindow.focus();
+      else
+        Services.ww.openWindow(null, "chrome://lightbird/content/sunbird/calendar.xul",
+          "_blank", "chrome,extrachrome,menubar,resizable,scrollbars,status,toolbar,dialog=no", aCmdLine);
       aCmdLine.preventDefault = true;
     }
   },
