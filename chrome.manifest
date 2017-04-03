@@ -36,7 +36,7 @@ overlay	chrome://calendar/content/calendar-common-sets.xul	chrome://lightbird/co
 overlay	chrome://calendar/content/calendar-unifinder.xul	chrome://lightbird/content/sunbird/lightning-hooks.xul
 
 override	chrome://lightning/skin/lightning-toolbar.css	chrome://lightbird/skin/sunbird/toolbar.css
-style	chrome://global/content/customizeToolbar.xul		chrome://lightbird/skin/sunbird/calendar-event-dialog-overlay.css
+style	chrome://global/content/customizeToolbar.xul		chrome://lightbird/skin/eventDialogOverlay.css
 
 overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder.xul		application=$SM_ID	appversion>=2.27
 overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder-old.xul	application=$SM_ID	appversion<2.27
@@ -44,7 +44,7 @@ overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/conte
 overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/calendar-unifinder-old.xul	application=$TB_ID	appversion<30.0
 overlay	chrome://lightbird/content/sunbird/calendar.xul	chrome://lightbird/content/sunbird/smOverlay.xul				application=$SM_ID
 
-overlay	chrome://calendar/content/calendar-event-dialog.xul	chrome://lightbird/content/sunbird/calendar-event-dialog-overlay.xul	application=$SM_ID
+overlay	chrome://calendar/content/calendar-event-dialog.xul	chrome://lightbird/content/eventDialogOverlay.xul			application=$SM_ID
 
 #Thunderbird-specific stuff
 overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/tbOverlay.xul	application=$TB_ID

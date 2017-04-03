@@ -6,10 +6,12 @@
 <?xul-overlay href="chrome://communicator/content/tasksOverlay.xul"?>
 <?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
 
-<?xml-stylesheet href="chrome://lightbird/skin/sunbird/calendar-event-dialog-overlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://lightbird/skin/eventDialogOverlay.css" type="text/css"?>
 
 <overlay id="lightbirdCalendarEventDialogOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://lightbird/content/lightning-hooks.js" />
+
   <menubar id="event-menubar">
     <menu id="tasksMenu" />
     <menu id="windowMenu" />

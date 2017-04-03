@@ -9,7 +9,7 @@ $_pinstripe: false;
 
 .cal-event-toolbarbutton,
 #button-delete.cal-event-toolbarbutton {
-  list-style-image: url("chrome://lightbird/skin/sunbird/calendar-event-dialog-toolbar.png") !important;
+  list-style-image: url("chrome://lightbird/skin/calendar-event-dialog-toolbar.png") !important;
 
   .toolbarbutton-icon {
     width: $_l_icon !important;
@@ -17,7 +17,7 @@ $_pinstripe: false;
   }
 
   toolbar[iconsize="small"] & {
-    list-style-image: url("chrome://lightbird/skin/sunbird/calendar-event-dialog-toolbar-small.png") !important;
+    list-style-image: url("chrome://lightbird/skin/calendar-event-dialog-toolbar-small.png") !important;
 
     .toolbarbutton-icon {
       width: $_s_icon !important;
