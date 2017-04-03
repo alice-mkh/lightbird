@@ -52,9 +52,11 @@ overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://messenger/con
 overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://messenger/content/utilityOverlay.xul		application=$TB_ID
 overlay	chrome://messenger/content/messenger.xul				chrome://lightbird/content/tbOverlay.xul			application=$TB_ID
 overlay	chrome://messenger/content/addressbook/addressbook.xul	chrome://lightbird/content/tbOverlayAddressBook.xul	application=$TB_ID
-style	chrome://global/content/customizeToolbar.xul			chrome://lightbird/skin/tbToolbar.css
+style	chrome://global/content/customizeToolbar.xul			chrome://lightbird/skin/tbToolbar.css				application=$TB_ID
 
 overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/smOverlay.xul	application=$SM_ID
+overlay	chrome://messenger/content/messenger.xul				chrome://lightbird/content/smOverlay.xul			application=$SM_ID
+style	chrome://global/content/customizeToolbar.xul			chrome://lightbird/skin/smToolbar.css				application=$SM_ID
 
 #Locales
 locale	lightbird	ca		chrome/locale/ca/

@@ -8,6 +8,7 @@
 [
     <!ENTITY % dtd1 SYSTEM "chrome://lightbird/locale/lightbird.dtd" > %dtd1;
     <!ENTITY % dtd2 SYSTEM "chrome://lightning/locale/lightning-toolbar.dtd" > %dtd2;
+    <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd3;
 ]>
 
 <!-- This is the overlay that adds Calendar to the (global) task menu. -->
@@ -61,6 +62,29 @@
                    label="&lightning.toolbar.calendar.label;"
                    tooltiptext="&lightning.toolbar.calendar.tooltip;"
                    command="Tasks:Calendar"/>
+</toolbarpalette>
+
+<toolbarpalette id="header-view-toolbar-palette">
+  <toolbarbutton id="hdrExtractEventButton"
+                 class="toolbarbutton-1 msgHeaderView-button"
+                 type="menu-button"
+                 label="&calendar.extract.event.button;"
+                 tooltiptext="&calendar.extract.event.button.tooltip;"
+                 oncommand="calendarExtract.extractFromEmail(true)">
+    <menupopup id="hdrExtractEventLocaleList"
+               oncommand="calendarExtract.extractWithLocale(event, true);"
+               onpopupshowing="calendarExtract.onShowLocaleMenu(event.target);"/>
+  </toolbarbutton>
+  <toolbarbutton id="hdrExtractTaskButton"
+                 class="toolbarbutton-1 msgHeaderView-button"
+                 type="menu-button"
+                 label="&calendar.extract.task.button;"
+                 tooltiptext="&calendar.extract.task.button.tooltip;"
+                 oncommand="calendarExtract.extractFromEmail(false)">
+    <menupopup id="hdrExtractTaskLocaleList"
+               oncommand="calendarExtract.extractWithLocale(event, false);"
+               onpopupshowing="calendarExtract.onShowLocaleMenu(event.target);"/>
+  </toolbarbutton>
 </toolbarpalette>
 
 </overlay>

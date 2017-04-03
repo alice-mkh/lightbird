@@ -1,0 +1,70 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*--------------------------------------------------------------------
+ *   Primary toolbar buttons
+ *-------------------------------------------------------------------*/
+
+#extractEventButton,
+#extractTaskButton {
+    list-style-image: url("chrome://lightbird/skin/sunbird/btn1.png");
+    background-color: transparent !important;
+}
+
+
+/*--------------------------------------------------------------------
+ *   extract event button
+ *-------------------------------------------------------------------*/
+
+#extractEventButton {
+    -moz-image-region: rect(204px 45px 238px 0px);
+}
+
+#extractEventButton:hover {
+    -moz-image-region: rect(204px 90px 238px 45px);
+}
+
+#extractEventButton:hover:active {
+    -moz-image-region: rect(204px 135px 238px 90px);
+}
+
+#extractEventButton[disabled="true"] {
+    -moz-image-region: rect(204px 180px 238px 135px) !important;
+}
+
+/*--------------------------------------------------------------------
+ *   extract task button
+ *-------------------------------------------------------------------*/
+
+#extractTaskButton {
+    -moz-image-region: rect(306px 45px 340px 0px);
+}
+
+#extractTaskButton:hover {
+    -moz-image-region: rect(306px 90px 340px 45px);
+}
+
+#extractTaskButton:hover:active {
+    -moz-image-region: rect(306px 135px 340px 90px);
+}
+
+#extractTaskButton[disabled="true"] {
+    -moz-image-region: rect(306px 180px 340px 135px) !important;
+}
+
+
+#extractEventButton > .toolbarbutton-icon,
+#extractTaskButton > .toolbarbutton-icon,
+#extractEventButton .toolbarbutton-icon,
+#extractTaskButton .toolbarbutton-icon,
+toolbar[iconsize="small"] #extractEventButton .toolbarbutton-icon,
+toolbar[iconsize="small"] #extractTaskButton .toolbarbutton-icon {
+  width: 45px;
+  height: 34px;
+}
+
+#extractEventButton[disabled="true"] .toolbarbutton-icon,
+#extractTaskButton[disabled="true"] .toolbarbutton-icon {
+  opacity: 1;
+}

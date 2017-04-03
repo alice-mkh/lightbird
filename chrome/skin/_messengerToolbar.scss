@@ -1,0 +1,21 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#extractEventButton,
+#extractTaskButton,
+#hdrExtractEventButton,
+#hdrExtractTaskButton {
+  list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-large.png");
+
+  toolbar[iconsize="small"] & {
+    list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-small.png");
+  }
+}
+
+@import "util";
+
+@include toolbar_button(extractEventButton, 1);
+@include toolbar_button(extractTaskButton, 16);
+@include toolbar_button(hdrExtractEventButton, 1);
+@include toolbar_button(hdrExtractTaskButton, 16);

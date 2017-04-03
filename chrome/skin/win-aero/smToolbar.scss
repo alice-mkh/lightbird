@@ -1,0 +1,23 @@
+$_l_icon: 24px;
+$_s_icon: 16px;
+$_pinstripe: false;
+@import "_messengerToolbar";
+
+#extractEventButton > .toolbarbutton-icon,
+#extractTaskButton > .toolbarbutton-icon,
+#extractEventButton > .box-inherit > .toolbarbutton-icon,
+#extractTaskButton > .box-inherit > .toolbarbutton-icon {
+  width: $_l_icon;
+  height: $_l_icon;
+}
+
+toolbar[iconsize="small"] #extractEventButton > .box-inherit > .toolbarbutton-icon,
+toolbar[iconsize="small"] #extractTaskButton > .box-inherit > .toolbarbutton-icon {
+  width: $_s_icon;
+  height: $_s_icon;
+}
+
+#extractEventButton[disabled="true"] > .box-inherit > .toolbarbutton-icon,
+#extractTaskButton[disabled="true"] > .box-inherit > .toolbarbutton-icon {
+  opacity: 1;
+}

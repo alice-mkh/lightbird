@@ -1,1 +1,54 @@
-@import "_tbToolbarMono";
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#extractEventButton,
+#hdrExtractEventButton {
+  list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newevent);
+
+  @media (-moz-mac-yosemite-theme) {
+    list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newevent-flat);
+  }
+
+  toolbar[brighttext] & {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#newevent-inverted");
+  }
+}
+
+#extractTaskButton,
+#hdrExtractTaskButton {
+  list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newtask);
+
+  @media (-moz-mac-yosemite-theme) {
+    list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newtask-flat);
+  }
+
+  toolbar[brighttext] & {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#newtask-inverted");
+  }
+}
+
+#calendar-button {
+  list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab");
+
+  &[BiffState="Alarm"] {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority");
+  }
+
+  @media (-moz-mac-yosemite-theme) {
+    list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab-flat);
+
+
+    &[BiffState="Alarm"] {
+      list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority-flat");
+    }
+  }
+
+  toolbar[brighttext] & {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab-inverted");
+
+    &[BiffState="Alarm"] {
+      list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority-inverted");
+    }
+  }
+}
