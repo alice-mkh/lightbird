@@ -168,7 +168,7 @@ function pickAndGoToDate() {
   };
   openDialog("chrome://lightbird/content/sunbird/calendar-gotodate-dialog.xul",
              "CalendarGoToDateDialog",
-             "chrome,modal",
+             "chrome,modal,resizable=no,centerscreen",
              {callback: callback, date: initialDate});
 }
 
