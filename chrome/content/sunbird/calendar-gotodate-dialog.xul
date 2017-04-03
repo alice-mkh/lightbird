@@ -22,6 +22,7 @@
         ondialogaccept="window.arguments[0].callback(document.getElementById('datepicker').value);"
         ondialogcancel="return true;">
   <script type="application/javascript" src="chrome://calendar/content/calUtils.js"/>
+  <script type="application/javascript" src="chrome://calendar/content/calendar-ui-utils.js"/>
   <hbox align="center">
     <label control="datepicker">&sunbird.flat.topbar.choosedate;</label>
     <datepicker id="datepicker"/>
