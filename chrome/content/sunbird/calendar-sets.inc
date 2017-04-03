@@ -56,7 +56,7 @@
   <key id="key_paste"/>
   <key id="key_selectAll"/>
 
-  <key id="go_to_date_key"       keycode="VK_UP"                         observes="go_date_command"             modifiers="accel"/>
+  <key id="go_to_date_key"       keycode="VK_UP"                         observes="go_date_command"             modifiers="alt"/>
 
   <key id="import_key"           key="&calendar.import.key;"             observes="calendar_import_command"              modifiers="accel"/>
   <key id="reload_server_key"    key="&calendar.synccalendars.key;"      observes="calendar_reload_remote_calendars"  modifiers="accel"/>
