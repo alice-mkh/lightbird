@@ -65,8 +65,8 @@ function changeContextMenuForTask (aEvent) {
     document.getElementById("task-context-menu-modify").hidden = false;
     document.getElementById("task-context-menu-new-todaypane").hidden = true;
     document.getElementById("task-context-menu-modify-todaypane").hidden = true;
-    document.getElementById("task-context-menu-filter-todaypane").hidden = true;
-    document.getElementById("task-context-menu-separator-filter").hidden = true;
+    document.getElementById("task-context-menu-filter-todaypane").hidden = false;
+    document.getElementById("task-context-menu-separator-filter").hidden = false;
 
     let tasksSelected = (items.length > 0);
     applyAttributeToMenuChildren(aEvent.target, "disabled", (!tasksSelected));
