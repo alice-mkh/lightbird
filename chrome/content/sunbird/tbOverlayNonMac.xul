@@ -3,20 +3,28 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!DOCTYPE overlay SYSTEM "chrome://messenger/locale/messenger.dtd">
-<!--<!DOCTYPE overlay
+<!DOCTYPE overlay
 [
-  <!ENTITY % sunbirdDTD SYSTEM "chrome://lightbird/locale/sunbird.dtd" > %sunbirdDTD;
-  <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
-  <!ENTITY % menuOverlayDTD SYSTEM "chrome://lightbird/locale/menuOverlay.dtd" > %menuOverlayDTD;
+  <!ENTITY % composeDTD SYSTEM "chrome://messenger/locale/messengercompose/messengercompose.dtd" > %composeDTD;
   <!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd" > %messengerDTD;
-]>-->
+]>
 
 <overlay id="lightbirdThunderbirdCompatOverlayPlatform"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <menu id="tasksMenu" removeelement="true" />
     <menu id="windowMenu" removeelement="true" />
     <menu id="menu_Help" removeelement="true" />
+
+    <keyset id="baseMenuKeyset">
+        <key id="key_mail"
+             key="&messengerCmd.commandkey;"
+             oncommand="toMessengerWindow();"
+             modifiers="accel"/>
+        <key id="key_addressbook"
+             key="&addressBookCmd.key;"
+             modifiers="accel, shift"
+             oncommand="toAddressBook();"/>
+    </keyset>
 
     <menubar id="main-menubar">
       <menu id="tasksMenu"
