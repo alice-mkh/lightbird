@@ -22,22 +22,17 @@
 <keyset id="tasksKeys">
   <key id="key_calendar"
        key="&calendarCmd.commandkey;"
-       command="Tasks:Calendar"
+       oncommand="lightbirdObject.toCalendar();"
        modifiers="accel"/>
 </keyset>
-
-<commandset id="tasksCommands">
-  <command id="Tasks:Calendar"
-           oncommand="lightbirdObject.toCalendar();"/>
-</commandset>
 
 <menupopup id="appmenu_taskPopup">
   <menuitem
         label="&calendarCmd.label;"
         accesskey="&calendarCmd.accesskey;"
         key="key_calendar"
-        command="Tasks:Calendar"
-        id="appmenu_tasksMenuCalendar"
+        oncommand="lightbirdObject.toCalendar();"
+        id="appmenu_toolsMenuCalendar"
         insertafter="appmenu_addressBook"/>
 </menupopup>
 
@@ -46,8 +41,8 @@
         label="&calendarCmd.label;"
         accesskey="&calendarCmd.accesskey;"
         key="key_calendar"
-        command="Tasks:Calendar"
-        id="tasksMenuCalendar"
+        oncommand="lightbirdObject.toCalendar();"
+        id="toolsMenuCalendar"
         insertafter="addressBook"/>
 </menupopup>
 
@@ -56,7 +51,7 @@
                    class="toolbarbutton-1"
                    label="&lightning.toolbar.calendar.label;"
                    tooltiptext="&lightning.toolbar.calendar.tooltip;"
-                   command="Tasks:Calendar"/>
+                   oncommand="lightbirdObject.toCalendar();"/>
 </toolbarpalette>
 
 <toolbarpalette id="header-view-toolbar-palette">

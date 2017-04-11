@@ -6,7 +6,7 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://lightbird/locale/lightbird.dtd" >
 
-<overlay id="lightbirdThunderbirdAddressBookOverlay"
+<overlay id="lightbirdThunderbirdOverlayMacGlobal"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/x-javascript"
@@ -21,12 +21,18 @@
 
 <menupopup id="taskPopup">
   <menuitem
+        id="toolsMenuCalendar"
+        removeelement="true"/>
+</menupopup>
+
+<menupopup id="windowPopup">
+  <menuitem
         label="&calendarCmd.label;"
         accesskey="&calendarCmd.accesskey;"
         key="key_calendar"
         oncommand="lightbirdObject.toCalendar();"
-        id="toolsMenuCalendar"
-        insertafter="tasksMenuMail"/>
+        id="tasksMenuCalendar"
+        insertafter="tasksMenuAddressBook"/>
 </menupopup>
 
 </overlay>
