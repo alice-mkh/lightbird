@@ -3,6 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 <commandset id="commands"/>
+<commandset id="baseMenuCommandSet"/>
 
 <keyset id="newKeys">
   <key id="key_newBlankPage"/>
@@ -11,6 +12,7 @@
   <key id="key_newPrivateWindow"/>
   <key id="key_newMessage"/>
 </keyset>
+<keyset id="baseMenuKeyset"/>
 
 <commandset id="tasksCommands">
   <command id="cmd_newNavigator"/>

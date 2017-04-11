@@ -77,25 +77,6 @@
         </menupopup>
     </menu>
 
-    <menu id="tasksMenu" removeelement="true" />
-    <menu id="windowMenu" removeelement="true" />
-    <menu id="menu_Help" removeelement="true" />
-
-    <menubar id="main-menubar">
-      <menu id="tasksMenu" label="&tasksMenu.label;" accesskey="&tasksMenu.accesskey;">
-        <menupopup id="taskPopup" onpopupshowing="document.commandDispatcher.updateCommands('create-menu-tasks')">
-          <menuitem accesskey="&messengerCmd.accesskey;" label="&messengerCmd.label;"
-                    key="key_mail" oncommand="toMessengerWindow();" id="tasksMenuMail" class="menuitem-iconic menu-iconic"/>
-          <menuitem id="addressBook"
-                    label="&addressBookCmd.label;"
-                    accesskey="&addressBookCmd.accesskey;"
-                    key="key_addressbook"
-                    oncommand="toOpenWindowByType('mail:addressbook', 'chrome://messenger/content/addressbook/addressbook.xul');"/>
-        </menupopup>
-      </menu>
-      <menu id="helpMenu" />
-    </menubar>
-
     <statusbar id="status-bar">
         <statusbarpanel id="component-bar"  removeelement="true"/>
         <statusbarpanel id="offline-status" removeelement="true"/>

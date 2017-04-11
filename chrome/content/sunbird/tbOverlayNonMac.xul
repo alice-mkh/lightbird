@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE overlay SYSTEM "chrome://messenger/locale/messenger.dtd">
+<!--<!DOCTYPE overlay
+[
+  <!ENTITY % sunbirdDTD SYSTEM "chrome://lightbird/locale/sunbird.dtd" > %sunbirdDTD;
+  <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
+  <!ENTITY % menuOverlayDTD SYSTEM "chrome://lightbird/locale/menuOverlay.dtd" > %menuOverlayDTD;
+  <!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd" > %messengerDTD;
+]>-->
+
+<overlay id="lightbirdThunderbirdCompatOverlayPlatform"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <menu id="tasksMenu" removeelement="true" />
+    <menu id="windowMenu" removeelement="true" />
+    <menu id="menu_Help" removeelement="true" />
+
+    <menubar id="main-menubar">
+      <menu id="tasksMenu"
+            label="&tasksMenu.label;"
+            accesskey="&tasksMenu.accesskey;">
+        <menupopup id="taskPopup"
+                   onpopupshowing="document.commandDispatcher.updateCommands('create-menu-tasks')">
+          <menuitem accesskey="&messengerCmd.accesskey;"
+                    label="&messengerCmd.label;"
+                    key="key_mail"
+                    oncommand="toMessengerWindow();"
+                    id="tasksMenuMail"
+                    class="menuitem-iconic menu-iconic"/>
+          <menuitem id="addressBook"
+                    label="&addressBookCmd.label;"
+                    accesskey="&addressBookCmd.accesskey;"
+                    key="key_addressbook"
+                    oncommand="toOpenWindowByType('mail:addressbook', 'chrome://messenger/content/addressbook/addressbook.xul');"/>
+        </menupopup>
+      </menu>
+      <menu id="helpMenu" />
+    </menubar>
+</overlay>

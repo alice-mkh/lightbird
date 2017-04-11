@@ -59,7 +59,9 @@ overlay	chrome://messenger/content/messenger.xul				chrome://lightbird/content/s
 style	chrome://global/content/customizeToolbar.xul			chrome://lightbird/skin/smToolbar.css				application=$SM_ID
 
 #OS-specific stuff
-overlay	chrome://messenger/content/macMenuOverlay.xul			chrome://lightbird/content/tbOverlayMac.xul			application=$TB_ID	os=Darwin
+overlay	chrome://messenger/content/macMenuOverlay.xul			chrome://lightbird/content/tbOverlayMac.xul				application=$TB_ID	os=Darwin
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/tbOverlayMac.xul		application=$TB_ID	os=Darwin
+overlay	chrome://lightbird/content/sunbird/calendar.xul			chrome://lightbird/content/sunbird/tbOverlayNonMac.xul	application=$TB_ID	os!=Darwin
 
 #Locales
 locale	lightbird	ca		chrome/locale/ca/
