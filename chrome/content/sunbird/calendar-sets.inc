@@ -47,6 +47,7 @@
   <key id="open_calendar_key"    key="&calendar.open.file.key;"          observes="open_local_calendar_command" modifiers="accel"/>
   <key id="key_close"/>
   <key id="key_print"/>
+  <key id="key_quit"/>
 
   <key id="key_undo"/>
   <key id="key_redo"/>
