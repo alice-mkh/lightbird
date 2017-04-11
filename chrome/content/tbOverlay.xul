@@ -11,9 +11,6 @@
     <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd3;
 ]>
 
-<!-- This is the overlay that adds Calendar to the (global) task menu. -->
-
-<?xml-stylesheet href="chrome://lightbird/skin/tasksOverlay.css" type="text/css"?>
 <?xml-stylesheet href="chrome://lightbird/skin/tbToolbar.css" type="text/css"?>
 
 <overlay id="lightbirdThunderbirdOverlay"
@@ -40,8 +37,7 @@
         accesskey="&calendarCmd.accesskey;"
         key="key_calendar"
         command="Tasks:Calendar"
-        id="tasksMenuCalendar"
-        class="menuitem-iconic"
+        id="appmenu_tasksMenuCalendar"
         insertafter="appmenu_addressBook"/>
 </menupopup>
 
@@ -52,7 +48,6 @@
         key="key_calendar"
         command="Tasks:Calendar"
         id="tasksMenuCalendar"
-        class="menuitem-iconic"
         insertafter="addressBook"/>
 </menupopup>
 

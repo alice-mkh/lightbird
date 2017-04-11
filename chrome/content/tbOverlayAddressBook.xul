@@ -6,10 +6,6 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://lightbird/locale/lightbird.dtd" >
 
-<!-- This is the overlay that adds Calendar to the (global) task menu. -->
-
-<?xml-stylesheet href="chrome://lightbird/skin/tasksOverlay.css" type="text/css"?>
-
 <overlay id="lightbirdThunderbirdAddressBookOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -35,7 +31,7 @@
         key="key_calendar"
         command="Tasks:Calendar"
         id="tasksMenuCalendar"
-        class="menuitem-iconic"
         insertafter="tasksMenuMail"/>
 </menupopup>
+
 </overlay>
