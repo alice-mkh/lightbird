@@ -5,9 +5,24 @@
 .cal-toolbarbutton-1 {
   list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-large.png");
 
+  .toolbarbutton-icon {
+    width: $_l_icon;
+    height: $_l_icon;
+  }
+
   toolbar[iconsize="small"] & {
     list-style-image: url("chrome://lightbird/skin/sunbird/toolbar-small.png");
+
+    .toolbarbutton-icon {
+      width: $_s_icon;
+      height: $_s_icon;
+    }
   }
+}
+
+/* Thunderbird hides small icons checkbox, but it's still needed here */
+#CustomizeToolbarWindow[toolboxId="calendar-toolbox"] #smallicons {
+  display: -moz-box;
 }
 
 @import "util";
