@@ -161,4 +161,7 @@
       </tree>
     </vbox>
   </vbox>
+
+  <!-- A workaround for Lightning -->
+  <vbox id="tabmail" class="hidden" />
 </page>

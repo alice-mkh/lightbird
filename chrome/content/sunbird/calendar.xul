@@ -179,4 +179,7 @@
 </statusbar>
 
 <panel id="customizeToolbarSheetPopup"/>
+
+<!-- A workaround for Lightning -->
+<vbox id="tabmail" class="hidden" />
 </window>

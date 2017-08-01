@@ -9,6 +9,12 @@
 var gBrandBundle;
 
 function calendarInit() {
+    document.getElementById("tabmail").currentTabInfo = {
+      mode: {
+        type: "calendarTask"
+      }
+    };
+
     // Take care of common initialization
     commonInitCalendar();
 

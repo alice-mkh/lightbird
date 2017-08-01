@@ -856,6 +856,11 @@ function focusSearch() {
 }
 
 function prepare() {
+    document.getElementById("tabmail").currentTabInfo = {
+      mode: {
+        type: "calendarEvent"
+      }
+    };
     prepareCalendarUnifinder();
 }
 
