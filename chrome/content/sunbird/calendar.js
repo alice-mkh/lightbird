@@ -55,13 +55,13 @@ function handleCommandLine(aComLine) {
     var validFlags = ["showdate", "subscribe", "url"];
     var flagsToProcess = [];
 
-    for each (var flag in validFlags) {
+    for (var flag of validFlags) {
         if (comLine.findFlag(flag, false) >= 0) {
             flagsToProcess.push(flag);
         }
     }
 
-    for each (var flag in flagsToProcess) {
+    for (var flag of flagsToProcess) {
         var param = comLine.handleFlagWithParam(flag, false);
 
         switch (flag) {

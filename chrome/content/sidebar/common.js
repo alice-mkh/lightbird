@@ -82,7 +82,7 @@ function updateClipboardCommands() {
     let commands = ["calendar_cut",
                     "calendar_copy",
                     "calendar_paste"];
-    for each (let command in commands) {
+    for (let command of commands) {
         goUpdateCommand(command);
     }
 }
