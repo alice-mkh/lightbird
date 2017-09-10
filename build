@@ -12,9 +12,10 @@ cp components temp -r
 cd temp
 
 cd chrome/skin
-sass --sourcemap=none --update .
+for scss in */*.scss */*/*.scss; do
+  sassc $scss ${scss%%.scss}.css -I . || exit 1
+done
 find -name "*.scss" -delete
-rm -rf .sass-cache
 cd ../..
 
 #Substitute variables
